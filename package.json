@@ -1,0 +1,28 @@
+{
+  "name": "twitter-alike-social-media",
+  "version": "1.0.0",
+  "description": "Social media application similar to Twitter, but just with the very basic features.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victorreis/twitter-alike-social-media.git"
+  },
+  "keywords": [
+    "twitter",
+    "frontend",
+    "react",
+    "TypeScript",
+    "styled-components",
+    "best",
+    "practices"
+  ],
+  "author": "victorreis <v.crisostomo.reis@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victorreis/twitter-alike-social-media/issues"
+  },
+  "homepage": "https://github.com/victorreis/twitter-alike-social-media#readme"
+}
