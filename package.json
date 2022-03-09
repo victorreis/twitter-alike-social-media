@@ -24,5 +24,9 @@
   "bugs": {
     "url": "https://github.com/victorreis/twitter-alike-social-media/issues"
   },
-  "homepage": "https://github.com/victorreis/twitter-alike-social-media#readme"
+  "homepage": "https://github.com/victorreis/twitter-alike-social-media#readme",
+  "devDependencies": {
+    "@types/prettier": "^2.4.4",
+    "prettier": "^2.5.1"
+  }
 }
