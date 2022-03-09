@@ -80,6 +80,7 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:jest/recommended',
     'plugin:jest/style',
+    'plugin:jest-react/recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:markdown/recommended',
     'plugin:prettier/recommended',
@@ -87,7 +88,6 @@ module.exports = {
     'plugin:react/all',
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
-    'react-app/jest',
   ],
   plugins: [
     'import',
@@ -99,6 +99,7 @@ module.exports = {
     'react-hooks',
     '@typescript-eslint',
     'jest',
+    'jest-react',
   ],
   rules: {
     '@typescript-eslint/explicit-member-accessibility': 0,
@@ -185,6 +186,7 @@ module.exports = {
     'react/jsx-newline': 0,
     'react/jsx-no-literals': 0,
     'react/jsx-one-expression-per-line': 0,
+    'react/jsx-props-no-spreading': 0,
     'react/prop-types': 0,
     'react/self-closing-comp': [
       2,
@@ -200,9 +202,9 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['*.ts', '*.tsx'],
+      files: ['*.ts', '*.tsx'], // Your TypeScript files extension
       parserOptions: {
-        project: ['./tsconfig.json'],
+        project: ['./tsconfig.json'], // Specify it only for TypeScript files
       },
     },
     {
