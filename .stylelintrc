@@ -1,11 +1,12 @@
 {
   "processors": ["stylelint-processor-styled-components"],
   "extends": [
-    "stylelint-config-recommended",
+    "stylelint-config-standard",
     "stylelint-config-prettier",
     "stylelint-config-styled-components"
   ],
-  "ignoreFiles": ["**/*.d.ts"],
+  "customSyntax": "@stylelint/postcss-css-in-js",
+  "ignoreFiles": ["**/*.d.ts", "**/*.tsx"],
   "rules": {
     "property-no-vendor-prefix": null
   }

@@ -22,7 +22,7 @@
     "disableSizeLimit": true,
 
     /* Language and Environment */
-    "target": "es5",
+    "target": "esnext",
     "lib": ["dom", "dom.iterable", "es5", "esnext"],
     "jsx": "react-jsx",
     "experimentalDecorators": true,
@@ -35,16 +35,12 @@
     "useDefineForClassFields": true,
 
     /* Modules */
-    "module": "commonjs",
+    "module": "esnext",
     // "rootDir": "./",
     "moduleResolution": "node",
     "baseUrl": "./",
     // "rootDirs": [],
-    "typeRoots": [
-      "node_modules/@types",
-      "node_modules/@testing-library",
-      "src/@types"
-    ],
+    "typeRoots": ["node_modules/@types", "node_modules/@testing-library"],
     "types": ["node", "jest", "react", "react-dom"],
     // "allowUmdGlobalAccess": true,
     "resolveJsonModule": true,
