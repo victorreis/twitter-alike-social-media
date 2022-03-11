@@ -1,9 +1,9 @@
-import React, { useMemo, useState } from 'react';
+import { useMemo, useState, createContext } from 'react';
 
 import { ThemeProvider } from 'styled-components';
 
 import { darkTheme } from '../Modes';
-import { CustomThemeType, ThemeMode } from '../Types';
+import { ThemeMode, CustomThemeType } from '../Types';
 import {
   ThemeContextType,
   CustomThemeProviderProps,
@@ -14,7 +14,7 @@ export const themes: Record<ThemeMode | 'default', CustomThemeType> = {
   dark: darkTheme,
 };
 
-export const ThemeContext = React.createContext<
+export const ThemeContext = createContext<
   ThemeContextType | Record<string, never>
 >({});
 

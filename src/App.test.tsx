@@ -7,7 +7,7 @@ import {
 import { themes } from './Theme/CustomThemeProvider';
 import { hexToRgb } from './Utils/Transform/hexToRgb.util';
 
-describe('App component tests', () => {
+describe('app component tests', () => {
   const setup = () => {
     const renderRTR = () => renderRTRCreator(App, {});
     const renderJestDom = () => renderJestDomCreator(App, {});
@@ -15,8 +15,9 @@ describe('App component tests', () => {
     return { renderRTR, renderJestDom };
   };
 
-  describe(`behavior tests`, () => {
-    it(`should render the Typography component`, () => {
+  describe('behavior tests', () => {
+    it('should render the Typography component', () => {
+      expect.assertions(1);
       setup().renderJestDom();
       const testInstance = screen.getByTestId('container');
 
@@ -24,8 +25,9 @@ describe('App component tests', () => {
     });
   });
 
-  describe(`style tests`, () => {
-    it(`should have style the Container component`, () => {
+  describe('style tests', () => {
+    it('should have style the Container component', () => {
+      expect.assertions(1);
       setup().renderJestDom();
       const container = screen.getByTestId('container');
 
