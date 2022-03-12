@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`button component tests snapshot tests should render correctly 1`] = `
+<button
+  className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 deVtHi"
+  data-testid="Button"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  type="button"
+>
+  text
+</button>
+`;
