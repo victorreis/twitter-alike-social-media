@@ -46,23 +46,30 @@ export const ButtonContainer = styled.button<ButtonStyleProps>`
   letter-spacing: 0.2rem;
   text-transform: uppercase;
   align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
+
   border-width: 1px;
   border-color: ${({ theme, hoverFeedbackColor }) =>
     getBorderColor({ theme, hoverFeedbackColor, hover: false })};
   border-style: solid;
-  padding: 1rem;
-  box-sizing: border-box;
+  border-radius: ${({ theme }) => toPx(theme.borders.radius.LG)};
 
   ${({ theme }) => theme.typographies.button};
+  color: ${({ theme }) => theme.colors.background.default.lightest};
+
   background-color: ${({ theme }) =>
     getBackgroundColor({ theme, hover: false })};
-  color: ${({ theme }) => theme.colors.background.default.lightest};
-  border-radius: ${({ theme }) => toPx(theme.borders.radius.LG)};
 
   &:hover {
     background-color: ${({ theme, hoverFeedbackColor }) =>
       getBackgroundColor({ theme, hoverFeedbackColor, hover: true })};
+
     border-color: ${({ theme, hoverFeedbackColor }) =>
       getBorderColor({ theme, hoverFeedbackColor, hover: true })};
+
+    box-shadow: inset 0 0 1em
+      ${({ theme, hoverFeedbackColor }) =>
+        getBorderColor({ theme, hoverFeedbackColor, hover: true })};
   }
 `;
