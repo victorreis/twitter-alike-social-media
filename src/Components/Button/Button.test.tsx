@@ -52,7 +52,7 @@ describe('button component tests', () => {
       expect(element).toBeInTheDocument();
     });
 
-    it('should call the onCLick callback when the button is clicked', () => {
+    it(`should call the 'onCLick' callback when the button is clicked`, () => {
       expect.assertions(1);
       setup().renderJestDom();
       const testInstance = screen.getByTestId(buttonDefaults.testID);
