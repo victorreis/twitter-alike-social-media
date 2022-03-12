@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fixedBar component tests snapshot tests should render correctly 1`] = `
+<div
+  className="FixedBarContainer-twitter-alike-social-media__sc-1hwkltx-0 gcGmRV"
+  data-testid="FixedBar"
+>
+  text
+</div>
+`;
