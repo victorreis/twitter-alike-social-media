@@ -113,7 +113,7 @@ import {
   screen,
 } from '../../Config/Tests/GlobalSetup.config';
 import { themes } from '../../Theme/CustomThemeProvider';
-import { hexToRgb } from '../../Utils/Transform';
+import { hexToRgb } from '../../Utils/Transform/hexToRgb.util';
 import { {{ inputs.value | pascal }}, {{ inputs.value | camel }}Defaults } from './{{ inputs.value | pascal }}';
 import { Required{{ inputs.value | pascal }}Props, {{ inputs.value | pascal }}Props } from './{{ inputs.value | pascal }}.types';
 
