@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tab component tests snapshot tests should render correctly 1`] = `
+<div
+  className="TabContainer-twitter-alike-social-media__sc-15n3a25-0 ilRouH"
+  data-testid="Tab"
+>
+  text
+</div>
+`;
