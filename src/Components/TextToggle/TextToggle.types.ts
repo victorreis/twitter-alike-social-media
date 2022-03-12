@@ -7,7 +7,7 @@ export interface RequiredTextToggleProps {
   texts: string[];
 
   /**
-   * Texts to be shown.
+   * Callback function that is called when the selected button is changed.
    */
   onToggle: (index: number) => void;
 }

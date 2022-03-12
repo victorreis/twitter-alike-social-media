@@ -6,7 +6,7 @@ exports[`textToggle component tests snapshot tests should render correctly 1`] =
   data-testid="TextToggle"
 >
   <button
-    className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 kBIryH TextToggleActiveButton-twitter-alike-social-media__sc-oz9uiz-1 dKHSqV"
+    className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 ihYxqp TextToggleActiveButton-twitter-alike-social-media__sc-oz9uiz-1 dKHSqV"
     data-testid="Button"
     onClick={[Function]}
     onMouseEnter={[Function]}
@@ -16,7 +16,7 @@ exports[`textToggle component tests snapshot tests should render correctly 1`] =
     teste1
   </button>
   <button
-    className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 kBIryH TextToggleActiveButton-twitter-alike-social-media__sc-oz9uiz-1 TextToggleButton-twitter-alike-social-media__sc-oz9uiz-2 dKHSqV bZcuRa"
+    className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 ihYxqp TextToggleActiveButton-twitter-alike-social-media__sc-oz9uiz-1 TextToggleButton-twitter-alike-social-media__sc-oz9uiz-2 dKHSqV bZcuRa"
     data-testid="Button"
     onClick={[Function]}
     onMouseEnter={[Function]}
@@ -26,7 +26,7 @@ exports[`textToggle component tests snapshot tests should render correctly 1`] =
     teste2
   </button>
   <button
-    className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 kBIryH TextToggleActiveButton-twitter-alike-social-media__sc-oz9uiz-1 TextToggleButton-twitter-alike-social-media__sc-oz9uiz-2 dKHSqV bZcuRa"
+    className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 ihYxqp TextToggleActiveButton-twitter-alike-social-media__sc-oz9uiz-1 TextToggleButton-twitter-alike-social-media__sc-oz9uiz-2 dKHSqV bZcuRa"
     data-testid="Button"
     onClick={[Function]}
     onMouseEnter={[Function]}

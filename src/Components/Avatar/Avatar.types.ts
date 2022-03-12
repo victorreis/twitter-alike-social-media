@@ -14,7 +14,7 @@ export interface RequiredAvatarProps {
   thumbnailUrl: string;
 
   /**
-   * Name show as title.
+   * Name show as title or as initials.
    */
   name: string;
 }

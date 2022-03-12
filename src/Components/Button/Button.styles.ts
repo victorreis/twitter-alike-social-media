@@ -41,7 +41,6 @@ const getBorderColor = ({
 export const ButtonContainer = styled.button<ButtonStyleProps>`
   cursor: pointer;
   height: 3rem;
-  margin: 0.5rem;
   border: 0;
   letter-spacing: 0.2rem;
   text-transform: uppercase;

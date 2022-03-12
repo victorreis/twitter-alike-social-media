@@ -46,7 +46,6 @@ export const Avatar: React.FC<AvatarProps> = (props): JSX.Element => {
           onError={handleImageLoadingError}
           size={size}
           src={thumbnailUrl}
-          style={style}
           title={description}
           {...others}
         />
@@ -72,7 +71,7 @@ export const Avatar: React.FC<AvatarProps> = (props): JSX.Element => {
   };
 
   return (
-    <AvatarContainer data-testid={testID} size={size}>
+    <AvatarContainer data-testid={testID} size={size} style={style}>
       {renderImage()}
       {renderInitials()}
     </AvatarContainer>
