@@ -64,8 +64,8 @@ import { API_URL, APPLICATION_ERROR } from '../../Config/constants';
 import { {{ inputs.value | camel }}Service } from './{{ inputs.value | pascal }}.service';
 import { {{ inputs.value | pascal }} } from './{{ inputs.value | pascal }}.types';
 
-describe(`{{ inputs.value | pascal }} service tests`, () => {
-  global.console.error = jest.fn();
+describe('{{ inputs.value | pascal }} service tests', () => {
+  jest.spyOn(global.console, 'error').mockImplementation();
 
   const {{ inputs.value | camel }}sUrl = `${API_URL}/{{ inputs.value | camel }}s`;
   const get{{ inputs.value | pascal }}sByAlbumIdUrl = (id: number | string) =>
@@ -130,12 +130,13 @@ describe(`{{ inputs.value | pascal }} service tests`, () => {
     )
   );
 
-  describe(`Successful tests`, () => {
+  describe('Successful tests', () => {
     beforeAll(() => server.listen());
     afterEach(() => server.resetHandlers());
     afterAll(() => server.close());
 
     it(`should fetch data successfully from '${ {{ inputs.value | camel }}sUrl}'`, async () => {
+      expect.assertions(1);
       const {{ inputs.value | camel }}s = await {{ inputs.value | camel }}Service.getAll();
 
       expect({{ inputs.value | camel }}s).toEqual({{ inputs.value | camel }}sData);
@@ -144,30 +145,33 @@ describe(`{{ inputs.value | pascal }} service tests`, () => {
     it(`should fetch filtered data successfully from '${get{{ inputs.value | pascal }}sByAlbumIdUrl(
       '{albumId}'
     )}`, async () => {
+      expect.assertions(3);
       const {{ inputs.value | camel }}s1 = await {{ inputs.value | camel }}Service.getByAlbumId(1);
-      expect({{ inputs.value | camel }}s1).toEqual(filterDataByAlbumId(1));
-
       const {{ inputs.value | camel }}s2 = await {{ inputs.value | camel }}Service.getByAlbumId(2);
-      expect({{ inputs.value | camel }}s2).toEqual(filterDataByAlbumId(2));
-
       const {{ inputs.value | camel }}s3 = await {{ inputs.value | camel }}Service.getByAlbumId(3);
+
+      expect({{ inputs.value | camel }}s1).toEqual(filterDataByAlbumId(1));
+      expect({{ inputs.value | camel }}s2).toEqual(filterDataByAlbumId(2));
       expect({{ inputs.value | camel }}s3).toEqual(filterDataByAlbumId(3));
     });
 
     it(`should fetch no data successfully from '${get{{ inputs.value | pascal }}sByAlbumIdUrl(
       '{albumId}'
     )} when '{albumId}' doesn't exists`, async () => {
+      expect.assertions(1);
       const {{ inputs.value | camel }}s = await {{ inputs.value | camel }}Service.getByAlbumId(unexistentAlbumId);
+
       expect({{ inputs.value | camel }}s).toEqual(filterDataByAlbumId(unexistentAlbumId));
     });
   });
 
-  describe(`Unsuccessful tests`, () => {
+  describe('Unsuccessful tests', () => {
     beforeAll(() => serverError.listen());
     afterEach(() => serverError.resetHandlers());
     afterAll(() => serverError.close());
 
     it(`should throw error when server returns status 500 when trying to fetch '${ {{ inputs.value | camel }}sUrl}'`, async () => {
+      expect.assertions(1);
       try {
         await {{ inputs.value | camel }}Service.getAll();
       } catch (e) {
@@ -180,6 +184,7 @@ describe(`{{ inputs.value | pascal }} service tests`, () => {
     it(`should throw error when server returns status 500 when trying to fetch '${get{{ inputs.value | pascal }}sByAlbumIdUrl(
       '{albumId}'
     )}`, async () => {
+      expect.assertions(3);
       try {
         await {{ inputs.value | camel }}Service.getByAlbumId(1);
       } catch (e) {
