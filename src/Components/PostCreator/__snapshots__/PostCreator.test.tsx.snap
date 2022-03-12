@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`postCreator component tests snapshot tests should render correctly 1`] = `
+<div
+  className="PostCreatorContainer-twitter-alike-social-media__sc-r64v60-0 glllXS"
+  data-testid="PostCreator"
+  onChange={[MockFunction]}
+>
+  <div
+    className="PostCreatorHeader-twitter-alike-social-media__sc-r64v60-1 beCQWi"
+  >
+    <div
+      className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 lhhZoW"
+      data-testid="Avatar"
+      size="MD"
+    >
+      <img
+        alt="Victor Reis's avatar photo."
+        className="AvatarImage-twitter-alike-social-media__sc-ne4tqs-1 biWnGi"
+        data-testid="Avatar_image"
+        onError={[Function]}
+        size="MD"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAcCAYAAAATFf3WAAAAAXNSR0IArs4c6QAAArJJREFUWEftlVtIk2EYx3/bPKERZOkItUSIskLojKDRwRrDIlMo0wkzwwmpQzS7KPBQ1E3zstZuUjONsIvAxNKMJPDCykM1yQ5WHppmIeWhMl1839xyUG4xJS/28V297/O+///3ew6fxGw2m1nAj8Rt0MXsuAm6CBA3QTdBVwm4et5BDVpnuMROx4z9bJfgaF84bh9juVC450/rv+UcNsn4+BdytLn8nLI3lZauoa2lmcet7TaRxCQVu3dEYTAYuF1bh6+vH5laLX1vX1J/74FNVbgpOCSUgoJTSF0xKJD6Pj5CYeEZRkdHuHRRzx5lLOvC13BElcTpk7l0ve7nYNw+UfxAfAKDPW84lKzmRH4+TE6wyD+AiNVhND1sprGhnve9A6jVKpYHhZCTk4UU6axVMCtBCzOz+A5/MiGXB6MvvUZqymEkTKJU7AXPJdTWVIschN/6+eICis7paH3aQfiqMIu4xJLG7Ix06pseYTQ+EeabSF4yvfc3lw5TbD04PGQiUB7EZdFgIjCFUhFDa8cLtm3djFTmRenVMvq6u4iO3sm3HxMkq1IoPluEPGCZaCYrI52GphaMxjYH3P6hBh0ZNH0cIy8vG6lURnxCPF4eMnp7eyjR6dDrDWyJ3M79xjvIJJA5bbDT2Oag8ubQIJ7+YorFYjBPMT42iq+fn1gW2uMayipvMTDUh4+Hx/8x2P7sFdFRkaLBpBQ1NTcrGfz8ldCVK7heVcUuRSyVFVfEfWuK54Gg0M1jXNCVsD8ugYj1a0XB6htVPO/ssuUjRqEkcOliyssr+GAaYMPGTaQdTcXH2xthItytq6X7XT8azTGhPZya4U43iWWoii05Y56Z7YSsA1zsaFvkTCOWVSFuHgw69cFzHvQPBOdc26kL3QadwjRLkJugm6CrBFw9v+Br8BdSpWm8K4SiiQAAAABJRU5ErkJggg=="
+        title="Victor Reis's avatar photo."
+      />
+    </div>
+    <textarea
+      className="StyledTextarea-twitter-alike-social-media__sc-12f32i7-0 ioqcrC"
+      data-testid="Textarea"
+      maxLength={777}
+      onChange={[Function]}
+      placeholder="What is happening?"
+      rows={4}
+      value=""
+    />
+  </div>
+  <div
+    className="PostCreatorFooter-twitter-alike-social-media__sc-r64v60-2 gtgaaP"
+  >
+    <span
+      className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 bsZKYT"
+      data-testid="Typography"
+    >
+      0
+       / 
+      777
+       
+    </span>
+    <button
+      className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 ihYxqp"
+      data-testid="Button"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      type="button"
+    >
+      POST
+    </button>
+  </div>
+</div>
+`;
