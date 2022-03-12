@@ -48,7 +48,7 @@ describe('typography component tests', () => {
       expect(element).toBeInTheDocument();
     });
 
-    it(`should render '${typographyDefaults.variant}' as the default variant`, () => {
+    it(`should render '${typographyDefaults.variant}' as the default 'variant'`, () => {
       expect.assertions(1);
       const instance = setup().renderRTR().root;
       const element = instance.findByProps({
@@ -58,7 +58,7 @@ describe('typography component tests', () => {
       expect(element).toBeTruthy();
     });
 
-    it('should override the default variant when it is passed as prop', () => {
+    it(`should override the default 'variant' when it is passed as prop`, () => {
       expect.assertions(1);
       const instance = setup({
         ...requiredProps,
@@ -71,7 +71,7 @@ describe('typography component tests', () => {
   });
 
   describe('style tests', () => {
-    it('should have style the Container component', () => {
+    it('should have styled the Container component', () => {
       expect.assertions(1);
       setup().renderJestDom();
       const container = screen.getByTestId(typographyDefaults.testID);

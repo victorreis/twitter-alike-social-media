@@ -51,7 +51,7 @@ describe('avatar component tests', () => {
       expect(element).toBeInTheDocument();
     });
 
-    it(`should render '${avatarDefaults.size}' as the default size`, () => {
+    it(`should render '${avatarDefaults.size}' as the default 'size'`, () => {
       expect.assertions(1);
       const instance = setup().renderRTR().root;
       const element = instance.findByProps({
@@ -61,7 +61,7 @@ describe('avatar component tests', () => {
       expect(element).toBeTruthy();
     });
 
-    it(`should override the default size when it is passed as prop`, () => {
+    it(`should override the default 'size' when it is passed as prop`, () => {
       expect.assertions(1);
       const instance = setup({
         ...requiredProps,
@@ -74,7 +74,7 @@ describe('avatar component tests', () => {
   });
 
   describe('style tests', () => {
-    it(`should have style the Container component`, () => {
+    it(`should have styled the Container component`, () => {
       expect.assertions(1);
       setup().renderJestDom();
       const container = screen.getByTestId(avatarDefaults.testID);

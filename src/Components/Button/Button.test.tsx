@@ -62,7 +62,7 @@ describe('button component tests', () => {
       expect(onClick).toHaveBeenCalledWith();
     });
 
-    it(`should render '${buttonDefaults.type}' as the default type`, () => {
+    it(`should render '${buttonDefaults.type}' as the default 'type'`, () => {
       expect.assertions(1);
       const instance = setup().renderRTR().root;
       const element = instance.findByProps({
@@ -72,7 +72,7 @@ describe('button component tests', () => {
       expect(element).toBeTruthy();
     });
 
-    it('should override the default type when it is passed as prop', () => {
+    it(`should override the default 'type' when it is passed as prop`, () => {
       expect.assertions(1);
       const instance = setup({
         ...requiredProps,
@@ -85,7 +85,7 @@ describe('button component tests', () => {
   });
 
   describe('style tests', () => {
-    it('should have style the correct styles', () => {
+    it('should have styled the correct styles', () => {
       expect.assertions(1);
       setup().renderJestDom();
       const container = screen.getByTestId(buttonDefaults.testID);

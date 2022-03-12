@@ -26,7 +26,7 @@ describe('app component tests', () => {
   });
 
   describe('style tests', () => {
-    it('should have style the Container component', () => {
+    it('should have styled the Container component', () => {
       expect.assertions(1);
       setup().renderJestDom();
       const container = screen.getByTestId('container');

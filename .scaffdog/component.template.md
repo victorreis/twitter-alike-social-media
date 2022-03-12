@@ -158,7 +158,7 @@ describe('{{ inputs.value | camel }} component tests', () => {
       expect(element).toBeInTheDocument();
     });
 
-    it(`should render '${ {{ inputs.value | camel }}Defaults.variant}' as the default variant`, () => {
+    it(`should render '${ {{ inputs.value | camel }}Defaults.variant}' as the default 'variant'`, () => {
       expect.assertions(1);
 const instance =
       setup().renderRTR().root;
@@ -169,7 +169,7 @@ const instance =
       expect(element).toBeTruthy();
     });
 
-    it(`should override the default variant when it is passed as prop`, () => {
+    it(`should override the default 'variant' when it is passed as prop`, () => {
       expect.assertions(1);
 const instance =
 
@@ -184,7 +184,7 @@ const instance =
   });
 
   describe('style tests', () => {
-    it(`should have style the Container component`, () => {
+    it(`should have styled the Container component`, () => {
       expect.assertions(1);
       setup().renderJestDom();
       const container = screen.getByTestId({{ inputs.value | camel }}Defaults.testID);
