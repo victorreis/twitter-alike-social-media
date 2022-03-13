@@ -4,8 +4,9 @@ import dayjs from 'dayjs';
 import { nanoid } from 'nanoid';
 
 import { TestProps } from '../../Config/Tests/Test.types';
+import { TypographyVariant } from '../../Theme/Types/Typographies.types';
 import { Avatar } from '../Avatar';
-import { Button } from '../Button';
+import { Button, ButtonSize } from '../Button';
 import { Typography } from '../Typography';
 import {
   PostContainer,
@@ -25,7 +26,7 @@ export const postDefaults: Required<DefaultPostProps> & Required<TestProps> = {
 export const Post: React.FC<PostProps> = (props): JSX.Element => {
   const {
     testID = postDefaults.testID,
-    style,
+    children,
     id,
     text,
     createdAt,
@@ -33,12 +34,20 @@ export const Post: React.FC<PostProps> = (props): JSX.Element => {
     reposts,
     quotPosts,
     compact = postDefaults.compact,
+    style,
     ...others
   } = props;
 
   const { name, nickname, thumbnailUrl } = createdBy;
 
   const formattedDate = dayjs(createdAt).format('MMMM D, YYYY');
+
+  const userNameVariant: TypographyVariant = compact ? 'h5' : 'h4';
+  const userInfoVariant: TypographyVariant = compact
+    ? 'subtitle3'
+    : 'subtitle2';
+  const textVariant: TypographyVariant = compact ? 'body2' : 'body1';
+  const buttonSize: ButtonSize = compact ? 'MD' : 'LG';
 
   const renderText = useMemo(
     () => () => {
@@ -61,24 +70,34 @@ export const Post: React.FC<PostProps> = (props): JSX.Element => {
       {...others}
     >
       {!compact && <Avatar name={name} thumbnailUrl={thumbnailUrl} />}
+
       <PostContent>
         <PostContentHeader>
           {compact && (
             <Avatar name={name} size="SM" thumbnailUrl={thumbnailUrl} />
           )}
-          <PostContentTitle variant="h4">{name}</PostContentTitle>
-          <PostContentTitle variant="subtitle2">@{nickname}</PostContentTitle>
-          <Typography>-</Typography>
-          <Typography>{formattedDate}</Typography>
+          <PostContentTitle variant={userNameVariant}>{name}</PostContentTitle>
+          <PostContentTitle variant={userInfoVariant}>
+            @{nickname}
+          </PostContentTitle>
+          <Typography variant={userInfoVariant}>- {formattedDate}</Typography>
         </PostContentHeader>
 
-        <PostText data-testid={`${testID}_text`}>{renderText()}</PostText>
+        <PostText data-testid={`${testID}_text`} variant={textVariant}>
+          {renderText()}
+        </PostText>
 
-        <PostContentButtonsContainer>
-          <Button onClick={() => {}}>Repost</Button>
-          <Typography>{reposts}</Typography>
-          <Button onClick={() => {}}>Quote post</Button>
-          <Typography>{quotPosts}</Typography>
+        {children}
+
+        <PostContentButtonsContainer hasChildren={Boolean(children)}>
+          <Button onClick={() => {}} size={buttonSize}>
+            Repost
+          </Button>
+          <Typography variant={textVariant}>{reposts}</Typography>
+          <Button onClick={() => {}} size={buttonSize}>
+            Quote post
+          </Button>
+          <Typography variant={textVariant}>{quotPosts}</Typography>
         </PostContentButtonsContainer>
       </PostContent>
     </PostContainer>

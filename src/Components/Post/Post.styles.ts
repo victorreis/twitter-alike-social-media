@@ -25,6 +25,24 @@ const getPostBorders = ({
   };
 };
 
+const getPostContentButtonsContainerBorder = ({
+  theme,
+  hasChildren,
+}: {
+  theme: DefaultTheme;
+  hasChildren: boolean;
+}): CSSObject => {
+  if (hasChildren) {
+    return {};
+  }
+
+  return {
+    borderTopWidth: '1px',
+    borderTopStyle: 'solid',
+    borderTopColor: theme.colors.background.default.light,
+  };
+};
+
 export const PostContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -54,18 +72,18 @@ export const PostContentTitle = styled(Typography)`
 
 export const PostText = styled(Typography)`
   flex: 1;
-  padding: 16px 0;
   margin-bottom: 16px;
-
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: ${({ theme }) => theme.colors.background.default.light};
 `;
 
-export const PostContentButtonsContainer = styled.div`
+export const PostContentButtonsContainer = styled.div<{ hasChildren: boolean }>`
   display: flex;
   flex-direction: row;
+  flex: 1;
   column-gap: 1rem;
   align-items: center;
-  align-self: flex-end;
+  align-self: stretch;
+  justify-content: flex-end;
+  padding-top: 16px;
+
+  ${getPostContentButtonsContainerBorder};
 `;
