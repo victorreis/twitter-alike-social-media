@@ -6,20 +6,20 @@ export const PostCreatorContainer = styled.div<PostCreatorStyleProps>`
   display: flex;
   flex-direction: column;
   padding: 16px;
+
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: ${({ theme }) => theme.colors.background.default.normal};
 `;
 
 export const PostCreatorHeader = styled.div<PostCreatorStyleProps>`
   display: flex;
   column-gap: 1rem;
   justify-content: flex-end;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: ${({ theme }) => theme.colors.background.default.light};
-  padding-bottom: 16px;
 `;
 
 export const PostCreatorFooter = styled.div<PostCreatorStyleProps>`
-  padding: 16px 0;
+  padding-top: 16px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;

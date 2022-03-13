@@ -66,7 +66,7 @@ describe('userDetails component tests', () => {
       const container = screen.getByTestId(userDetailsDefaults.testID);
 
       expect(container).toHaveStyle({
-        borderBottomColor: themes.default.colors.background.default.light,
+        borderBottomColor: themes.default.colors.background.default.normal,
       });
     });
   });

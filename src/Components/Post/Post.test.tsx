@@ -103,7 +103,7 @@ describe('post component tests', () => {
       expect(container).toHaveStyle({
         borderBottomWidth: '1px',
         borderBottomStyle: 'solid',
-        borderBottomColor: themes.default.colors.background.default.light,
+        borderBottomColor: themes.default.colors.background.default.normal,
       });
     });
   });

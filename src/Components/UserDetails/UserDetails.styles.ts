@@ -11,7 +11,7 @@ export const UserDetailsContainer = styled.div<UserDetailsStyleProps>`
 
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-bottom-color: ${({ theme }) => theme.colors.background.default.light};
+  border-bottom-color: ${({ theme }) => theme.colors.background.default.normal};
 `;
 
 export const UserDetailsHeader = styled.div<UserDetailsStyleProps>`

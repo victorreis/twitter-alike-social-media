@@ -2,7 +2,7 @@
 
 exports[`userDetails component tests snapshot tests should render correctly 1`] = `
 <div
-  className="UserDetailsContainer-twitter-alike-social-media__sc-1pkktdh-0 idYBoO"
+  className="UserDetailsContainer-twitter-alike-social-media__sc-1pkktdh-0 ewYhwp"
   data-testid="UserDetails"
   id="user123"
 >

@@ -13,7 +13,7 @@ const getPostBorders = ({
     return {
       borderWidth: '1px',
       borderStyle: 'solid',
-      borderColor: theme.colors.background.default.light,
+      borderColor: theme.colors.background.default.normal,
       borderRadius: 16,
     };
   }
@@ -21,7 +21,7 @@ const getPostBorders = ({
   return {
     borderBottomWidth: '1px',
     borderBottomStyle: 'solid',
-    borderBottomColor: theme.colors.background.default.light,
+    borderBottomColor: theme.colors.background.default.normal,
   };
 };
 
@@ -39,7 +39,7 @@ const getPostContentButtonsContainerBorder = ({
   return {
     borderTopWidth: '1px',
     borderTopStyle: 'solid',
-    borderTopColor: theme.colors.background.default.light,
+    borderTopColor: theme.colors.background.default.normal,
   };
 };
 

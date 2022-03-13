@@ -2,7 +2,7 @@
 
 exports[`post component tests snapshot tests should render correctly 1`] = `
 <div
-  className="PostContainer-twitter-alike-social-media__sc-zy8jam-0 fUTNMc"
+  className="PostContainer-twitter-alike-social-media__sc-zy8jam-0 kqSmiT"
   data-testid="Post"
 >
   <div
@@ -65,7 +65,7 @@ exports[`post component tests snapshot tests should render correctly 1`] = `
       </span>
     </span>
     <div
-      className="PostContentButtonsContainer-twitter-alike-social-media__sc-zy8jam-5 MfVXl"
+      className="PostContentButtonsContainer-twitter-alike-social-media__sc-zy8jam-5 DMmfK"
     >
       <button
         className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 fBnyBV"

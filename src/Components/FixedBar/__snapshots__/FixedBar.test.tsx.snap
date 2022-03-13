@@ -2,7 +2,7 @@
 
 exports[`fixedBar component tests snapshot tests should render correctly 1`] = `
 <div
-  className="FixedBarContainer-twitter-alike-social-media__sc-1hwkltx-0 gcGmRV"
+  className="FixedBarContainer-twitter-alike-social-media__sc-1hwkltx-0 htqTfF"
   data-testid="FixedBar"
 >
   text

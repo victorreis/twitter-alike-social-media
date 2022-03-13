@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import { FixedBarStyleProps } from './FixedBar.types';
 
 export const FixedBarContainer = styled.div<FixedBarStyleProps>`
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   display: flex;
-  width: 100vw;
   height: 3rem;
   top: 0;
   left: 0;
@@ -18,7 +18,7 @@ export const FixedBarContainer = styled.div<FixedBarStyleProps>`
   box-sizing: border-box;
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-bottom-color: ${({ theme }) => theme.colors.background.default.light};
+  border-bottom-color: ${({ theme }) => theme.colors.background.default.normal};
 
   background-color: ${({ theme }) => theme.colors.background.default.darkest};
   color: ${({ theme }) => theme.colors.font.default};
