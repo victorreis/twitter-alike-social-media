@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`repost component tests snapshot tests should render correctly 1`] = `
+<span
+  className="RepostContainer-twitter-alike-social-media__sc-dgb1yt-0 efDaFT"
+  data-testid="Repost"
+  id="post123"
+>
+  <span
+    className="RepostTextContainer-twitter-alike-social-media__sc-dgb1yt-1 lNuFn"
+  >
+    <svg
+      className="RepostIcon-twitter-alike-social-media__sc-dgb1yt-3 bStOLt"
+      fill="currentColor"
+      height={20}
+      stroke="currentColor"
+      strokeWidth="0"
+      style={
+        Object {
+          "color": undefined,
+        }
+      }
+      viewBox="0 0 1024 1024"
+      width={20}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M136 552h63.6c4.4 0 8-3.6 8-8V288.7h528.6v72.6c0 1.9.6 3.7 1.8 5.2a8.3 8.3 0 0 0 11.7 1.4L893 255.4c4.3-5 3.6-10.3 0-13.2L749.7 129.8a8.22 8.22 0 0 0-5.2-1.8c-4.6 0-8.4 3.8-8.4 8.4V209H199.7c-39.5 0-71.7 32.2-71.7 71.8V544c0 4.4 3.6 8 8 8zm752-80h-63.6c-4.4 0-8 3.6-8 8v255.3H287.8v-72.6c0-1.9-.6-3.7-1.8-5.2a8.3 8.3 0 0 0-11.7-1.4L131 768.6c-4.3 5-3.6 10.3 0 13.2l143.3 112.4c1.5 1.2 3.3 1.8 5.2 1.8 4.6 0 8.4-3.8 8.4-8.4V815h536.6c39.5 0 71.7-32.2 71.7-71.8V480c-.2-4.4-3.8-8-8.2-8z"
+      />
+    </svg>
+    <h5
+      className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 cCEHbN RepostText-twitter-alike-social-media__sc-dgb1yt-2 epWPqF"
+      data-testid="Typography"
+    >
+      Victor Reis
+       Reposted
+    </h5>
+  </span>
+  <div
+    className="PostContainer-twitter-alike-social-media__sc-zy8jam-0 fUTNMc"
+    data-testid="Post"
+  >
+    <div
+      className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 lhhZoW"
+      data-testid="Avatar"
+      size="MD"
+    >
+      <img
+        alt="Victor Reis's avatar photo."
+        className="AvatarImage-twitter-alike-social-media__sc-ne4tqs-1 biWnGi"
+        data-testid="Avatar_image"
+        onError={[Function]}
+        size="MD"
+        src="https://i.pravatar.cc/300"
+        title="Victor Reis's avatar photo."
+      />
+    </div>
+    <div
+      className="PostContent-twitter-alike-social-media__sc-zy8jam-1 kvzPWr"
+    >
+      <div
+        className="PostContentHeader-twitter-alike-social-media__sc-zy8jam-2 dyHMAc"
+      >
+        <h4
+          className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 dwIaAW PostContentTitle-twitter-alike-social-media__sc-zy8jam-3 bFlsZm"
+          data-testid="Typography"
+        >
+          Victor Reis
+        </h4>
+        <h4
+          className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 cCEHbN PostContentTitle-twitter-alike-social-media__sc-zy8jam-3 bFlsZm"
+          data-testid="Typography"
+        >
+          @
+          victor.reis
+        </h4>
+        <span
+          className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 bsZKYT"
+          data-testid="Typography"
+        >
+          -
+        </span>
+        <span
+          className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 bsZKYT"
+          data-testid="Typography"
+        >
+          March 13, 2022
+        </span>
+      </div>
+      <span
+        className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 bsZKYT PostText-twitter-alike-social-media__sc-zy8jam-4 jMMOQu"
+        data-testid="Post_text"
+      >
+        <span>
+          first line
+          <br />
+        </span>
+        <span>
+          second line
+          <br />
+        </span>
+        <span>
+          third line
+          <br />
+        </span>
+      </span>
+      <div
+        className="PostContentButtonsContainer-twitter-alike-social-media__sc-zy8jam-5 eLbLUq"
+      >
+        <button
+          className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 ihYxqp"
+          data-testid="Button"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          type="button"
+        >
+          Repost
+        </button>
+        <span
+          className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 bsZKYT"
+          data-testid="Typography"
+        >
+          9
+        </span>
+        <button
+          className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 ihYxqp"
+          data-testid="Button"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          type="button"
+        >
+          Quote post
+        </button>
+        <span
+          className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 bsZKYT"
+          data-testid="Typography"
+        >
+          99
+        </span>
+      </div>
+    </div>
+  </div>
+</span>
+`;
