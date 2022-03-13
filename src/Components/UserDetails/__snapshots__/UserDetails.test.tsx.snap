@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`userDetails component tests snapshot tests should render correctly 1`] = `
+<div
+  className="UserDetailsContainer-twitter-alike-social-media__sc-1pkktdh-0 idYBoO"
+  data-testid="UserDetails"
+  id="user123"
+>
+  <div
+    className="UserDetailsHeader-twitter-alike-social-media__sc-1pkktdh-1 jPbomt"
+  >
+    <div
+      className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 jOhgOw"
+      data-testid="Avatar"
+      size="LG"
+      style={
+        Object {
+          "padding": 2,
+        }
+      }
+    >
+      <img
+        alt="Victor Reis's avatar photo."
+        className="AvatarImage-twitter-alike-social-media__sc-ne4tqs-1 lbyZtm"
+        data-testid="Avatar_image"
+        onError={[Function]}
+        size="LG"
+        src="https://i.pravatar.cc/300"
+        title="Victor Reis's avatar photo."
+      />
+    </div>
+    <div
+      className="UserDetailsHeaderContent-twitter-alike-social-media__sc-1pkktdh-2 cVyYAQ"
+    >
+      <span
+        className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 kTmxqV"
+        data-testid="Typography"
+      >
+        999
+         Posts
+      </span>
+    </div>
+  </div>
+  <div
+    className="UserDetailsContent-twitter-alike-social-media__sc-1pkktdh-3 COovM"
+  >
+    <span
+      className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 bsZKYT"
+      data-testid="Typography"
+    >
+      Victor Reis
+    </span>
+    <span
+      className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 kTmxqV"
+      data-testid="Typography"
+    >
+      @
+      victor.reis
+    </span>
+    <span
+      className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 kTmxqV"
+      data-testid="Typography"
+    >
+      Joined 
+      March 13, 2022
+    </span>
+    <br />
+    <span
+      className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 bsZKYT"
+      data-testid="Typography"
+    >
+      333
+       following
+    </span>
+    <span
+      className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 bsZKYT"
+      data-testid="Typography"
+    >
+      777
+       followers
+    </span>
+  </div>
+</div>
+`;
