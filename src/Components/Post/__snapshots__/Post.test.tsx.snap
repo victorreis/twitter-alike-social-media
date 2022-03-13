@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`post component tests snapshot tests should render correctly 1`] = `
+<div
+  className="PostContainer-twitter-alike-social-media__sc-zy8jam-0 fUTNMc"
+  data-testid="Post"
+>
+  <div
+    className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 lhhZoW"
+    data-testid="Avatar"
+    size="MD"
+  >
+    <img
+      alt="Victor Reis's avatar photo."
+      className="AvatarImage-twitter-alike-social-media__sc-ne4tqs-1 biWnGi"
+      data-testid="Avatar_image"
+      onError={[Function]}
+      size="MD"
+      src="https://i.pravatar.cc/300"
+      title="Victor Reis's avatar photo."
+    />
+  </div>
+  <div
+    className="PostContent-twitter-alike-social-media__sc-zy8jam-1 kvzPWr"
+  >
+    <div
+      className="PostContentHeader-twitter-alike-social-media__sc-zy8jam-2 dyHMAc"
+    >
+      <h4
+        className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 dwIaAW"
+        data-testid="Typography"
+        style={
+          Object {
+            "margin": 0,
+          }
+        }
+      >
+        Victor Reis
+      </h4>
+      <h4
+        className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 cCEHbN"
+        data-testid="Typography"
+        style={
+          Object {
+            "margin": 0,
+          }
+        }
+      >
+        @
+        victor.reis
+      </h4>
+      <span
+        className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 bsZKYT"
+        data-testid="Typography"
+      >
+        -
+      </span>
+      <span
+        className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 bsZKYT"
+        data-testid="Typography"
+      >
+        March 12, 2022
+      </span>
+    </div>
+    <span
+      className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 bsZKYT PostText-twitter-alike-social-media__sc-zy8jam-3 cNqrPx"
+      data-testid="Post_text"
+    >
+      <span>
+        first line
+        <br />
+      </span>
+      <span>
+        second line
+        <br />
+      </span>
+      <span>
+        third line
+        <br />
+      </span>
+    </span>
+    <div
+      className="PostContentButtonsContainer-twitter-alike-social-media__sc-zy8jam-4 kggXMX"
+    >
+      <button
+        className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 ihYxqp"
+        data-testid="Button"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        type="button"
+      >
+        Repost
+      </button>
+      <span
+        className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 bsZKYT"
+        data-testid="Typography"
+      >
+        9
+      </span>
+      <button
+        className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 ihYxqp"
+        data-testid="Button"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        type="button"
+      >
+        Quote post
+      </button>
+      <span
+        className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 bsZKYT"
+        data-testid="Typography"
+      >
+        99
+      </span>
+    </div>
+  </div>
+</div>
+`;
