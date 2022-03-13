@@ -17,6 +17,6 @@ export type QuotePostProps = RequiredQuotePostProps &
   OptionalQuotePostProps &
   TestProps &
   QuotePostType &
-  Omit<React.HTMLAttributes<HTMLSpanElement>, 'children'>;
+  Omit<React.HTMLAttributes<HTMLDivElement>, 'children'>;
 
 export type QuotePostStyleProps = Required<DefaultQuotePostProps>;

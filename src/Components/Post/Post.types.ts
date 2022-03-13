@@ -22,4 +22,4 @@ export type PostProps = RequiredPostProps &
   OptionalPostProps &
   TestProps &
   PostType &
-  Omit<React.HTMLAttributes<HTMLSpanElement>, 'children'>;
+  Omit<React.HTMLAttributes<HTMLDivElement>, 'children'>;

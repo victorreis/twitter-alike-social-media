@@ -10,13 +10,13 @@ exports[`postCreator component tests snapshot tests should render correctly 1`] 
     className="PostCreatorHeader-twitter-alike-social-media__sc-r64v60-1 beCQWi"
   >
     <div
-      className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 lhhZoW"
+      className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 keOLqm"
       data-testid="Avatar"
       size="MD"
     >
       <img
         alt="Victor Reis's avatar photo."
-        className="AvatarImage-twitter-alike-social-media__sc-ne4tqs-1 biWnGi"
+        className="AvatarImage-twitter-alike-social-media__sc-ne4tqs-1 dnbueO"
         data-testid="Avatar_image"
         onError={[Function]}
         size="MD"

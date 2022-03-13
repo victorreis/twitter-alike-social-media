@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`repost component tests snapshot tests should render correctly 1`] = `
-<span
+<div
   className="RepostContainer-twitter-alike-social-media__sc-dgb1yt-0 efDaFT"
   data-testid="Repost"
   id="post123"
 >
-  <span
+  <div
     className="RepostTextContainer-twitter-alike-social-media__sc-dgb1yt-1 lNuFn"
   >
     <svg
@@ -35,19 +35,19 @@ exports[`repost component tests snapshot tests should render correctly 1`] = `
       Victor Reis
        Reposted
     </h5>
-  </span>
+  </div>
   <div
     className="PostContainer-twitter-alike-social-media__sc-zy8jam-0 fUTNMc"
     data-testid="Post"
   >
     <div
-      className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 lhhZoW"
+      className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 keOLqm"
       data-testid="Avatar"
       size="MD"
     >
       <img
         alt="Victor Reis's avatar photo."
-        className="AvatarImage-twitter-alike-social-media__sc-ne4tqs-1 biWnGi"
+        className="AvatarImage-twitter-alike-social-media__sc-ne4tqs-1 dnbueO"
         data-testid="Avatar_image"
         onError={[Function]}
         size="MD"
@@ -139,5 +139,5 @@ exports[`repost component tests snapshot tests should render correctly 1`] = `
       </div>
     </div>
   </div>
-</span>
+</div>
 `;

@@ -5,12 +5,12 @@ import styled from 'styled-components';
 import { Typography } from '../Typography';
 import { RepostStyleProps } from './Repost.types';
 
-export const RepostContainer = styled.span<RepostStyleProps>`
+export const RepostContainer = styled.div<RepostStyleProps>`
   display: flex;
   flex-direction: column;
 `;
 
-export const RepostTextContainer = styled.span<RepostStyleProps>`
+export const RepostTextContainer = styled.div<RepostStyleProps>`
   display: flex;
   flex-direction: row;
   column-gap: 0.5rem;

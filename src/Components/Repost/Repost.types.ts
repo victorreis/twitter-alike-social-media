@@ -17,6 +17,6 @@ export type RepostProps = RequiredRepostProps &
   OptionalRepostProps &
   TestProps &
   RepostType &
-  Omit<React.HTMLAttributes<HTMLSpanElement>, 'children'>;
+  Omit<React.HTMLAttributes<HTMLDivElement>, 'children'>;
 
 export type RepostStyleProps = Required<DefaultRepostProps>;

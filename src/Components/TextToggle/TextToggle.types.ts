@@ -31,4 +31,4 @@ export type TextToggleProps = RequiredTextToggleProps &
   DefaultTextToggleProps &
   OptionalTextToggleProps &
   TestProps &
-  Omit<React.HTMLAttributes<HTMLSpanElement>, 'children'>;
+  Omit<React.HTMLAttributes<HTMLDivElement>, 'children'>;

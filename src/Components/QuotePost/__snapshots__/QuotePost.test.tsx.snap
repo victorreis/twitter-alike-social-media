@@ -6,13 +6,13 @@ exports[`quotePost component tests snapshot tests should render correctly 1`] = 
   data-testid="QuotePost"
 >
   <div
-    className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 lhhZoW"
+    className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 keOLqm"
     data-testid="Avatar"
     size="MD"
   >
     <img
       alt="Another User's avatar photo."
-      className="AvatarImage-twitter-alike-social-media__sc-ne4tqs-1 biWnGi"
+      className="AvatarImage-twitter-alike-social-media__sc-ne4tqs-1 dnbueO"
       data-testid="Avatar_image"
       onError={[Function]}
       size="MD"
@@ -75,7 +75,7 @@ exports[`quotePost component tests snapshot tests should render correctly 1`] = 
           className="PostContentHeader-twitter-alike-social-media__sc-zy8jam-2 dyHMAc"
         >
           <div
-            className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 eDvVru"
+            className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 gILUNW"
             data-testid="Avatar"
             size="SM"
           >

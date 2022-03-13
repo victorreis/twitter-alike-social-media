@@ -6,8 +6,8 @@ import { AvatarSize, AvatarSizes, AvatarStyleProps } from './Avatar.types';
 
 export const avatarDimensions: AvatarSizes = {
   SM: 32,
-  MD: 48,
-  LG: 88,
+  MD: 56,
+  LG: 100,
 };
 
 const getAvatarDimensions = ({ size }: { size: AvatarSize }): CSSObject => {
@@ -34,7 +34,8 @@ export const AvatarContainer = styled.div<AvatarStyleProps>`
   background-color: white;
   display: grid;
   place-items: center;
-  ${getAvatarContainerDimensions}
+  ${getAvatarContainerDimensions};
+  box-sizing: border-box;
 `;
 
 export const AvatarImage = styled.img<AvatarStyleProps>`
