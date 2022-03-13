@@ -48,6 +48,10 @@ export const PostContentHeader = styled.div`
   align-items: center;
 `;
 
+export const PostContentTitle = styled(Typography)`
+  margin: 0;
+`;
+
 export const PostText = styled(Typography)`
   flex: 1;
   padding: 16px 0;

@@ -27,24 +27,14 @@ exports[`post component tests snapshot tests should render correctly 1`] = `
       className="PostContentHeader-twitter-alike-social-media__sc-zy8jam-2 dyHMAc"
     >
       <h4
-        className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 dwIaAW"
+        className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 dwIaAW PostContentTitle-twitter-alike-social-media__sc-zy8jam-3 bFlsZm"
         data-testid="Typography"
-        style={
-          Object {
-            "margin": 0,
-          }
-        }
       >
         Victor Reis
       </h4>
       <h4
-        className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 cCEHbN"
+        className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 cCEHbN PostContentTitle-twitter-alike-social-media__sc-zy8jam-3 bFlsZm"
         data-testid="Typography"
-        style={
-          Object {
-            "margin": 0,
-          }
-        }
       >
         @
         victor.reis
@@ -59,11 +49,11 @@ exports[`post component tests snapshot tests should render correctly 1`] = `
         className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 bsZKYT"
         data-testid="Typography"
       >
-        March 12, 2022
+        March 13, 2022
       </span>
     </div>
     <span
-      className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 bsZKYT PostText-twitter-alike-social-media__sc-zy8jam-3 cNqrPx"
+      className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 bsZKYT PostText-twitter-alike-social-media__sc-zy8jam-4 jMMOQu"
       data-testid="Post_text"
     >
       <span>
@@ -80,7 +70,7 @@ exports[`post component tests snapshot tests should render correctly 1`] = `
       </span>
     </span>
     <div
-      className="PostContentButtonsContainer-twitter-alike-social-media__sc-zy8jam-4 kggXMX"
+      className="PostContentButtonsContainer-twitter-alike-social-media__sc-zy8jam-5 eLbLUq"
     >
       <button
         className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 ihYxqp"

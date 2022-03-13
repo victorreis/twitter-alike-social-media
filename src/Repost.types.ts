@@ -1,10 +1,9 @@
+import { PostType } from './Post.types';
 import { UserType } from './User.types';
 
-export interface PostType {
+export interface RepostType {
   id: string;
-  text: string;
   createdAt: Date;
   createdBy: UserType;
-  reposts: number;
-  quotPosts: number;
+  originalPost: PostType;
 }

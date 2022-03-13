@@ -1,13 +1,7 @@
 import { TestProps } from '../../Config/Tests/Test.types';
 import { PostType } from '../../Post.types';
-import { UserType } from '../../User.types';
 
-export interface RequiredPostProps {
-  /**
-   * User that created the post.
-   */
-  createdBy: UserType;
-}
+export interface RequiredPostProps {}
 
 export interface DefaultPostProps {
   /**
@@ -27,5 +21,5 @@ export type PostProps = RequiredPostProps &
   DefaultPostProps &
   OptionalPostProps &
   TestProps &
-  Omit<PostType, 'createdBy'> &
+  PostType &
   Omit<React.HTMLAttributes<HTMLSpanElement>, 'children'>;

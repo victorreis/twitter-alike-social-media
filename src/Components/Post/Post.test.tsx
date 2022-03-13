@@ -19,15 +19,15 @@ describe('post component tests', () => {
     createdAt: new Date(),
     following: 333,
     followers: 777,
-  } as UserType;
-  const post: PostType & { createdBy: UserType } = {
+  };
+  const post: PostType = {
     id: 'post123',
     text: `first line\nsecond line\nthird line`,
     createdAt: new Date(),
     createdBy: userTeste,
     reposts: 9,
     quotPosts: 99,
-  } as const;
+  };
   const newCompact = true;
 
   const requiredProps: PostProps = {

@@ -12,6 +12,7 @@ import {
   PostContent,
   PostContentButtonsContainer,
   PostContentHeader,
+  PostContentTitle,
   PostText,
 } from './Post.styles';
 import { PostProps, DefaultPostProps } from './Post.types';
@@ -65,12 +66,8 @@ export const Post: React.FC<PostProps> = (props): JSX.Element => {
           {compact && (
             <Avatar name={name} size="SM" thumbnailUrl={thumbnailUrl} />
           )}
-          <Typography style={{ margin: 0 }} variant="h4">
-            {name}
-          </Typography>
-          <Typography style={{ margin: 0 }} variant="subtitle2">
-            @{nickname}
-          </Typography>
+          <PostContentTitle variant="h4">{name}</PostContentTitle>
+          <PostContentTitle variant="subtitle2">@{nickname}</PostContentTitle>
           <Typography>-</Typography>
           <Typography>{formattedDate}</Typography>
         </PostContentHeader>
