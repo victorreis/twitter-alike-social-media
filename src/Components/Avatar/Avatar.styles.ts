@@ -34,8 +34,10 @@ export const AvatarContainer = styled.div<AvatarStyleProps>`
   background-color: white;
   display: grid;
   place-items: center;
-  ${getAvatarContainerDimensions};
   box-sizing: border-box;
+  padding: 2px;
+
+  ${getAvatarContainerDimensions};
 `;
 
 export const AvatarImage = styled.img<AvatarStyleProps>`

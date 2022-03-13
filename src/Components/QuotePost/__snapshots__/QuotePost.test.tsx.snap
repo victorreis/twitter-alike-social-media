@@ -6,7 +6,7 @@ exports[`quotePost component tests snapshot tests should render correctly 1`] = 
   data-testid="QuotePost"
 >
   <div
-    className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 keOLqm"
+    className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 gejhQE"
     data-testid="Avatar"
     size="MD"
   >
@@ -75,7 +75,7 @@ exports[`quotePost component tests snapshot tests should render correctly 1`] = 
           className="PostContentHeader-twitter-alike-social-media__sc-zy8jam-2 dyHMAc"
         >
           <div
-            className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 gILUNW"
+            className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 keDfGM"
             data-testid="Avatar"
             size="SM"
           >
