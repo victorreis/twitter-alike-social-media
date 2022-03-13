@@ -37,13 +37,13 @@ export const TextToggle: React.FC<TextToggleProps> = (props): JSX.Element => {
 
       if (activeIndex === index) {
         return (
-          <TextToggleActiveButton key={nanoid()} onClick={() => {}}>
+          <TextToggleActiveButton key={nanoid()} onClick={() => {}} size="MD">
             {text}
           </TextToggleActiveButton>
         );
       }
       return (
-        <TextToggleButton key={nanoid()} onClick={handleClick}>
+        <TextToggleButton key={nanoid()} onClick={handleClick} size="MD">
           {text}
         </TextToggleButton>
       );

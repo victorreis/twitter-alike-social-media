@@ -74,21 +74,16 @@ exports[`repost component tests snapshot tests should render correctly 1`] = `
           @
           victor.reis
         </h4>
-        <span
-          className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 bsZKYT"
+        <h4
+          className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 cCEHbN"
           data-testid="Typography"
         >
-          -
-        </span>
-        <span
-          className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 bsZKYT"
-          data-testid="Typography"
-        >
+          - 
           March 13, 2022
-        </span>
+        </h4>
       </div>
       <span
-        className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 bsZKYT PostText-twitter-alike-social-media__sc-zy8jam-4 jMMOQu"
+        className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 bsZKYT PostText-twitter-alike-social-media__sc-zy8jam-4 kKAkLD"
         data-testid="Post_text"
       >
         <span>
@@ -105,14 +100,15 @@ exports[`repost component tests snapshot tests should render correctly 1`] = `
         </span>
       </span>
       <div
-        className="PostContentButtonsContainer-twitter-alike-social-media__sc-zy8jam-5 eLbLUq"
+        className="PostContentButtonsContainer-twitter-alike-social-media__sc-zy8jam-5 MfVXl"
       >
         <button
-          className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 ihYxqp"
+          className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 fBnyBV"
           data-testid="Button"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
+          size="LG"
           type="button"
         >
           Repost
@@ -124,11 +120,12 @@ exports[`repost component tests snapshot tests should render correctly 1`] = `
           9
         </span>
         <button
-          className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 ihYxqp"
+          className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 fBnyBV"
           data-testid="Button"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
+          size="LG"
           type="button"
         >
           Quote post

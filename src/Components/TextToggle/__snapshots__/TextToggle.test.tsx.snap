@@ -2,35 +2,38 @@
 
 exports[`textToggle component tests snapshot tests should render correctly 1`] = `
 <div
-  className="TextToggleContainer-twitter-alike-social-media__sc-oz9uiz-0 cDQgIf"
+  className="TextToggleContainer-twitter-alike-social-media__sc-oz9uiz-0 mIkpa"
   data-testid="TextToggle"
 >
   <button
-    className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 ihYxqp TextToggleActiveButton-twitter-alike-social-media__sc-oz9uiz-1 dKHSqV"
+    className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 hdSPNA TextToggleActiveButton-twitter-alike-social-media__sc-oz9uiz-1 kUSULk"
     data-testid="Button"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
+    size="MD"
     type="button"
   >
     teste1
   </button>
   <button
-    className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 ihYxqp TextToggleActiveButton-twitter-alike-social-media__sc-oz9uiz-1 TextToggleButton-twitter-alike-social-media__sc-oz9uiz-2 dKHSqV bZcuRa"
+    className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 hdSPNA TextToggleActiveButton-twitter-alike-social-media__sc-oz9uiz-1 TextToggleButton-twitter-alike-social-media__sc-oz9uiz-2 kUSULk kqflPP"
     data-testid="Button"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
+    size="MD"
     type="button"
   >
     teste2
   </button>
   <button
-    className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 ihYxqp TextToggleActiveButton-twitter-alike-social-media__sc-oz9uiz-1 TextToggleButton-twitter-alike-social-media__sc-oz9uiz-2 dKHSqV bZcuRa"
+    className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 hdSPNA TextToggleActiveButton-twitter-alike-social-media__sc-oz9uiz-1 TextToggleButton-twitter-alike-social-media__sc-oz9uiz-2 kUSULk kqflPP"
     data-testid="Button"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
+    size="MD"
     type="button"
   >
     teste3
