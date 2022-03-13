@@ -1,8 +1,16 @@
 import { TestProps } from '../../Config/Tests/Test.types';
+import { Size } from '../../Theme/Types';
 import { FeedbackColor } from '../../Theme/Types/Colors.types';
 
 export const availableButtonTypes = ['button', 'submit'] as const;
 export type ButtonType = typeof availableButtonTypes[number];
+
+export const availableButtonSizes: ReadonlyArray<Extract<Size, 'MD' | 'LG'>> = [
+  'MD',
+  'LG',
+] as const;
+export type ButtonSize = typeof availableButtonSizes[number];
+export type ButtonSizes = Record<ButtonSize, string>;
 
 export interface RequiredButtonProps {
   /**
@@ -22,6 +30,12 @@ export interface DefaultButtonProps {
    * @default 'button'.
    */
   type?: ButtonType;
+
+  /**
+   * Sets the button size.
+   * @default 'LG'.
+   */
+  size?: ButtonSize;
 }
 
 export interface OptionalButtonProps {
