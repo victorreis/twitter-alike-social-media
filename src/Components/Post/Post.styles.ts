@@ -13,7 +13,7 @@ const getPostBorders = ({
     return {
       borderWidth: '1px',
       borderStyle: 'solid',
-      borderColor: theme.colors.background.default.normal,
+      borderColor: theme.colors.background.default.light,
       borderRadius: 16,
     };
   }

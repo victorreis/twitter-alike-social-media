@@ -1,11 +1,14 @@
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
-export const Container = styled.div`
-  background-color: ${({ theme }) => theme.colors.background.default.darkest};
-  position: absolute;
-  width: 100%;
-  height: 100%;
+export const GlobalStyle = createGlobalStyle`
+  body {
+    overflow: hidden;
+  }
+`;
+
+export const ContainerScroll = styled.div`
   overflow-x: hidden;
+  overflow-y: scroll;
 
   &::-webkit-scrollbar {
     width: 10px;
@@ -25,9 +28,19 @@ export const Container = styled.div`
   }
 `;
 
-export const PageContainer = styled.div`
-  padding: 0 2rem;
-  margin-bottom: 5rem;
+export const Container = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: ${({ theme }) => theme.colors.background.default.darkest};
   overflow-x: hidden;
   overflow-y: hidden;
+`;
+
+export const PageContainer = styled(ContainerScroll)`
+  padding: 0 2rem;
+  height: 100%;
 `;

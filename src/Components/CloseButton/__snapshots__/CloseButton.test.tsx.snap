@@ -2,7 +2,7 @@
 
 exports[`closeButton component tests snapshot tests should render correctly 1`] = `
 <button
-  className="CloseButtonContainer-twitter-alike-social-media__sc-1gjf1sx-1 dIHxFQ"
+  className="CloseButtonContainer-twitter-alike-social-media__sc-1gjf1sx-1 jiZEDz"
   data-testid="CloseButton"
   onClick={[MockFunction]}
 >

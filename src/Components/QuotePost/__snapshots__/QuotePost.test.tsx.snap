@@ -65,7 +65,7 @@ exports[`quotePost component tests snapshot tests should render correctly 1`] = 
       </span>
     </span>
     <div
-      className="PostContainer-twitter-alike-social-media__sc-zy8jam-0 kxkYRC"
+      className="PostContainer-twitter-alike-social-media__sc-zy8jam-0 fEIXaV"
       data-testid="Post"
     >
       <div

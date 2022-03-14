@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import { FixedBarStyleProps } from './FixedBar.types';
 
 export const FixedBarContainer = styled.div<FixedBarStyleProps>`
-  position: -webkit-sticky;
-  position: sticky;
   display: flex;
   height: 3rem;
   top: 0;

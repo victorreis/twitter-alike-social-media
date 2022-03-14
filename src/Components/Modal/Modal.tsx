@@ -1,10 +1,6 @@
 import { TestProps } from '../../Config/Tests/Test.types';
 import { CloseButton } from '../CloseButton';
-import {
-  ModalBackdropContainer,
-  ModalContainer,
-  ModalContentContainer,
-} from './Modal.styles';
+import { ModalBackdropContainer, ModalContentContainer } from './Modal.styles';
 import { ModalProps, DefaultModalProps } from './Modal.types';
 
 export const modalDefaults: Required<DefaultModalProps> & Required<TestProps> =
@@ -22,7 +18,7 @@ export const Modal: React.FC<ModalProps> = (props): JSX.Element => {
   };
 
   return (
-    <ModalContainer data-testid={testID}>
+    <div data-testid={testID}>
       <ModalContentContainer data-testid={`${testID}_ModalContentContainer`}>
         <CloseButton onClick={handleClose} />
         {children}
@@ -32,6 +28,6 @@ export const Modal: React.FC<ModalProps> = (props): JSX.Element => {
         onClick={handleClose}
         {...others}
       />
-    </ModalContainer>
+    </div>
   );
 };

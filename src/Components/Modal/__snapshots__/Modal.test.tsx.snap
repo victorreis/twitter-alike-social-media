@@ -2,15 +2,14 @@
 
 exports[`modal component tests snapshot tests should render correctly 1`] = `
 <div
-  className="ModalContainer-twitter-alike-social-media__sc-1uzvib4-0 drtUWv"
   data-testid="Modal"
 >
   <div
-    className="ModalContentContainer-twitter-alike-social-media__sc-1uzvib4-2 hyvUiz"
+    className="ModalContentContainer-twitter-alike-social-media__sc-1uzvib4-1 guHovc"
     data-testid="Modal_ModalContentContainer"
   >
     <button
-      className="CloseButtonContainer-twitter-alike-social-media__sc-1gjf1sx-1 dIHxFQ"
+      className="CloseButtonContainer-twitter-alike-social-media__sc-1gjf1sx-1 jiZEDz"
       data-testid="CloseButton"
       onClick={[Function]}
     >
@@ -45,7 +44,7 @@ exports[`modal component tests snapshot tests should render correctly 1`] = `
     text
   </div>
   <div
-    className="ModalBackdropContainer-twitter-alike-social-media__sc-1uzvib4-1 kvBLvT"
+    className="ModalBackdropContainer-twitter-alike-social-media__sc-1uzvib4-0 fAJgOJ"
     data-testid="Modal_ModalBackdropContainer"
     onClick={[Function]}
   />

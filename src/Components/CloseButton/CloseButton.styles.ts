@@ -20,7 +20,7 @@ export const CloseButtonContainer = styled.button<CloseButtonStyleProps>`
   width: 2.5rem;
   height: 2.5rem;
   margin-top: -1.5rem;
-  margin-right: -1.5rem;
+  margin-right: -1rem;
   align-self: flex-end;
   border: 0;
   filter: drop-shadow(
