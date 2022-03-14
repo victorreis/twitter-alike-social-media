@@ -16,7 +16,7 @@ export const QuotePost: React.FC<QuotePostProps> = (props): JSX.Element => {
   } = props;
 
   return (
-    <Post data-testid={testID} {...others}>
+    <Post data-testid={testID} {...others} type="Post">
       <Post compact {...originalPost} />
     </Post>
   );

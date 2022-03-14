@@ -22,6 +22,7 @@ describe('repost component tests', () => {
     followers: 777,
   };
   const post: PostType = {
+    type: 'Post',
     id: 'post123',
     text: `first line\nsecond line\nthird line`,
     createdAt: new Date(),
@@ -30,6 +31,7 @@ describe('repost component tests', () => {
     quotPosts: 99,
   };
   const repost: RepostType = {
+    type: 'Repost',
     id: 'post123',
     createdAt: new Date(),
     createdBy: userTeste,

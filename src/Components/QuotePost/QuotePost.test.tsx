@@ -31,6 +31,7 @@ describe('quotePost component tests', () => {
     followers: 77,
   };
   const originalPost: PostType = {
+    type: 'Post',
     id: 'post123',
     text: `first line\nsecond line\nthird line`,
     createdAt: new Date(),
@@ -39,6 +40,7 @@ describe('quotePost component tests', () => {
     quotPosts: 99,
   };
   const quotePost: QuotePostType = {
+    type: 'QuotePost',
     originalPost,
     id: 'post123',
     text: `first line\nsecond line\nthird line`,

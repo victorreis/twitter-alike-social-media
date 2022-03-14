@@ -21,6 +21,7 @@ describe('post component tests', () => {
     followers: 777,
   };
   const post: PostType = {
+    type: 'Post',
     id: 'post123',
     text: `first line\nsecond line\nthird line`,
     createdAt: new Date(),
