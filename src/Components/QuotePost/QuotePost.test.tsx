@@ -1,3 +1,5 @@
+import dayjs from 'dayjs';
+
 import {
   renderJestDomCreator,
   renderRTRCreator,
@@ -16,7 +18,7 @@ describe('quotePost component tests', () => {
     nickname: 'victor.reis',
     url: '...',
     thumbnailUrl: 'https://i.pravatar.cc/300',
-    createdAt: new Date(),
+    createdAt: dayjs('01-01-2011', 'MM-DD-YYYY').toDate(),
     following: 333,
     followers: 777,
   };
@@ -26,7 +28,7 @@ describe('quotePost component tests', () => {
     nickname: 'another.user',
     url: '...',
     thumbnailUrl: 'https://i.pravatar.cc/300',
-    createdAt: new Date(),
+    createdAt: dayjs('01-01-2011', 'MM-DD-YYYY').toDate(),
     following: 33,
     followers: 77,
   };
@@ -34,7 +36,7 @@ describe('quotePost component tests', () => {
     type: 'Post',
     id: 'post123',
     text: `first line\nsecond line\nthird line`,
-    createdAt: new Date(),
+    createdAt: dayjs('01-01-2011', 'MM-DD-YYYY').toDate(),
     createdBy: originalPostUser,
     reposts: 9,
     quotPosts: 99,
@@ -44,7 +46,7 @@ describe('quotePost component tests', () => {
     originalPost,
     id: 'post123',
     text: `first line\nsecond line\nthird line`,
-    createdAt: new Date(),
+    createdAt: dayjs('01-01-2011', 'MM-DD-YYYY').toDate(),
     createdBy: user,
     reposts: 9,
     quotPosts: 99,

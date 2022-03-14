@@ -5,6 +5,7 @@ exports[`repost component tests snapshot tests should render correctly 1`] = `
   className="RepostContainer-twitter-alike-social-media__sc-dgb1yt-0 efDaFT"
   data-testid="Repost"
   id="post123"
+  type="Repost"
 >
   <div
     className="RepostTextContainer-twitter-alike-social-media__sc-dgb1yt-1 lNuFn"
@@ -39,6 +40,7 @@ exports[`repost component tests snapshot tests should render correctly 1`] = `
   <div
     className="PostContainer-twitter-alike-social-media__sc-zy8jam-0 kqSmiT"
     data-testid="Post"
+    type="Post"
   >
     <div
       className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 kiwhFQ"
@@ -80,7 +82,7 @@ exports[`repost component tests snapshot tests should render correctly 1`] = `
           data-testid="Typography"
         >
           - 
-          March 13, 2022
+          January 1, 2011
         </h4>
       </div>
       <span

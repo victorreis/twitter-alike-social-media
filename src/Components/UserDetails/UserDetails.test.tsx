@@ -1,3 +1,5 @@
+import dayjs from 'dayjs';
+
 import {
   renderJestDomCreator,
   renderRTRCreator,
@@ -15,7 +17,7 @@ describe('userDetails component tests', () => {
     nickname: 'victor.reis',
     url: '...',
     thumbnailUrl: 'https://i.pravatar.cc/300',
-    createdAt: new Date(),
+    createdAt: dayjs('01-01-2011', 'MM-DD-YYYY').toDate(),
     following: 333,
     followers: 777,
   };

@@ -4,6 +4,7 @@ exports[`post component tests snapshot tests should render correctly 1`] = `
 <div
   className="PostContainer-twitter-alike-social-media__sc-zy8jam-0 kqSmiT"
   data-testid="Post"
+  type="Post"
 >
   <div
     className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 kiwhFQ"
@@ -45,7 +46,7 @@ exports[`post component tests snapshot tests should render correctly 1`] = `
         data-testid="Typography"
       >
         - 
-        March 13, 2022
+        January 1, 2011
       </h4>
     </div>
     <span

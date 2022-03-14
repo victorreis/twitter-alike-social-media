@@ -62,7 +62,7 @@ exports[`userDetails component tests snapshot tests should render correctly 1`] 
       data-testid="Typography"
     >
       Joined 
-      March 13, 2022
+      January 1, 2011
     </span>
     <br />
     <span

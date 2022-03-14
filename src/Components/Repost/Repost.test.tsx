@@ -1,3 +1,5 @@
+import dayjs from 'dayjs';
+
 import {
   renderJestDomCreator,
   renderRTRCreator,
@@ -17,7 +19,7 @@ describe('repost component tests', () => {
     nickname: 'victor.reis',
     url: '...',
     thumbnailUrl: 'https://i.pravatar.cc/300',
-    createdAt: new Date(),
+    createdAt: dayjs('01-01-2011', 'MM-DD-YYYY').toDate(),
     following: 333,
     followers: 777,
   };
@@ -25,7 +27,7 @@ describe('repost component tests', () => {
     type: 'Post',
     id: 'post123',
     text: `first line\nsecond line\nthird line`,
-    createdAt: new Date(),
+    createdAt: dayjs('01-01-2011', 'MM-DD-YYYY').toDate(),
     createdBy: userTeste,
     reposts: 9,
     quotPosts: 99,
@@ -33,7 +35,7 @@ describe('repost component tests', () => {
   const repost: RepostType = {
     type: 'Repost',
     id: 'post123',
-    createdAt: new Date(),
+    createdAt: dayjs('01-01-2011', 'MM-DD-YYYY').toDate(),
     createdBy: userTeste,
     originalPost: post,
   };
