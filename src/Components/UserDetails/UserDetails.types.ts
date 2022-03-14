@@ -1,5 +1,5 @@
 import { TestProps } from '../../Config/Tests/Test.types';
-import { UserType } from '../../User.types';
+import { UserType } from '../../Models/User.types';
 
 export interface RequiredUserDetailsProps {
   /**

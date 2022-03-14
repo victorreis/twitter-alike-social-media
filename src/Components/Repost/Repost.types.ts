@@ -1,5 +1,5 @@
 import { TestProps } from '../../Config/Tests/Test.types';
-import { RepostType } from '../../Repost.types';
+import { RepostType } from '../../Models/Repost.types';
 
 export interface RequiredRepostProps {}
 

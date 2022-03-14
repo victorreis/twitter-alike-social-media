@@ -5,9 +5,9 @@ import {
   renderRTRCreator,
   screen,
 } from '../../Config/Tests/GlobalSetup.config';
-import { PostType } from '../../Post.types';
-import { RepostType } from '../../Repost.types';
-import { UserType } from '../../User.types';
+import { PostType } from '../../Models/Post.types';
+import { RepostType } from '../../Models/Repost.types';
+import { UserType } from '../../Models/User.types';
 import { postDefaults } from '../Post';
 import { Repost, repostDefaults } from './Repost';
 import { RepostProps } from './Repost.types';

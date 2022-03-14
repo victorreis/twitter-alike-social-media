@@ -1,5 +1,5 @@
 import { TestProps } from '../../Config/Tests/Test.types';
-import { QuotePostType } from '../../QuotePost.types';
+import { QuotePostType } from '../../Models/QuotePost.types';
 
 export interface RequiredQuotePostProps {}
 

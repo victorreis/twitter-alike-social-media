@@ -5,8 +5,8 @@ import {
   renderRTRCreator,
   screen,
 } from '../../Config/Tests/GlobalSetup.config';
+import { UserType } from '../../Models/User.types';
 import { themes } from '../../Theme/CustomThemeProvider';
-import { UserType } from '../../User.types';
 import { UserDetails, userDetailsDefaults } from './UserDetails';
 import { UserDetailsProps } from './UserDetails.types';
 

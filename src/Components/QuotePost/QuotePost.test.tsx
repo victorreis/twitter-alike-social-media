@@ -5,9 +5,9 @@ import {
   renderRTRCreator,
   screen,
 } from '../../Config/Tests/GlobalSetup.config';
-import { PostType } from '../../Post.types';
-import { QuotePostType } from '../../QuotePost.types';
-import { UserType } from '../../User.types';
+import { PostType } from '../../Models/Post.types';
+import { QuotePostType } from '../../Models/QuotePost.types';
+import { UserType } from '../../Models/User.types';
 import { QuotePost, quotePostDefaults } from './QuotePost';
 import { QuotePostProps } from './QuotePost.types';
 
