@@ -2,14 +2,14 @@ import styled from 'styled-components';
 
 import { Typography } from '../../Components/Typography';
 
-export const HomeTitle = styled(Typography)`
-  margin: 0;
-`;
-
 export const HomeContainer = styled.div`
   display: flex;
   flex-direction: row;
   column-gap: 1rem;
+`;
+
+export const HomeTitle = styled(Typography)`
+  margin: 0;
 `;
 
 export const HomeVerticalMenu = styled.div`

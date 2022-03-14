@@ -1,12 +1,15 @@
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 
 import dayjs from 'dayjs';
 import { nanoid } from 'nanoid';
 
 import { TestProps } from '../../Config/Tests/Test.types';
+// eslint-disable-next-line import/no-cycle
+import { User } from '../../Pages/User';
 import { TypographyVariant } from '../../Theme/Types/Typographies.types';
 import { Avatar } from '../Avatar';
 import { Button, ButtonSize } from '../Button';
+import { Modal } from '../Modal';
 import { Typography } from '../Typography';
 import {
   PostContainer,
@@ -38,6 +41,12 @@ export const Post: React.FC<PostProps> = (props): JSX.Element => {
     ...others
   } = props;
 
+  const [open, setOpen] = useState(false);
+
+  const handleOpenClose = () => {
+    setOpen((prevState) => !prevState);
+  };
+
   const { name, nickname, thumbnailUrl } = createdBy;
 
   const formattedDate = dayjs(createdAt).format('MMMM D, YYYY');
@@ -61,6 +70,17 @@ export const Post: React.FC<PostProps> = (props): JSX.Element => {
     [text]
   );
 
+  const renderAvatar = () => {
+    return (
+      <Avatar
+        name={name}
+        onClick={handleOpenClose}
+        size={compact ? 'SM' : 'MD'}
+        thumbnailUrl={thumbnailUrl}
+      />
+    );
+  };
+
   return (
     <PostContainer
       key={id}
@@ -69,13 +89,18 @@ export const Post: React.FC<PostProps> = (props): JSX.Element => {
       style={style}
       {...others}
     >
-      {!compact && <Avatar name={name} thumbnailUrl={thumbnailUrl} />}
+      {!compact && renderAvatar()}
+
+      {open && (
+        <Modal onClose={handleOpenClose}>
+          <User />
+        </Modal>
+      )}
 
       <PostContent>
         <PostContentHeader>
-          {compact && (
-            <Avatar name={name} size="SM" thumbnailUrl={thumbnailUrl} />
-          )}
+          {compact && renderAvatar()}
+
           <PostContentTitle variant={userNameVariant}>{name}</PostContentTitle>
           <PostContentTitle variant={userInfoVariant}>
             @{nickname}

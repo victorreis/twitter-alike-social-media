@@ -41,7 +41,7 @@ exports[`repost component tests snapshot tests should render correctly 1`] = `
     data-testid="Post"
   >
     <div
-      className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 gejhQE"
+      className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 kiwhFQ"
       data-testid="Avatar"
       size="MD"
     >
@@ -49,6 +49,7 @@ exports[`repost component tests snapshot tests should render correctly 1`] = `
         alt="Victor Reis's avatar photo."
         className="AvatarImage-twitter-alike-social-media__sc-ne4tqs-1 dnbueO"
         data-testid="Avatar_image"
+        onClick={[Function]}
         onError={[Function]}
         size="MD"
         src="https://i.pravatar.cc/300"

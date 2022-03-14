@@ -36,6 +36,7 @@ export const AvatarContainer = styled.div<AvatarStyleProps>`
   place-items: center;
   box-sizing: border-box;
   padding: 2px;
+  cursor: pointer;
 
   ${getAvatarContainerDimensions};
 `;

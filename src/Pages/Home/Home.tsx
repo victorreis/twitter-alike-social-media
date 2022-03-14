@@ -1,6 +1,9 @@
+import { useState } from 'react';
+
 import { PageContainer } from '../../App.styles';
 import { Button } from '../../Components/Button';
 import { FixedBar } from '../../Components/FixedBar';
+import { Modal } from '../../Components/Modal';
 import { Post } from '../../Components/Post';
 import { PostCreator } from '../../Components/PostCreator';
 import { QuotePost } from '../../Components/QuotePost';
@@ -12,6 +15,7 @@ import { PostType } from '../../Post.types';
 import { QuotePostType } from '../../QuotePost.types';
 import { RepostType } from '../../Repost.types';
 import { UserType } from '../../User.types';
+import { User } from '../User';
 import { HomeFeedContainer, HomeTitle, HomeVerticalMenu } from './Home.styles';
 
 export const homeDefaults: Required<TestProps> = {
@@ -19,6 +23,12 @@ export const homeDefaults: Required<TestProps> = {
 };
 
 export const Home: React.FC = (): JSX.Element => {
+  const [open, setOpen] = useState(false);
+
+  const handleOpenClose = () => {
+    setOpen((prevState) => !prevState);
+  };
+
   const userTeste: UserType = {
     id: 'user123',
     name: 'Victor Reis',
@@ -58,8 +68,13 @@ export const Home: React.FC = (): JSX.Element => {
       <HomeVerticalMenu>
         <HomeTitle variant="h2">Posterr</HomeTitle>
         <Typography>Home</Typography>
-        <Typography>Profile</Typography>
+        <Typography onClick={handleOpenClose}>Profile</Typography>
         <Button onClick={() => {}}>POST</Button>
+        {open && (
+          <Modal onClose={handleOpenClose}>
+            <User />
+          </Modal>
+        )}
       </HomeVerticalMenu>
 
       <HomeFeedContainer>

@@ -120,6 +120,7 @@ module.exports = {
         groups: ['/^react/', 'module', ['parent', 'sibling', 'index']],
       },
     ],
+    'import/no-cycle': 0,
     'jest/no-conditional-expect': 0,
     'jest/no-hooks': 0,
     'jest/require-hook': 0,

@@ -1,12 +1,16 @@
 import { FC } from 'react';
 
-import { Container } from './App.styles';
+import { Container, GlobalStyle } from './App.styles';
+import { Home } from './Pages/Home';
 import { CustomThemeProvider } from './Theme/CustomThemeProvider';
 
 export const App: FC = (): JSX.Element => {
   return (
     <CustomThemeProvider>
-      <Container data-testid="container">hello world</Container>
+      <GlobalStyle />
+      <Container data-testid="container">
+        <Home />
+      </Container>
     </CustomThemeProvider>
   );
 };

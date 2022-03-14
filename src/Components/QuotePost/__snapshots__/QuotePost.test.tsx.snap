@@ -6,7 +6,7 @@ exports[`quotePost component tests snapshot tests should render correctly 1`] = 
   data-testid="QuotePost"
 >
   <div
-    className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 gejhQE"
+    className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 kiwhFQ"
     data-testid="Avatar"
     size="MD"
   >
@@ -14,6 +14,7 @@ exports[`quotePost component tests snapshot tests should render correctly 1`] = 
       alt="Another User's avatar photo."
       className="AvatarImage-twitter-alike-social-media__sc-ne4tqs-1 dnbueO"
       data-testid="Avatar_image"
+      onClick={[Function]}
       onError={[Function]}
       size="MD"
       src="https://i.pravatar.cc/300"
@@ -75,7 +76,7 @@ exports[`quotePost component tests snapshot tests should render correctly 1`] = 
           className="PostContentHeader-twitter-alike-social-media__sc-zy8jam-2 dyHMAc"
         >
           <div
-            className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 keDfGM"
+            className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 fXaazY"
             data-testid="Avatar"
             size="SM"
           >
@@ -83,6 +84,7 @@ exports[`quotePost component tests snapshot tests should render correctly 1`] = 
               alt="Victor Reis's avatar photo."
               className="AvatarImage-twitter-alike-social-media__sc-ne4tqs-1 huWvgW"
               data-testid="Avatar_image"
+              onClick={[Function]}
               onError={[Function]}
               size="SM"
               src="https://i.pravatar.cc/300"
