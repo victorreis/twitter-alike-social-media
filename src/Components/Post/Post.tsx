@@ -3,6 +3,7 @@ import { useMemo, useState } from 'react';
 import dayjs from 'dayjs';
 import { nanoid } from 'nanoid';
 
+import { EXTENDED_DATE_FORMAT } from '../../Config/Constants';
 import { TestProps } from '../../Config/Tests/Test.types';
 // eslint-disable-next-line import/no-cycle
 import { User } from '../../Pages/User';
@@ -49,7 +50,7 @@ export const Post: React.FC<PostProps> = (props): JSX.Element => {
 
   const { name, nickname, thumbnailUrl } = createdBy;
 
-  const formattedDate = dayjs(createdAt).format('MMMM D, YYYY');
+  const formattedDate = dayjs(createdAt).format(EXTENDED_DATE_FORMAT);
 
   const userNameVariant: TypographyVariant = compact ? 'h5' : 'h4';
   const userInfoVariant: TypographyVariant = compact

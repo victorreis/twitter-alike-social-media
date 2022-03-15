@@ -1,5 +1,6 @@
 import dayjs from 'dayjs';
 
+import { SHORT_DATE_FORMAT } from '../../Config/Constants';
 import {
   renderJestDomCreator,
   renderRTRCreator,
@@ -18,7 +19,7 @@ describe('post component tests', () => {
     nickname: 'victor.reis',
     url: '...',
     thumbnailUrl: 'https://i.pravatar.cc/300',
-    createdAt: dayjs('01-01-2011', 'MM-DD-YYYY').toDate(),
+    createdAt: dayjs('01-01-2011', SHORT_DATE_FORMAT).toDate(),
     following: 333,
     followers: 777,
   };
@@ -26,7 +27,7 @@ describe('post component tests', () => {
     type: 'Post',
     id: 'post123',
     text: `first line\nsecond line\nthird line`,
-    createdAt: dayjs('01-01-2011', 'MM-DD-YYYY').toDate(),
+    createdAt: dayjs('01-01-2011', SHORT_DATE_FORMAT).toDate(),
     createdBy: userTeste,
     reposts: 9,
     quotPosts: 99,

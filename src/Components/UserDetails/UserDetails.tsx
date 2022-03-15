@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import dayjs from 'dayjs';
 
+import { EXTENDED_DATE_FORMAT } from '../../Config/Constants';
 import { TestProps } from '../../Config/Tests/Test.types';
 import { FeedbackColor } from '../../Theme/Types/Colors.types';
 import { Avatar } from '../Avatar';
@@ -39,7 +40,7 @@ export const UserDetails: React.FC<UserDetailsProps> = (props): JSX.Element => {
     Boolean(userIsFollowing)
   );
 
-  const formattedDate = dayjs(createdAt).format('MMMM D, YYYY');
+  const formattedDate = dayjs(createdAt).format(EXTENDED_DATE_FORMAT);
   const buttonText = isFollowing ? 'FOLLOWING' : 'FOLLOW';
   const buttonHoverText = isFollowing ? 'UNFOLLOW' : '';
   const buttonHoverFeedbackColor: FeedbackColor = isFollowing
