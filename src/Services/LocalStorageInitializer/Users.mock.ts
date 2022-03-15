@@ -1,10 +1,10 @@
 import dayjs from 'dayjs';
 import { nanoid } from 'nanoid';
 
+import { SHORT_DATE_FORMAT } from '../../Config/Constants';
 import { UserType } from '../../Models/User.types';
 
 export const getRandomNumber = (max = 777) => Math.round(Math.random() * max);
-export const dateFormat = 'MM-DD-YYYY';
 
 export const LOGGED_IN_USER_ID = '1';
 export const LOGGED_IN_USER: UserType = {
@@ -13,7 +13,7 @@ export const LOGGED_IN_USER: UserType = {
   nickname: 'victor.reis',
   url: 'https://i.pravatar.cc/500',
   thumbnailUrl: 'https://i.pravatar.cc/100',
-  createdAt: dayjs('01-01-2011', 'MM-DD-YYYY').toDate(),
+  createdAt: dayjs('01-01-2011', SHORT_DATE_FORMAT).toDate(),
   following: getRandomNumber(),
   followers: getRandomNumber(),
 };
@@ -26,7 +26,7 @@ export const mockedUsers: UserType[] = [
     nickname: 'user.two',
     url: 'https://i.pravatar.cc/500',
     thumbnailUrl: 'https://i.pravatar.cc/100',
-    createdAt: dayjs('02-02-2012', 'MM-DD-YYYY').toDate(),
+    createdAt: dayjs('02-02-2012', SHORT_DATE_FORMAT).toDate(),
     following: getRandomNumber(),
     followers: getRandomNumber(),
   },
@@ -36,7 +36,7 @@ export const mockedUsers: UserType[] = [
     nickname: 'user.three',
     url: 'https://i.pravatar.cc/500',
     thumbnailUrl: 'https://i.pravatar.cc/100',
-    createdAt: dayjs('03-03-2013', 'MM-DD-YYYY').toDate(),
+    createdAt: dayjs('03-03-2013', SHORT_DATE_FORMAT).toDate(),
     following: getRandomNumber(),
     followers: getRandomNumber(),
   },
@@ -46,7 +46,7 @@ export const mockedUsers: UserType[] = [
     nickname: 'user.four',
     url: 'https://i.pravatar.cc/500',
     thumbnailUrl: 'https://i.pravatar.cc/100',
-    createdAt: dayjs('04-04-2014', 'MM-DD-YYYY').toDate(),
+    createdAt: dayjs('04-04-2014', SHORT_DATE_FORMAT).toDate(),
     following: getRandomNumber(),
     followers: getRandomNumber(),
   },
@@ -56,7 +56,7 @@ export const mockedUsers: UserType[] = [
     nickname: 'user.five',
     url: 'https://i.pravatar.cc/500',
     thumbnailUrl: 'https://i.pravatar.cc/100',
-    createdAt: dayjs('05-05-2015', 'MM-DD-YYYY').toDate(),
+    createdAt: dayjs('05-05-2015', SHORT_DATE_FORMAT).toDate(),
     following: getRandomNumber(),
     followers: getRandomNumber(),
   },
@@ -66,7 +66,7 @@ export const mockedUsers: UserType[] = [
     nickname: 'user.six',
     url: 'https://i.pravatar.cc/500',
     thumbnailUrl: 'https://i.pravatar.cc/100',
-    createdAt: dayjs('06-06-2016', 'MM-DD-YYYY').toDate(),
+    createdAt: dayjs('06-06-2016', SHORT_DATE_FORMAT).toDate(),
     following: getRandomNumber(),
     followers: getRandomNumber(),
   },
@@ -76,7 +76,7 @@ export const mockedUsers: UserType[] = [
     nickname: 'user.seven',
     url: 'https://i.pravatar.cc/500',
     thumbnailUrl: 'https://i.pravatar.cc/100',
-    createdAt: dayjs('07-07-2017', 'MM-DD-YYYY').toDate(),
+    createdAt: dayjs('07-07-2017', SHORT_DATE_FORMAT).toDate(),
     following: getRandomNumber(),
     followers: getRandomNumber(),
   },

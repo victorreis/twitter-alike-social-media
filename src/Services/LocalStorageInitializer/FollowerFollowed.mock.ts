@@ -1,10 +1,10 @@
 import { nanoid } from 'nanoid';
 
+import { FollowerFollowedType } from '../../Models/FollowerFollowed.types';
 import { UserType } from '../../Models/User.types';
-import { FollowerFollowed } from './LocalStorageInitializer.service.type';
 import { LOGGED_IN_USER, mockedUsers } from './Users.mock';
 
-export const mockedFollowerFolloweds: FollowerFollowed[] = [
+export const mockedFollowerFolloweds: FollowerFollowedType[] = [
   {
     id: nanoid(),
     follower: mockedUsers[1] as UserType,
