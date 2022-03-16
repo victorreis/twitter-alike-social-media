@@ -1,16 +1,14 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 
 import dayjs from 'dayjs';
 import { nanoid } from 'nanoid';
 
 import { EXTENDED_DATE_FORMAT } from '../../Config/Constants';
 import { TestProps } from '../../Config/Tests/Test.types';
-// eslint-disable-next-line import/no-cycle
-import { User } from '../../Pages/User';
 import { TypographyVariant } from '../../Theme/Types/Typographies.types';
 import { Avatar } from '../Avatar';
 import { Button, ButtonSize } from '../Button';
-import { Modal } from '../Modal';
 import { Typography } from '../Typography';
 import {
   PostContainer,
@@ -42,13 +40,15 @@ export const Post: React.FC<PostProps> = (props): JSX.Element => {
     ...others
   } = props;
 
-  const [open, setOpen] = useState(false);
-
-  const handleOpenClose = () => {
-    setOpen((prevState) => !prevState);
-  };
-
+  const navigate = useNavigate();
+  const { nickname: urlNickname } = useParams();
   const { name, nickname, thumbnailUrl } = createdBy;
+
+  const handleShowUserPage = () => {
+    if (urlNickname !== nickname) {
+      navigate(`/user/${nickname}`);
+    }
+  };
 
   const formattedDate = dayjs(createdAt).format(EXTENDED_DATE_FORMAT);
 
@@ -75,7 +75,7 @@ export const Post: React.FC<PostProps> = (props): JSX.Element => {
     return (
       <Avatar
         name={name}
-        onClick={handleOpenClose}
+        onClick={handleShowUserPage}
         size={compact ? 'SM' : 'MD'}
         thumbnailUrl={thumbnailUrl}
       />
@@ -91,12 +91,6 @@ export const Post: React.FC<PostProps> = (props): JSX.Element => {
       {...others}
     >
       {!compact && renderAvatar()}
-
-      {open && (
-        <Modal onClose={handleOpenClose}>
-          <User />
-        </Modal>
-      )}
 
       <PostContent>
         <PostContentHeader>

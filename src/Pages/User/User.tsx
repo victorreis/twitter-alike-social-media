@@ -1,4 +1,5 @@
-import { useState, useLayoutEffect } from 'react';
+import { useState, useEffect } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 
 import { PageContainer } from '../../App.styles';
 import { PostCreator } from '../../Components/PostCreator';
@@ -8,7 +9,6 @@ import { TestProps } from '../../Config/Tests/Test.types';
 import { useRenderPosts } from '../../Hooks/RenderPosts';
 import { UserType } from '../../Models/User.types';
 import { PostTypes } from '../../Services/LocalStorageInitializer';
-import { LOGGED_IN_USER_ID } from '../../Services/LocalStorageInitializer/Users.mock';
 import { postRetrieverService } from '../../Services/PostRetriever';
 import { userRetrieverService } from '../../Services/UserRetriever';
 import { UserTabBar } from './User.styles';
@@ -17,30 +17,40 @@ export const userDefaults: Required<TestProps> = {
   testID: 'User',
 };
 
-export const User: React.FC = (): JSX.Element => {
-  const [posts, setPosts] = useState<PostTypes[]>([]);
+export const User: React.FC = (): JSX.Element | null => {
   const [user, setUser] = useState<UserType>();
+  const [posts, setPosts] = useState<PostTypes[]>([]);
   const { renderPosts } = useRenderPosts(posts);
 
-  useLayoutEffect(() => {
-    const loadedUser = userRetrieverService.getById(LOGGED_IN_USER_ID);
-    if (loadedUser) {
-      setUser(() => loadedUser);
-    }
+  const { nickname } = useParams();
+  const navigate = useNavigate();
 
-    const loadedPosts =
-      postRetrieverService.getAllCreatedByUser(LOGGED_IN_USER_ID);
+  useEffect(() => {
+    const loadedUser = userRetrieverService.getByNickname(String(nickname));
+    if (!loadedUser) {
+      navigate('/');
+      return;
+    }
+    setUser(() => loadedUser);
+
+    const loadedPosts = postRetrieverService.getAllCreatedByUser(loadedUser.id);
     setPosts(() => loadedPosts);
-  }, []);
+  }, [navigate, nickname]);
+
+  if (!user) {
+    return null;
+  }
+
+  const { name, thumbnailUrl } = user;
 
   return (
     <PageContainer data-testid={userDefaults.testID}>
-      {user && <UserDetails numberOfPosts={789} {...user} />}
+      <UserDetails {...user} />
 
       <PostCreator
-        name="Victor Reis"
+        name={name}
         onChange={() => {}}
-        thumbnailUrl="https://i.pravatar.cc/300"
+        thumbnailUrl={thumbnailUrl}
       />
 
       <UserTabBar>

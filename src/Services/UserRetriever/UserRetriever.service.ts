@@ -12,7 +12,12 @@ const getById = (userId: string): UserType | undefined => {
   return getAll().find((user) => user.id === userId);
 };
 
+const getByNickname = (nickname: string): UserType | undefined => {
+  return getAll().find((user) => user.nickname === nickname);
+};
+
 export const userRetrieverService: UserRetrieverService = {
   getAll,
   getById,
+  getByNickname,
 };

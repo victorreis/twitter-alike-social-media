@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { forwardRef, ForwardRefRenderFunction, useState } from 'react';
 
+import { POST_CREATOR_MAX_LENGTH } from '../../Config/Constants';
 import { TestProps } from '../../Config/Tests/Test.types';
 import { Avatar } from '../Avatar';
 import { Button } from '../Button';
@@ -17,7 +18,10 @@ export const postCreatorDefaults: Required<DefaultPostCreatorProps> &
   testID: 'PostCreator',
 };
 
-export const PostCreator: React.FC<PostCreatorProps> = (props): JSX.Element => {
+const PostCreatorComponent: ForwardRefRenderFunction<
+  HTMLTextAreaElement,
+  PostCreatorProps
+> = (props, ref) => {
   const {
     testID = postCreatorDefaults.testID,
     thumbnailUrl,
@@ -26,7 +30,6 @@ export const PostCreator: React.FC<PostCreatorProps> = (props): JSX.Element => {
     ...others
   } = props;
 
-  const maxlength = 777;
   const [value, setValue] = useState('');
   const [characterCounter, setCharacterCounter] = useState(0);
 
@@ -40,7 +43,8 @@ export const PostCreator: React.FC<PostCreatorProps> = (props): JSX.Element => {
       <PostCreatorHeader>
         <Avatar name={name} thumbnailUrl={thumbnailUrl} />
         <Textarea
-          maxLength={maxlength}
+          ref={ref}
+          maxLength={POST_CREATOR_MAX_LENGTH}
           onChange={handleChange}
           placeholder="What is happening?"
           value={value}
@@ -49,10 +53,12 @@ export const PostCreator: React.FC<PostCreatorProps> = (props): JSX.Element => {
 
       <PostCreatorFooter>
         <Typography>
-          {characterCounter} / {maxlength}{' '}
+          {characterCounter} / {POST_CREATOR_MAX_LENGTH}{' '}
         </Typography>
         <Button onClick={() => {}}>POST</Button>
       </PostCreatorFooter>
     </PostCreatorContainer>
   );
 };
+
+export const PostCreator = forwardRef(PostCreatorComponent);
