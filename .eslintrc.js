@@ -175,7 +175,7 @@ module.exports = {
     'react/jsx-indent-props': 0,
     'react/jsx-max-props-per-line': [2, { maximum: 1, when: 'multiline' }],
     'react/jsx-props-no-spreading': 0,
-    'react/jsx-max-depth': [2, { max: 3 }],
+    'react/jsx-max-depth': [2, { max: 4 }],
     'react/jsx-newline': 0,
     'react/jsx-no-bind': [
       2,

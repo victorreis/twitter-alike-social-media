@@ -1,6 +1,6 @@
 {
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=827846
-  "unwantedRecommendations": [],
+  "unwantedRecommendations": ["dbaeumer.vscode-eslint"],
   "recommendations": [
     "aaron-bond.better-comments",
     "bierner.emojisense",

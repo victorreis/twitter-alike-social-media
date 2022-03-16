@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`routerSwitch component tests snapshot tests should render correctly 1`] = `
+<main
+  data-testid="RouterSwitch"
+>
+  <div
+    className="ContainerScroll-twitter-alike-social-media__sc-q0f03s-0 PageContainer-twitter-alike-social-media__sc-q0f03s-2 iEbgwk hmrJtF"
+    data-testid="Home"
+  >
+    <nav>
+      <div
+        className="HomeVerticalMenu-twitter-alike-social-media__sc-yzia5e-2 iCpZvy"
+      >
+        <h2
+          className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 BTnQe HomeTitle-twitter-alike-social-media__sc-yzia5e-1 gKXhqI"
+          data-testid="Typography"
+        >
+          <a
+            aria-current="page"
+            className="active"
+            href="/"
+            onClick={[Function]}
+          >
+            Posterr
+          </a>
+        </h2>
+        <span
+          className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 bsZKYT"
+          data-testid="Typography"
+        >
+          <a
+            aria-current="page"
+            className="active"
+            href="/"
+            onClick={[Function]}
+          >
+            Home
+          </a>
+        </span>
+        <span
+          className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 bsZKYT"
+          data-testid="Typography"
+        >
+          <a
+            aria-current="page"
+            className="active"
+            href="/"
+            onClick={[Function]}
+          >
+            Profile
+          </a>
+        </span>
+        <button
+          className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 fBnyBV"
+          data-testid="Button"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          size="LG"
+          type="button"
+        >
+          POST
+        </button>
+      </div>
+    </nav>
+    <div
+      className="HomeFeedContainer-twitter-alike-social-media__sc-yzia5e-3 hPFclt"
+    >
+      <div
+        className="FixedBarContainer-twitter-alike-social-media__sc-1hwkltx-0 iJVjri"
+        data-testid="FixedBar"
+      >
+        <span
+          className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 bsZKYT"
+          data-testid="Typography"
+        >
+          Home
+        </span>
+        <div
+          className="TextToggleContainer-twitter-alike-social-media__sc-oz9uiz-0 mIkpa"
+          data-testid="TextToggle"
+        >
+          <button
+            className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 hdSPNA TextToggleActiveButton-twitter-alike-social-media__sc-oz9uiz-1 kUSULk"
+            data-testid="Button"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            size="MD"
+            type="button"
+          >
+            ALL
+          </button>
+          <button
+            className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 hdSPNA TextToggleActiveButton-twitter-alike-social-media__sc-oz9uiz-1 TextToggleButton-twitter-alike-social-media__sc-oz9uiz-2 kUSULk kqflPP"
+            data-testid="Button"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            size="MD"
+            type="button"
+          >
+            FOLLOWING
+          </button>
+        </div>
+      </div>
+      <div
+        className="PostCreatorContainer-twitter-alike-social-media__sc-r64v60-0 hgebJz"
+        data-testid="PostCreator"
+        onChange={[Function]}
+      >
+        <div
+          className="PostCreatorHeader-twitter-alike-social-media__sc-r64v60-1 dERajZ"
+        >
+          <div
+            className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 kiwhFQ"
+            data-testid="Avatar"
+            size="MD"
+          >
+            <img
+              alt="undefined's avatar photo."
+              className="AvatarImage-twitter-alike-social-media__sc-ne4tqs-1 dnbueO"
+              data-testid="Avatar_image"
+              onError={[Function]}
+              size="MD"
+              src="undefined"
+              title="undefined's avatar photo."
+            />
+          </div>
+          <textarea
+            className="StyledTextarea-twitter-alike-social-media__sc-12f32i7-0 ioqcrC"
+            data-testid="Textarea"
+            maxLength={777}
+            onChange={[Function]}
+            placeholder="What is happening?"
+            rows={4}
+            value=""
+          />
+        </div>
+        <div
+          className="PostCreatorFooter-twitter-alike-social-media__sc-r64v60-2 haUZSF"
+        >
+          <span
+            className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 bsZKYT"
+            data-testid="Typography"
+          >
+            0
+             / 
+            777
+             
+          </span>
+          <button
+            className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 fBnyBV"
+            data-testid="Button"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            size="LG"
+            type="button"
+          >
+            POST
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+`;
