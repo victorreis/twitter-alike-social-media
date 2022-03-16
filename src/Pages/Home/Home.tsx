@@ -23,9 +23,14 @@ export const homeDefaults: Required<TestProps> = {
 };
 
 export const Home: React.FC = (): JSX.Element => {
+  const ALL_INDEX = 0;
+  const FOLLOWING_INDEX = 1;
+
   const { nickname } = useParams();
   const navigate = useNavigate();
   const [open, setOpen] = useState(Boolean(nickname));
+
+  const [toggleActiveIndex, setToggleActiveIndex] = useState(0);
 
   const [loggedUser, setLoggedUser] = useState<UserType>();
   const [loadedPosts, setLoadedPosts] = useState<PostTypes[]>([]);
@@ -59,6 +64,18 @@ export const Home: React.FC = (): JSX.Element => {
     navigate('/');
   };
 
+  const handleTogglePostFilter = (index: number) => {
+    setToggleActiveIndex(() => index);
+
+    if (index === ALL_INDEX) {
+      const posts = postRetrieverService.getAll();
+      setLoadedPosts(() => posts);
+    } else if (index === FOLLOWING_INDEX && loggedUser) {
+      const posts = postRetrieverService.getAllFollowing(loggedUser.id);
+      setLoadedPosts(() => posts);
+    }
+  };
+
   return (
     <PageContainer data-testid={homeDefaults.testID}>
       {open && (
@@ -86,7 +103,11 @@ export const Home: React.FC = (): JSX.Element => {
       <HomeFeedContainer>
         <FixedBar justifyContent="space-between">
           <Typography>Home</Typography>
-          <TextToggle onToggle={() => {}} texts={['ALL', 'FOLLOWING']} />
+          <TextToggle
+            activeIndex={toggleActiveIndex}
+            onToggle={handleTogglePostFilter}
+            texts={['ALL', 'FOLLOWING']}
+          />
         </FixedBar>
 
         <PostCreator

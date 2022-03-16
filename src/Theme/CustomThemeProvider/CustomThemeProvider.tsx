@@ -43,9 +43,9 @@ export const CustomThemeProvider: React.FC<CustomThemeProviderProps> = (
 
   return (
     <ThemeContext.Provider data-testid={testID} value={providerValue}>
-      <BrowserRouter>
-        <ThemeProvider theme={theme}>{children}</ThemeProvider>
-      </BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <BrowserRouter>{children}</BrowserRouter>
+      </ThemeProvider>
     </ThemeContext.Provider>
   );
 };

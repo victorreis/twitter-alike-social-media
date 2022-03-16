@@ -42,5 +42,5 @@ export const Container = styled.div`
 
 export const PageContainer = styled(ContainerScroll)`
   padding: 0 2rem;
-  height: 100%;
+  height: 100vh;
 `;
