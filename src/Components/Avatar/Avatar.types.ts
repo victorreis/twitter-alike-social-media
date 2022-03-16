@@ -25,6 +25,12 @@ export interface DefaultAvatarProps {
    * @default 'MD'.
    */
   size?: AvatarSize;
+
+  /**
+   * Controls when the Avatar is clickable or not.
+   * @default true.
+   */
+  clickable?: boolean;
 }
 
 export interface OptionalAvatarProps {

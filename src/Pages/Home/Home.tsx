@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
-import { NavLink, useNavigate, useParams } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import { PageContainer } from '../../App.styles';
 import { Button } from '../../Components/Button';
@@ -10,6 +10,7 @@ import { TextToggle } from '../../Components/TextToggle';
 import { Typography } from '../../Components/Typography';
 import { TestProps } from '../../Config/Tests/Test.types';
 import { useRenderPosts } from '../../Hooks/RenderPosts';
+import { useShowUserPage } from '../../Hooks/ShowUserPage';
 import { UserType } from '../../Models/User.types';
 import { PostTypes } from '../../Services/LocalStorageInitializer';
 import { LOGGED_IN_USER_ID } from '../../Services/LocalStorageInitializer/Users.mock';
@@ -26,15 +27,17 @@ export const Home: React.FC = (): JSX.Element => {
   const ALL_INDEX = 0;
   const FOLLOWING_INDEX = 1;
 
-  const { nickname } = useParams();
-  const navigate = useNavigate();
-  const [open, setOpen] = useState(Boolean(nickname));
-
   const [toggleActiveIndex, setToggleActiveIndex] = useState(0);
 
   const [loggedUser, setLoggedUser] = useState<UserType>();
   const [loadedPosts, setLoadedPosts] = useState<PostTypes[]>([]);
-  const { renderPosts } = useRenderPosts(loadedPosts);
+  const { renderPosts } = useRenderPosts({
+    posts: loadedPosts,
+  });
+  const { openUserModal, handleCloseUserPage } = useShowUserPage({
+    nickname: loggedUser?.nickname,
+  });
+  const [open, setOpen] = useState(openUserModal);
 
   const postCreatorRef = useRef<HTMLTextAreaElement>(null);
   const handlePostButtonCLick = () => {
@@ -56,12 +59,12 @@ export const Home: React.FC = (): JSX.Element => {
   }, []);
 
   useEffect(() => {
-    setOpen(() => Boolean(nickname));
-  }, [nickname]);
+    setOpen(() => openUserModal);
+  }, [loggedUser?.nickname, openUserModal]);
 
   const handleCloseModal = () => {
     setOpen(() => false);
-    navigate('/');
+    handleCloseUserPage();
   };
 
   const handleTogglePostFilter = (index: number) => {
@@ -113,6 +116,7 @@ export const Home: React.FC = (): JSX.Element => {
         <PostCreator
           ref={postCreatorRef}
           name={String(loggedUser?.name)}
+          nickname={String(loggedUser?.nickname)}
           onChange={() => {}}
           thumbnailUrl={String(loggedUser?.thumbnailUrl)}
         />

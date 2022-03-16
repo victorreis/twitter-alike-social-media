@@ -6,7 +6,9 @@ import { QuotePostType } from '../../Models/QuotePost.types';
 import { RepostType } from '../../Models/Repost.types';
 import { PostTypes } from '../../Services/LocalStorageInitializer';
 
-export const useRenderPosts = (posts: PostTypes[]) => {
+export const useRenderPosts = (options: { posts: PostTypes[] }) => {
+  const { posts } = options;
+
   const renderPost = (post: PostType) => {
     return <Post key={post.id} {...post} />;
   };

@@ -1,11 +1,11 @@
 import { useMemo } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
 
 import dayjs from 'dayjs';
 import { nanoid } from 'nanoid';
 
 import { EXTENDED_DATE_FORMAT } from '../../Config/Constants';
 import { TestProps } from '../../Config/Tests/Test.types';
+import { useShowUserPage } from '../../Hooks/ShowUserPage';
 import { TypographyVariant } from '../../Theme/Types/Typographies.types';
 import { Avatar } from '../Avatar';
 import { Button, ButtonSize } from '../Button';
@@ -40,15 +40,10 @@ export const Post: React.FC<PostProps> = (props): JSX.Element => {
     ...others
   } = props;
 
-  const navigate = useNavigate();
-  const { nickname: urlNickname } = useParams();
   const { name, nickname, thumbnailUrl } = createdBy;
-
-  const handleShowUserPage = () => {
-    if (urlNickname !== nickname) {
-      navigate(`/user/${nickname}`);
-    }
-  };
+  const { handleShowUserPage, isAvatarClickable } = useShowUserPage({
+    nickname,
+  });
 
   const formattedDate = dayjs(createdAt).format(EXTENDED_DATE_FORMAT);
 
@@ -74,6 +69,7 @@ export const Post: React.FC<PostProps> = (props): JSX.Element => {
   const renderAvatar = () => {
     return (
       <Avatar
+        clickable={isAvatarClickable}
         name={name}
         onClick={handleShowUserPage}
         size={compact ? 'SM' : 'MD'}

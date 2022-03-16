@@ -7,7 +7,7 @@ exports[`post component tests snapshot tests should render correctly 1`] = `
   type="Post"
 >
   <div
-    className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 kiwhFQ"
+    className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 fMGQXn"
     data-testid="Avatar"
     size="MD"
   >

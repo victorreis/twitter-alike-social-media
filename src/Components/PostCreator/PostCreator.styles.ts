@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
-import { PostCreatorStyleProps } from './PostCreator.types';
-
-export const PostCreatorContainer = styled.div<PostCreatorStyleProps>`
+export const PostCreatorContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 16px;
@@ -12,13 +10,13 @@ export const PostCreatorContainer = styled.div<PostCreatorStyleProps>`
   border-bottom-color: ${({ theme }) => theme.colors.background.default.normal};
 `;
 
-export const PostCreatorHeader = styled.div<PostCreatorStyleProps>`
+export const PostCreatorHeader = styled.div`
   display: flex;
   column-gap: 1rem;
   justify-content: flex-end;
 `;
 
-export const PostCreatorFooter = styled.div<PostCreatorStyleProps>`
+export const PostCreatorFooter = styled.div`
   padding-top: 16px;
   display: flex;
   flex-direction: row;

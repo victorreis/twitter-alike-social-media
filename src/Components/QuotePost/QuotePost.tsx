@@ -8,12 +8,7 @@ export const quotePostDefaults: Required<DefaultQuotePostProps> &
 };
 
 export const QuotePost: React.FC<QuotePostProps> = (props): JSX.Element => {
-  const {
-    testID = quotePostDefaults.testID,
-    originalPost,
-
-    ...others
-  } = props;
+  const { testID = quotePostDefaults.testID, originalPost, ...others } = props;
 
   return (
     <Post data-testid={testID} {...others} type="Post">

@@ -2,6 +2,7 @@ import { forwardRef, ForwardRefRenderFunction, useState } from 'react';
 
 import { POST_CREATOR_MAX_LENGTH } from '../../Config/Constants';
 import { TestProps } from '../../Config/Tests/Test.types';
+import { useShowUserPage } from '../../Hooks/ShowUserPage';
 import { Avatar } from '../Avatar';
 import { Button } from '../Button';
 import { Textarea } from '../Textarea';
@@ -26,12 +27,17 @@ const PostCreatorComponent: ForwardRefRenderFunction<
     testID = postCreatorDefaults.testID,
     thumbnailUrl,
     name,
+    nickname,
     style,
     ...others
   } = props;
 
   const [value, setValue] = useState('');
   const [characterCounter, setCharacterCounter] = useState(0);
+
+  const { handleShowUserPage, isAvatarClickable } = useShowUserPage({
+    nickname,
+  });
 
   const handleChange = (newValue: string) => {
     setValue(newValue);
@@ -41,7 +47,12 @@ const PostCreatorComponent: ForwardRefRenderFunction<
   return (
     <PostCreatorContainer data-testid={testID} style={style} {...others}>
       <PostCreatorHeader>
-        <Avatar name={name} thumbnailUrl={thumbnailUrl} />
+        <Avatar
+          clickable={isAvatarClickable}
+          name={name}
+          onClick={handleShowUserPage}
+          thumbnailUrl={thumbnailUrl}
+        />
         <Textarea
           ref={ref}
           maxLength={POST_CREATOR_MAX_LENGTH}

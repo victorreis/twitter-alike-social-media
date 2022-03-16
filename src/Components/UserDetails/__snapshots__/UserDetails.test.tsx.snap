@@ -10,7 +10,7 @@ exports[`userDetails component tests snapshot tests should render correctly 1`] 
     className="UserDetailsHeader-twitter-alike-social-media__sc-1pkktdh-1 jPbomt"
   >
     <div
-      className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 hhzawU"
+      className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 jOfrBo"
       data-testid="Avatar"
       size="LG"
     >

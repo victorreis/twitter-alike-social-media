@@ -6,6 +6,11 @@ export interface RequiredPostCreatorProps {
    * Callback function that is called when the text is changed.
    */
   onChange: (newText: string) => void;
+
+  /**
+   * Callback function that is called when the text is changed.
+   */
+  nickname: string;
 }
 
 export interface DefaultPostCreatorProps {}

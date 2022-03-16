@@ -8,6 +8,7 @@ export const avatarDefaults: Required<DefaultAvatarProps> &
   Required<TestProps> = {
   testID: 'Avatar',
   size: 'MD',
+  clickable: true,
 };
 
 export const Avatar: React.FC<AvatarProps> = (props): JSX.Element => {
@@ -16,6 +17,7 @@ export const Avatar: React.FC<AvatarProps> = (props): JSX.Element => {
     size = avatarDefaults.size,
     thumbnailUrl,
     name,
+    clickable = avatarDefaults.clickable,
     style,
     ...others
   } = props;
@@ -42,6 +44,7 @@ export const Avatar: React.FC<AvatarProps> = (props): JSX.Element => {
       return (
         <AvatarImage
           alt={description}
+          clickable={clickable}
           data-testid={`${testID}_image`}
           onError={handleImageLoadingError}
           size={size}
@@ -71,7 +74,12 @@ export const Avatar: React.FC<AvatarProps> = (props): JSX.Element => {
   };
 
   return (
-    <AvatarContainer data-testid={testID} size={size} style={style}>
+    <AvatarContainer
+      clickable={clickable}
+      data-testid={testID}
+      size={size}
+      style={style}
+    >
       {renderImage()}
       {renderInitials()}
     </AvatarContainer>
