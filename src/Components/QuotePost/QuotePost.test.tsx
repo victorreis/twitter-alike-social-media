@@ -22,6 +22,7 @@ describe('quotePost component tests', () => {
     createdAt: dayjs('01-01-2011', SHORT_DATE_FORMAT).toDate(),
     following: 333,
     followers: 777,
+    numberOfPosts: 999,
   };
   const user: UserType = {
     id: 'user456',
@@ -32,6 +33,7 @@ describe('quotePost component tests', () => {
     createdAt: dayjs('01-01-2011', SHORT_DATE_FORMAT).toDate(),
     following: 33,
     followers: 77,
+    numberOfPosts: 999,
   };
   const originalPost: PostType = {
     type: 'Post',

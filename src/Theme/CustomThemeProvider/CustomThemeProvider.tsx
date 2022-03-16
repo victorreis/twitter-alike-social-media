@@ -1,4 +1,5 @@
 import { useMemo, useState, createContext } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
 import { ThemeProvider } from 'styled-components';
 
@@ -42,7 +43,9 @@ export const CustomThemeProvider: React.FC<CustomThemeProviderProps> = (
 
   return (
     <ThemeContext.Provider data-testid={testID} value={providerValue}>
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      <BrowserRouter>
+        <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      </BrowserRouter>
     </ThemeContext.Provider>
   );
 };

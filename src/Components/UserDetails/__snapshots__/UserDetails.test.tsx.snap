@@ -13,11 +13,6 @@ exports[`userDetails component tests snapshot tests should render correctly 1`] 
       className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 hhzawU"
       data-testid="Avatar"
       size="LG"
-      style={
-        Object {
-          "padding": 2,
-        }
-      }
     >
       <img
         alt="Victor Reis's avatar photo."

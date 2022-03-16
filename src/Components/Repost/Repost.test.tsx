@@ -23,6 +23,7 @@ describe('repost component tests', () => {
     createdAt: dayjs('01-01-2011', SHORT_DATE_FORMAT).toDate(),
     following: 333,
     followers: 777,
+    numberOfPosts: 999,
   };
   const post: PostType = {
     type: 'Post',

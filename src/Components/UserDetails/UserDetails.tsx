@@ -59,12 +59,7 @@ export const UserDetails: React.FC<UserDetailsProps> = (props): JSX.Element => {
   return (
     <UserDetailsContainer data-testid={testID} style={style} {...others}>
       <UserDetailsHeader>
-        <Avatar
-          name={name}
-          size="LG"
-          style={{ padding: 2 }}
-          thumbnailUrl={thumbnailUrl}
-        />
+        <Avatar name={name} size="LG" thumbnailUrl={thumbnailUrl} />
 
         <UserDetailsHeaderContent>
           {userIsFollowing !== undefined && (

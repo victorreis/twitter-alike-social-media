@@ -16,6 +16,7 @@ export const LOGGED_IN_USER: UserType = {
   createdAt: dayjs('01-01-2011', SHORT_DATE_FORMAT).toDate(),
   following: getRandomNumber(),
   followers: getRandomNumber(),
+  numberOfPosts: getRandomNumber(),
 };
 
 export const mockedUsers: UserType[] = [
@@ -29,6 +30,7 @@ export const mockedUsers: UserType[] = [
     createdAt: dayjs('02-02-2012', SHORT_DATE_FORMAT).toDate(),
     following: getRandomNumber(),
     followers: getRandomNumber(),
+    numberOfPosts: getRandomNumber(),
   },
   {
     id: nanoid(),
@@ -39,6 +41,7 @@ export const mockedUsers: UserType[] = [
     createdAt: dayjs('03-03-2013', SHORT_DATE_FORMAT).toDate(),
     following: getRandomNumber(),
     followers: getRandomNumber(),
+    numberOfPosts: getRandomNumber(),
   },
   {
     id: nanoid(),
@@ -49,6 +52,7 @@ export const mockedUsers: UserType[] = [
     createdAt: dayjs('04-04-2014', SHORT_DATE_FORMAT).toDate(),
     following: getRandomNumber(),
     followers: getRandomNumber(),
+    numberOfPosts: getRandomNumber(),
   },
   {
     id: nanoid(),
@@ -59,6 +63,7 @@ export const mockedUsers: UserType[] = [
     createdAt: dayjs('05-05-2015', SHORT_DATE_FORMAT).toDate(),
     following: getRandomNumber(),
     followers: getRandomNumber(),
+    numberOfPosts: getRandomNumber(),
   },
   {
     id: nanoid(),
@@ -69,6 +74,7 @@ export const mockedUsers: UserType[] = [
     createdAt: dayjs('06-06-2016', SHORT_DATE_FORMAT).toDate(),
     following: getRandomNumber(),
     followers: getRandomNumber(),
+    numberOfPosts: getRandomNumber(),
   },
   {
     id: nanoid(),
@@ -79,5 +85,6 @@ export const mockedUsers: UserType[] = [
     createdAt: dayjs('07-07-2017', SHORT_DATE_FORMAT).toDate(),
     following: getRandomNumber(),
     followers: getRandomNumber(),
+    numberOfPosts: getRandomNumber(),
   },
 ];

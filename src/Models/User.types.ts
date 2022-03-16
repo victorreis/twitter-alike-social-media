@@ -7,4 +7,5 @@ export interface UserType {
   createdAt: Date;
   following: number;
   followers: number;
+  numberOfPosts: number;
 }
