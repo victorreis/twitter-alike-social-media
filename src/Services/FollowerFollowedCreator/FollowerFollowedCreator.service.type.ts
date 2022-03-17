@@ -1,8 +1,9 @@
 import { FollowerFollowedType } from '../../Models/FollowerFollowed.types';
 
 export interface FollowerFollowedCreatorService {
-  create: (
+  createRelationship: (
     followerUserId: string,
     followedUserId: string
   ) => FollowerFollowedType;
+  deleteRelationship: (followerUserId: string, followedUserId: string) => void;
 }

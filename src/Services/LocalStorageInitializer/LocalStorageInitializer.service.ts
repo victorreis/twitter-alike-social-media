@@ -5,6 +5,14 @@ import { mockedPostsAllTypes } from './Posts.mock';
 import { mockedUsers } from './Users.mock';
 
 const initialize = () => {
+  if (
+    localStorage.getItem(LOCAL_STORAGE.USERS) ||
+    localStorage.getItem(LOCAL_STORAGE.POSTS) ||
+    localStorage.getItem(LOCAL_STORAGE.FOLLOWER_FOLLOWED)
+  ) {
+    return;
+  }
+
   localStorage.setItem(LOCAL_STORAGE.USERS, JSON.stringify(mockedUsers));
   localStorage.setItem(
     LOCAL_STORAGE.POSTS,

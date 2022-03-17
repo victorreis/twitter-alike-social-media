@@ -6,7 +6,7 @@ import { FollowerFollowedRetrieverService } from '../FollowerFollowedRetriever/F
 import { userRetrieverService } from '../UserRetriever';
 import { FollowerFollowedCreatorService } from './FollowerFollowedCreator.service.type';
 
-const create = (
+const createRelationship = (
   followerUserId: string,
   followedUserId: string
 ): FollowerFollowedType => {
@@ -33,6 +33,32 @@ const create = (
   return newFollowerFollowed;
 };
 
+const deleteRelationship = (
+  followerUserId: string,
+  followedUserId: string
+): void => {
+  const followerFolloweds = FollowerFollowedRetrieverService.getAll();
+  const follower = userRetrieverService.getById(followerUserId);
+  const followed = userRetrieverService.getById(followedUserId);
+
+  if (!follower || !followed) {
+    throw Error(`This user doesn't exists`);
+  }
+
+  const newFollowerFolloweds = followerFolloweds.filter(
+    (followerFollowed) =>
+      !(
+        followerFollowed.follower.id === follower.id &&
+        followerFollowed.followed.id === followed.id
+      )
+  );
+  localStorage.setItem(
+    LOCAL_STORAGE.FOLLOWER_FOLLOWED,
+    JSON.stringify(newFollowerFolloweds)
+  );
+};
+
 export const followerFollowedCreatorService: FollowerFollowedCreatorService = {
-  create,
+  createRelationship,
+  deleteRelationship,
 };
