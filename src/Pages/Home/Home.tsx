@@ -1,21 +1,22 @@
 import { useEffect, useState, useRef } from 'react';
+import { AiFillHome } from 'react-icons/ai';
+import { FaUserCircle } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 
 import { PageContainer } from '../../App.styles';
 import { Button } from '../../Components/Button';
 import { FixedBar } from '../../Components/FixedBar';
+import { MenuItem } from '../../Components/MenuItem';
 import { Modal } from '../../Components/Modal';
 import { PostCreator } from '../../Components/PostCreator';
 import { TextToggle } from '../../Components/TextToggle';
 import { Typography } from '../../Components/Typography';
 import { TestProps } from '../../Config/Tests/Test.types';
+import { useLoggedUser } from '../../Hooks/LoggedUser';
 import { useRenderPosts } from '../../Hooks/RenderPosts';
 import { useShowUserPage } from '../../Hooks/ShowUserPage';
-import { UserType } from '../../Models/User.types';
 import { PostTypes } from '../../Services/LocalStorageInitializer';
-import { LOGGED_IN_USER_ID } from '../../Services/LocalStorageInitializer/Users.mock';
 import { postRetrieverService } from '../../Services/PostRetriever';
-import { userRetrieverService } from '../../Services/UserRetriever';
 import { User } from '../User';
 import { HomeFeedContainer, HomeTitle, HomeVerticalMenu } from './Home.styles';
 
@@ -27,9 +28,9 @@ export const Home: React.FC = (): JSX.Element => {
   const ALL_INDEX = 0;
   const FOLLOWING_INDEX = 1;
 
+  const { loggedUser } = useLoggedUser();
   const [toggleActiveIndex, setToggleActiveIndex] = useState(0);
 
-  const [loggedUser, setLoggedUser] = useState<UserType>();
   const [loadedPosts, setLoadedPosts] = useState<PostTypes[]>([]);
   const { renderPosts } = useRenderPosts({
     posts: loadedPosts,
@@ -51,11 +52,6 @@ export const Home: React.FC = (): JSX.Element => {
   useEffect(() => {
     const posts = postRetrieverService.getAll();
     setLoadedPosts(() => posts);
-
-    const loggedUserData = userRetrieverService.getById(LOGGED_IN_USER_ID);
-    if (loggedUserData) {
-      setLoggedUser(() => loggedUserData);
-    }
   }, []);
 
   useEffect(() => {
@@ -92,12 +88,14 @@ export const Home: React.FC = (): JSX.Element => {
           <HomeTitle variant="h2">
             <NavLink to="/">Posterr</NavLink>
           </HomeTitle>
-          <Typography>
-            <NavLink to="/">Home</NavLink>
-          </Typography>
-          <Typography>
-            <NavLink to={profileLink}>Profile</NavLink>
-          </Typography>
+
+          <MenuItem to="/">
+            <AiFillHome /> Home
+          </MenuItem>
+          <MenuItem to={profileLink}>
+            <FaUserCircle />
+            Profile
+          </MenuItem>
 
           <Button onClick={handlePostButtonCLick}>POST</Button>
         </HomeVerticalMenu>

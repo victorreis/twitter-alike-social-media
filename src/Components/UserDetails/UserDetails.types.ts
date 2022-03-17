@@ -17,14 +17,19 @@ export interface OptionalUserDetailsProps {
   style?: React.CSSProperties;
 
   /**
-   * Sets the component styles.
+   * Defines when the logged user is following or not the loaded user.
    */
   isFollowing?: boolean;
 
   /**
-   * Sets the component styles.
+   * Callback function that is called when the logged user follows the loaded user.
    */
-  onFollow?: (follow: boolean) => void;
+  onFollow?: () => void;
+
+  /**
+   * Callback function that is called when the logged user unfollows the loaded user.
+   */
+  onUnfollow?: () => void;
 }
 
 export type UserDetailsProps = RequiredUserDetailsProps &

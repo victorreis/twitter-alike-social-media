@@ -39,12 +39,12 @@ exports[`userDetails component tests snapshot tests should render correctly 1`] 
   <div
     className="UserDetailsContent-twitter-alike-social-media__sc-1pkktdh-3 COovM"
   >
-    <span
-      className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 bsZKYT"
+    <h4
+      className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 dwIaAW"
       data-testid="Typography"
     >
       Victor Reis
-    </span>
+    </h4>
     <span
       className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 kTmxqV"
       data-testid="Typography"
