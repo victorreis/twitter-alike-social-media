@@ -7,6 +7,7 @@ import { PostType } from '../../Models/Post.types';
 import { QuotePostType } from '../../Models/QuotePost.types';
 import { RepostType } from '../../Models/Repost.types';
 import { PostTypes } from '../../Services/LocalStorageInitializer';
+import { postCreatorService } from '../../Services/PostCreator';
 import { postRetrieverService } from '../../Services/PostRetriever';
 import { useLoggedUser } from '../LoggedUser';
 
@@ -34,7 +35,7 @@ export const useRenderPosts = (options: { userId?: string }) => {
     }
   }, [userId]);
 
-  useEffect(() => {
+  const updateLoadedPosts = useCallback(() => {
     if (userId) {
       showAllPostsFromUser();
     } else {
@@ -42,17 +43,75 @@ export const useRenderPosts = (options: { userId?: string }) => {
     }
   }, [showAllPosts, showAllPostsFromUser, userId]);
 
-  const renderPost = (post: PostType) => {
-    return <Post key={post.id} {...post} />;
-  };
+  useEffect(() => {
+    updateLoadedPosts();
+  }, [updateLoadedPosts]);
 
-  const renderRepost = (post: RepostType) => {
-    return <Repost key={post.id} {...post} />;
-  };
+  const handleClickRepost = useCallback(
+    (originalPostId: string) => {
+      if (loggedUser) {
+        postCreatorService.createRepost(originalPostId, loggedUser.id);
+        updateLoadedPosts();
+      }
+    },
+    [loggedUser, updateLoadedPosts]
+  );
 
-  const renderQuotePost = (post: QuotePostType) => {
-    return <QuotePost key={post.id} {...post} />;
-  };
+  const handleClickQuotePost = useCallback(
+    (originalPostId: string) => {
+      if (loggedUser) {
+        postCreatorService.createQuotePost(
+          originalPostId,
+          '...',
+          loggedUser.id
+        );
+        updateLoadedPosts();
+      }
+    },
+    [loggedUser, updateLoadedPosts]
+  );
+
+  const renderPost = useCallback(
+    (post: PostType) => {
+      return (
+        <Post
+          key={post.id}
+          {...post}
+          onClickQuotePost={handleClickQuotePost}
+          onClickRepost={handleClickRepost}
+        />
+      );
+    },
+    [handleClickQuotePost, handleClickRepost]
+  );
+
+  const renderRepost = useCallback(
+    (post: RepostType) => {
+      return (
+        <Repost
+          key={post.id}
+          {...post}
+          onClickQuotePost={handleClickQuotePost}
+          onClickRepost={handleClickRepost}
+        />
+      );
+    },
+    [handleClickQuotePost, handleClickRepost]
+  );
+
+  const renderQuotePost = useCallback(
+    (post: QuotePostType) => {
+      return (
+        <QuotePost
+          key={post.id}
+          {...post}
+          onClickQuotePost={handleClickQuotePost}
+          onClickRepost={handleClickRepost}
+        />
+      );
+    },
+    [handleClickQuotePost, handleClickRepost]
+  );
 
   const renderPosts: () => JSX.Element[] = useCallback(() => {
     const renderedPosts: JSX.Element[] = [];
@@ -73,12 +132,13 @@ export const useRenderPosts = (options: { userId?: string }) => {
       }
     });
     return renderedPosts;
-  }, [posts]);
+  }, [posts, renderPost, renderQuotePost, renderRepost]);
 
   return {
     renderPosts,
     showAllPosts,
     showAllPostsFromFollowedUsers,
     showAllPostsFromUser,
+    updateLoadedPosts,
   };
 };

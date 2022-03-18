@@ -136,7 +136,6 @@ exports[`routerSwitch component tests snapshot tests should render correctly 1`]
       <div
         className="PostCreatorContainer-twitter-alike-social-media__sc-r64v60-0 hgebJz"
         data-testid="PostCreator"
-        onChange={[Function]}
       >
         <div
           className="PostCreatorHeader-twitter-alike-social-media__sc-r64v60-1 dERajZ"

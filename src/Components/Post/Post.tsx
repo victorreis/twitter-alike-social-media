@@ -36,6 +36,8 @@ export const Post: React.FC<PostProps> = (props): JSX.Element => {
     reposts,
     quotPosts,
     compact = postDefaults.compact,
+    onClickRepost,
+    onClickQuotePost,
     style,
     ...others
   } = props;
@@ -53,6 +55,14 @@ export const Post: React.FC<PostProps> = (props): JSX.Element => {
     : 'subtitle2';
   const textVariant: TypographyVariant = compact ? 'body2' : 'body1';
   const buttonSize: ButtonSize = compact ? 'MD' : 'LG';
+
+  const handleClickRepost = () => {
+    onClickRepost(id);
+  };
+
+  const handleClickQuotePost = () => {
+    onClickQuotePost(id);
+  };
 
   const renderText = useMemo(
     () => () => {
@@ -106,11 +116,11 @@ export const Post: React.FC<PostProps> = (props): JSX.Element => {
         {children}
 
         <PostContentButtonsContainer hasChildren={Boolean(children)}>
-          <Button onClick={() => {}} size={buttonSize}>
+          <Button onClick={handleClickRepost} size={buttonSize}>
             Repost
           </Button>
           <Typography variant={textVariant}>{reposts}</Typography>
-          <Button onClick={() => {}} size={buttonSize}>
+          <Button onClick={handleClickQuotePost} size={buttonSize}>
             Quote post
           </Button>
           <Typography variant={textVariant}>{quotPosts}</Typography>

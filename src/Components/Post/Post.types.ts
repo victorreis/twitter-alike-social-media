@@ -1,7 +1,17 @@
 import { TestProps } from '../../Config/Tests/Test.types';
 import { PostType } from '../../Models/Post.types';
 
-export interface RequiredPostProps {}
+export interface RequiredPostProps {
+  /**
+   * Callback function that is called when the Repost button is clicked.
+   */
+  onClickRepost: (originalPostId: string) => void;
+
+  /**
+   * Callback function that is called when the QuotePost button is clicked.
+   */
+  onClickQuotePost: (originalPostId: string) => void;
+}
 
 export interface DefaultPostProps {
   /**

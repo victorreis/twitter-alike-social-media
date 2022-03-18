@@ -10,30 +10,28 @@ import { useRenderPosts } from '../../Hooks/RenderPosts';
 import { useShowUserPage } from '../../Hooks/ShowUserPage';
 import { followerFollowedCreatorService } from '../../Services/FollowerFollowedCreator';
 import { followerFollowedRetrieverService } from '../../Services/FollowerFollowedRetriever';
+import { postCreatorService } from '../../Services/PostCreator';
 import { UserTabBar } from './User.styles';
 
 export const userDefaults: Required<TestProps> = {
   testID: 'User',
 };
 
-export const User: React.FC<{
-  onTogglePostFilter: (index: number) => void;
-  toggleActiveIndex: number;
-}> = (props): JSX.Element | null => {
-  const { onTogglePostFilter, toggleActiveIndex } = props;
-
+export const User: React.FC = (): JSX.Element | null => {
   const [isFollowing, setIsFollowing] = useState<boolean | undefined>(
     undefined
   );
   const { userFromUserPage } = useShowUserPage({});
   const { loggedUser } = useLoggedUser();
-  const { renderPosts } = useRenderPosts({ userId: userFromUserPage?.id });
+  const { renderPosts, updateLoadedPosts } = useRenderPosts({
+    userId: userFromUserPage?.id,
+  });
 
   useEffect(() => {
     if (
       loggedUser &&
       userFromUserPage &&
-      loggedUser.id !== userFromUserPage.id
+      loggedUser?.id !== userFromUserPage?.id
     ) {
       setIsFollowing(() =>
         followerFollowedRetrieverService.isFollowerFollowed(
@@ -44,33 +42,54 @@ export const User: React.FC<{
     }
   }, [loggedUser, userFromUserPage, userFromUserPage?.id]);
 
+  if (!userFromUserPage) {
+    return null;
+  }
+
   const handleFollow = () => {
-    if (loggedUser && userFromUserPage) {
+    if (loggedUser) {
       followerFollowedCreatorService.createRelationship(
         loggedUser.id,
         userFromUserPage.id
       );
       setIsFollowing((prevState) => !prevState);
-      onTogglePostFilter(toggleActiveIndex);
+      updateLoadedPosts();
     }
   };
 
   const handleUnfollow = () => {
-    if (loggedUser && userFromUserPage) {
+    if (loggedUser) {
       followerFollowedCreatorService.deleteRelationship(
         loggedUser.id,
         userFromUserPage.id
       );
       setIsFollowing((prevState) => !prevState);
-      onTogglePostFilter(toggleActiveIndex);
+      updateLoadedPosts();
     }
   };
 
-  if (!userFromUserPage) {
-    return null;
-  }
+  const handleSubmitPost = (text: string) => {
+    if (loggedUser) {
+      postCreatorService.createPost(text, loggedUser.id);
+      updateLoadedPosts();
+    }
+  };
 
-  const { name, thumbnailUrl } = userFromUserPage;
+  const renderPostCreator = () => {
+    const { id, name, nickname, thumbnailUrl } = userFromUserPage;
+    if (loggedUser?.id !== id) {
+      return null;
+    }
+
+    return (
+      <PostCreator
+        name={name}
+        nickname={nickname}
+        onSubmit={handleSubmitPost}
+        thumbnailUrl={thumbnailUrl}
+      />
+    );
+  };
 
   return (
     <PageContainer data-testid={userDefaults.testID}>
@@ -81,12 +100,7 @@ export const User: React.FC<{
         onUnfollow={handleUnfollow}
       />
 
-      <PostCreator
-        name={name}
-        nickname={String(userFromUserPage?.nickname)}
-        onChange={() => {}}
-        thumbnailUrl={thumbnailUrl}
-      />
+      {renderPostCreator()}
 
       <UserTabBar>
         <Tab active text="POSTS" />

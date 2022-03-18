@@ -1,4 +1,9 @@
-import { forwardRef, ForwardRefRenderFunction, useState } from 'react';
+import {
+  forwardRef,
+  ForwardRefRenderFunction,
+  useState,
+  useCallback,
+} from 'react';
 
 import { POST_CREATOR_MAX_LENGTH } from '../../Config/Constants';
 import { TestProps } from '../../Config/Tests/Test.types';
@@ -28,6 +33,7 @@ const PostCreatorComponent: ForwardRefRenderFunction<
     thumbnailUrl,
     name,
     nickname,
+    onSubmit,
     style,
     ...others
   } = props;
@@ -43,6 +49,14 @@ const PostCreatorComponent: ForwardRefRenderFunction<
     setValue(newValue);
     setCharacterCounter(newValue.length);
   };
+
+  const handleSubmit = useCallback(() => {
+    if (value) {
+      setValue(() => '');
+      onSubmit(value);
+      setCharacterCounter(() => 0);
+    }
+  }, [onSubmit, value]);
 
   return (
     <PostCreatorContainer data-testid={testID} style={style} {...others}>
@@ -66,7 +80,7 @@ const PostCreatorComponent: ForwardRefRenderFunction<
         <Typography>
           {characterCounter} / {POST_CREATOR_MAX_LENGTH}{' '}
         </Typography>
-        <Button onClick={() => {}}>POST</Button>
+        <Button onClick={handleSubmit}>POST</Button>
       </PostCreatorFooter>
     </PostCreatorContainer>
   );

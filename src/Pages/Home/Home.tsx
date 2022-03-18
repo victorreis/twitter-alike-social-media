@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useCallback } from 'react';
 import { AiFillHome } from 'react-icons/ai';
 import { FaUserCircle } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
@@ -15,6 +15,7 @@ import { TestProps } from '../../Config/Tests/Test.types';
 import { useLoggedUser } from '../../Hooks/LoggedUser';
 import { useRenderPosts } from '../../Hooks/RenderPosts';
 import { useShowUserPage } from '../../Hooks/ShowUserPage';
+import { postCreatorService } from '../../Services/PostCreator';
 import { User } from '../User';
 import { HomeFeedContainer, HomeTitle, HomeVerticalMenu } from './Home.styles';
 
@@ -28,8 +29,12 @@ export const Home: React.FC = (): JSX.Element => {
   const postCreatorRef = useRef<HTMLTextAreaElement>(null);
 
   const { loggedUser } = useLoggedUser();
-  const { renderPosts, showAllPosts, showAllPostsFromFollowedUsers } =
-    useRenderPosts({});
+  const {
+    renderPosts,
+    showAllPosts,
+    showAllPostsFromFollowedUsers,
+    updateLoadedPosts,
+  } = useRenderPosts({});
   const { openUserModal, handleCloseUserPage } = useShowUserPage({
     nickname: loggedUser?.nickname,
   });
@@ -49,10 +54,12 @@ export const Home: React.FC = (): JSX.Element => {
     setOpen(() => openUserModal);
   }, [loggedUser?.nickname, openUserModal]);
 
-  const handleCloseModal = () => {
-    setOpen(() => false);
+  const handleCloseModal = useCallback(() => {
+    setToggleActiveIndex(() => ALL_INDEX);
+    updateLoadedPosts();
     handleCloseUserPage();
-  };
+    setOpen(() => false);
+  }, [handleCloseUserPage, updateLoadedPosts]);
 
   const handleTogglePostFilter = (index: number) => {
     setToggleActiveIndex(() => index);
@@ -64,14 +71,18 @@ export const Home: React.FC = (): JSX.Element => {
     }
   };
 
+  const handleSubmitPost = (text: string) => {
+    if (loggedUser) {
+      postCreatorService.createPost(text, loggedUser.id);
+      updateLoadedPosts();
+    }
+  };
+
   return (
     <PageContainer data-testid={homeDefaults.testID}>
       {open && (
         <Modal onClose={handleCloseModal}>
-          <User
-            onTogglePostFilter={handleTogglePostFilter}
-            toggleActiveIndex={toggleActiveIndex}
-          />
+          <User />
         </Modal>
       )}
 
@@ -107,7 +118,7 @@ export const Home: React.FC = (): JSX.Element => {
           ref={postCreatorRef}
           name={String(loggedUser?.name)}
           nickname={String(loggedUser?.nickname)}
-          onChange={() => {}}
+          onSubmit={handleSubmitPost}
           thumbnailUrl={String(loggedUser?.thumbnailUrl)}
         />
 

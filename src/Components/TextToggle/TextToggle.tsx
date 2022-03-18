@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { nanoid } from 'nanoid';
 
@@ -27,6 +27,10 @@ export const TextToggle: React.FC<TextToggleProps> = (props): JSX.Element => {
   } = props;
 
   const [activeIndex, setActiveIndex] = useState<number>(defaultIndex);
+
+  useEffect(() => {
+    setActiveIndex(() => defaultIndex);
+  }, [defaultIndex]);
 
   const renderButtons = () => {
     return texts.map((text, index) => {

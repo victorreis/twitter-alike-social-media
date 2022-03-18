@@ -54,9 +54,13 @@ describe('quotePost component tests', () => {
     reposts: 9,
     quotPosts: 99,
   };
+  const onClickRepost = jest.fn();
+  const onClickQuotePost = jest.fn();
 
   const requiredProps: QuotePostProps = {
     ...quotePost,
+    onClickRepost,
+    onClickQuotePost,
   };
 
   const setup = (props?: QuotePostProps) => {

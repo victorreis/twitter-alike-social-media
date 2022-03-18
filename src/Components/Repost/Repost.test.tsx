@@ -41,9 +41,13 @@ describe('repost component tests', () => {
     createdBy: userTeste,
     originalPost: post,
   };
+  const onClickRepost = jest.fn();
+  const onClickQuotePost = jest.fn();
 
   const requiredProps: RepostProps = {
     ...repost,
+    onClickRepost,
+    onClickQuotePost,
   };
 
   const setup = (props?: RepostProps) => {

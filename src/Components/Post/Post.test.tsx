@@ -40,9 +40,13 @@ describe('post component tests', () => {
     quotPosts: 99,
   };
   const newCompact = true;
+  const onClickRepost = jest.fn();
+  const onClickQuotePost = jest.fn();
 
   const requiredProps: PostProps = {
     ...post,
+    onClickRepost,
+    onClickQuotePost,
   };
 
   const setup = (props?: PostProps) => {

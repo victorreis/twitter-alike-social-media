@@ -8,11 +8,48 @@ export const quotePostDefaults: Required<DefaultQuotePostProps> &
 };
 
 export const QuotePost: React.FC<QuotePostProps> = (props): JSX.Element => {
-  const { testID = quotePostDefaults.testID, originalPost, ...others } = props;
+  const {
+    testID = quotePostDefaults.testID,
+    id,
+    createdBy,
+    originalPost,
+    onClickRepost,
+    onClickQuotePost,
+    ...others
+  } = props;
+
+  const handleClickRepost = () => {
+    onClickRepost(id);
+  };
+
+  const handleClickQuotePost = () => {
+    onClickQuotePost(id);
+  };
+
+  const handleClickRepostOriginalPost = () => {
+    onClickRepost(originalPost.id);
+  };
+
+  const handleClickQuotePostOriginalPost = () => {
+    onClickQuotePost(originalPost.id);
+  };
 
   return (
-    <Post data-testid={testID} {...others} type="Post">
-      <Post compact {...originalPost} />
+    <Post
+      createdBy={createdBy}
+      data-testid={testID}
+      id={id}
+      onClickQuotePost={handleClickQuotePost}
+      onClickRepost={handleClickRepost}
+      {...others}
+      type="Post"
+    >
+      <Post
+        compact
+        {...originalPost}
+        onClickQuotePost={handleClickQuotePostOriginalPost}
+        onClickRepost={handleClickRepostOriginalPost}
+      />
     </Post>
   );
 };

@@ -19,8 +19,18 @@ export const Repost: React.FC<RepostProps> = (props): JSX.Element => {
     style,
     originalPost,
     createdBy,
+    onClickRepost,
+    onClickQuotePost,
     ...others
   } = props;
+
+  const handleClickRepostOriginalPost = () => {
+    onClickRepost(originalPost.id);
+  };
+
+  const handleClickQuotePostOriginalPost = () => {
+    onClickQuotePost(originalPost.id);
+  };
 
   return (
     <RepostContainer data-testid={testID} style={style} {...others}>
@@ -29,7 +39,11 @@ export const Repost: React.FC<RepostProps> = (props): JSX.Element => {
         <RepostText variant="h5">{createdBy.name} Reposted</RepostText>
       </RepostTextContainer>
 
-      <Post {...originalPost} />
+      <Post
+        {...originalPost}
+        onClickQuotePost={handleClickQuotePostOriginalPost}
+        onClickRepost={handleClickRepostOriginalPost}
+      />
     </RepostContainer>
   );
 };

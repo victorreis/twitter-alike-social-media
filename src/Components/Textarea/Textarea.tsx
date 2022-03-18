@@ -1,4 +1,10 @@
-import { forwardRef, ForwardRefRenderFunction, useState } from 'react';
+import {
+  forwardRef,
+  ForwardRefRenderFunction,
+  useState,
+  useCallback,
+  useEffect,
+} from 'react';
 
 import { TestProps } from '../../Config/Tests/Test.types';
 import { StyledTextarea } from './Textarea.styles';
@@ -27,11 +33,18 @@ const TextareaComponent: ForwardRefRenderFunction<
 
   const [value, setValue] = useState(initialValue);
 
-  const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    const newValue = event.target.value;
-    setValue(() => newValue);
-    onChange(newValue);
-  };
+  useEffect(() => {
+    setValue(() => initialValue);
+  }, [initialValue]);
+
+  const handleChange = useCallback(
+    (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+      const newValue = event.target.value;
+      onChange(newValue);
+      setValue(() => initialValue);
+    },
+    [initialValue, onChange]
+  );
 
   return (
     <StyledTextarea
@@ -40,7 +53,6 @@ const TextareaComponent: ForwardRefRenderFunction<
       maxLength={maxLength}
       onChange={handleChange}
       resizable={resizable}
-      // rows={5}
       rows={rows}
       value={value}
       {...others}

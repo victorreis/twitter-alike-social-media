@@ -3,9 +3,9 @@ import { RequiredAvatarProps } from '../Avatar';
 
 export interface RequiredPostCreatorProps {
   /**
-   * Callback function that is called when the text is changed.
+   * Callback function that is called when the post button is clicked.
    */
-  onChange: (newText: string) => void;
+  onSubmit: (text: string) => void;
 
   /**
    * Callback function that is called when the text is changed.
@@ -27,6 +27,6 @@ export type PostCreatorProps = RequiredPostCreatorProps &
   OptionalPostCreatorProps &
   TestProps &
   RequiredAvatarProps &
-  Omit<React.HTMLAttributes<HTMLDivElement>, 'children'>;
+  Omit<React.HTMLAttributes<HTMLDivElement>, 'children' | 'onSubmit'>;
 
 export type PostCreatorStyleProps = Required<DefaultPostCreatorProps>;
