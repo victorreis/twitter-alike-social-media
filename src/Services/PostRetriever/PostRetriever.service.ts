@@ -1,5 +1,5 @@
 import { LOCAL_STORAGE } from '../../Config/Constants';
-import { FollowerFollowedRetrieverService } from '../FollowerFollowedRetriever';
+import { followerFollowedRetrieverService } from '../FollowerFollowedRetriever';
 import { PostTypes } from '../LocalStorageInitializer/LocalStorageInitializer.service.type';
 import { PostRetrieverService } from './PostRetriever.service.type';
 
@@ -13,11 +13,11 @@ const getById = (postId: string): PostTypes | undefined => {
   return getAll().find((post) => post.id === postId);
 };
 
-const getAllFollowing = (followerUserId: string) => {
+const getAllFromFollowedUsers = (followerUserId: string) => {
   return getAll().filter(
     (post) =>
       post.createdBy.id !== followerUserId &&
-      FollowerFollowedRetrieverService.isFollowerFollowed(
+      followerFollowedRetrieverService.isFollowerFollowed(
         followerUserId,
         post.createdBy.id
       )
@@ -31,6 +31,6 @@ const getAllCreatedByUser = (userId: string) => {
 export const postRetrieverService: PostRetrieverService = {
   getAll,
   getById,
-  getAllFollowing,
+  getAllFromFollowedUsers,
   getAllCreatedByUser,
 };

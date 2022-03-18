@@ -2,7 +2,7 @@ import { nanoid } from 'nanoid';
 
 import { LOCAL_STORAGE } from '../../Config/Constants';
 import { FollowerFollowedType } from '../../Models/FollowerFollowed.types';
-import { FollowerFollowedRetrieverService } from '../FollowerFollowedRetriever/FollowerFollowedRetriever.service';
+import { followerFollowedRetrieverService } from '../FollowerFollowedRetriever/FollowerFollowedRetriever.service';
 import { userRetrieverService } from '../UserRetriever';
 import { FollowerFollowedCreatorService } from './FollowerFollowedCreator.service.type';
 
@@ -10,7 +10,7 @@ const createRelationship = (
   followerUserId: string,
   followedUserId: string
 ): FollowerFollowedType => {
-  const followerFolloweds = FollowerFollowedRetrieverService.getAll();
+  const followerFolloweds = followerFollowedRetrieverService.getAll();
   const follower = userRetrieverService.getById(followerUserId);
   const followed = userRetrieverService.getById(followedUserId);
 
@@ -37,7 +37,7 @@ const deleteRelationship = (
   followerUserId: string,
   followedUserId: string
 ): void => {
-  const followerFolloweds = FollowerFollowedRetrieverService.getAll();
+  const followerFolloweds = followerFollowedRetrieverService.getAll();
   const follower = userRetrieverService.getById(followerUserId);
   const followed = userRetrieverService.getById(followedUserId);
 

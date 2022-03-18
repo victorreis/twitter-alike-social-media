@@ -15,8 +15,6 @@ import { TestProps } from '../../Config/Tests/Test.types';
 import { useLoggedUser } from '../../Hooks/LoggedUser';
 import { useRenderPosts } from '../../Hooks/RenderPosts';
 import { useShowUserPage } from '../../Hooks/ShowUserPage';
-import { PostTypes } from '../../Services/LocalStorageInitializer';
-import { postRetrieverService } from '../../Services/PostRetriever';
 import { User } from '../User';
 import { HomeFeedContainer, HomeTitle, HomeVerticalMenu } from './Home.styles';
 
@@ -27,20 +25,18 @@ export const homeDefaults: Required<TestProps> = {
 export const Home: React.FC = (): JSX.Element => {
   const ALL_INDEX = 0;
   const FOLLOWING_INDEX = 1;
+  const postCreatorRef = useRef<HTMLTextAreaElement>(null);
 
   const { loggedUser } = useLoggedUser();
-  const [toggleActiveIndex, setToggleActiveIndex] = useState(0);
-
-  const [loadedPosts, setLoadedPosts] = useState<PostTypes[]>([]);
-  const { renderPosts } = useRenderPosts({
-    posts: loadedPosts,
-  });
+  const { renderPosts, showAllPosts, showAllPostsFromFollowedUsers } =
+    useRenderPosts({});
   const { openUserModal, handleCloseUserPage } = useShowUserPage({
     nickname: loggedUser?.nickname,
   });
+
+  const [toggleActiveIndex, setToggleActiveIndex] = useState(0);
   const [open, setOpen] = useState(openUserModal);
 
-  const postCreatorRef = useRef<HTMLTextAreaElement>(null);
   const handlePostButtonCLick = () => {
     if (postCreatorRef.current) {
       postCreatorRef.current.focus();
@@ -48,11 +44,6 @@ export const Home: React.FC = (): JSX.Element => {
   };
 
   const profileLink = (loggedUser && `/user/${loggedUser.nickname}`) || '#';
-
-  useEffect(() => {
-    const posts = postRetrieverService.getAll();
-    setLoadedPosts(() => posts);
-  }, []);
 
   useEffect(() => {
     setOpen(() => openUserModal);
@@ -67,11 +58,9 @@ export const Home: React.FC = (): JSX.Element => {
     setToggleActiveIndex(() => index);
 
     if (index === ALL_INDEX) {
-      const posts = postRetrieverService.getAll();
-      setLoadedPosts(() => posts);
+      showAllPosts();
     } else if (index === FOLLOWING_INDEX && loggedUser) {
-      const posts = postRetrieverService.getAllFollowing(loggedUser.id);
-      setLoadedPosts(() => posts);
+      showAllPostsFromFollowedUsers();
     }
   };
 

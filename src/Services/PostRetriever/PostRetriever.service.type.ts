@@ -3,6 +3,6 @@ import { PostTypes } from '../LocalStorageInitializer/LocalStorageInitializer.se
 export interface PostRetrieverService {
   getAll: () => PostTypes[];
   getById: (postId: string) => PostTypes | undefined;
-  getAllFollowing: (followerUserId: string) => PostTypes[];
+  getAllFromFollowedUsers: (followerUserId: string) => PostTypes[];
   getAllCreatedByUser: (userId: string) => PostTypes[];
 }

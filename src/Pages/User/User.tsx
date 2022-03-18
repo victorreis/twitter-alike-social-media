@@ -8,12 +8,8 @@ import { TestProps } from '../../Config/Tests/Test.types';
 import { useLoggedUser } from '../../Hooks/LoggedUser';
 import { useRenderPosts } from '../../Hooks/RenderPosts';
 import { useShowUserPage } from '../../Hooks/ShowUserPage';
-import { UserType } from '../../Models/User.types';
 import { followerFollowedCreatorService } from '../../Services/FollowerFollowedCreator';
-import { FollowerFollowedRetrieverService } from '../../Services/FollowerFollowedRetriever';
-import { PostTypes } from '../../Services/LocalStorageInitializer';
-import { postRetrieverService } from '../../Services/PostRetriever';
-import { userRetrieverService } from '../../Services/UserRetriever';
+import { followerFollowedRetrieverService } from '../../Services/FollowerFollowedRetriever';
 import { UserTabBar } from './User.styles';
 
 export const userDefaults: Required<TestProps> = {
@@ -21,63 +17,58 @@ export const userDefaults: Required<TestProps> = {
 };
 
 export const User: React.FC = (): JSX.Element | null => {
-  const [user, setUser] = useState<UserType>();
-  const [posts, setPosts] = useState<PostTypes[]>([]);
   const [isFollowing, setIsFollowing] = useState<boolean | undefined>(
     undefined
   );
-  const { renderPosts } = useRenderPosts({ posts });
-
+  const { userFromUserPage } = useShowUserPage({});
   const { loggedUser } = useLoggedUser();
-  const { urlNickname, handleCloseUserPage } = useShowUserPage({
-    nickname: user?.nickname,
-  });
+  const { renderPosts } = useRenderPosts({ userId: userFromUserPage?.id });
 
   useEffect(() => {
-    const loadedUser = userRetrieverService.getByNickname(String(urlNickname));
-    if (!loadedUser) {
-      handleCloseUserPage();
-      return;
-    }
-    setUser(() => loadedUser);
-
-    const loadedPosts = postRetrieverService.getAllCreatedByUser(loadedUser.id);
-    setPosts(() => loadedPosts);
-
-    if (loggedUser && loggedUser.id !== loadedUser.id) {
+    if (
+      loggedUser &&
+      userFromUserPage &&
+      loggedUser.id !== userFromUserPage.id
+    ) {
       setIsFollowing(() =>
-        FollowerFollowedRetrieverService.isFollowerFollowed(
+        followerFollowedRetrieverService.isFollowerFollowed(
           loggedUser.id,
-          loadedUser.id
+          userFromUserPage.id
         )
       );
     }
-  }, [handleCloseUserPage, loggedUser, loggedUser?.id, urlNickname]);
+  }, [loggedUser, userFromUserPage, userFromUserPage?.id]);
 
   const handleFollow = () => {
-    if (loggedUser && user) {
-      followerFollowedCreatorService.createRelationship(loggedUser.id, user.id);
+    if (loggedUser && userFromUserPage) {
+      followerFollowedCreatorService.createRelationship(
+        loggedUser.id,
+        userFromUserPage.id
+      );
       setIsFollowing((prevState) => !prevState);
     }
   };
 
   const handleUnfollow = () => {
-    if (loggedUser && user) {
-      followerFollowedCreatorService.deleteRelationship(loggedUser.id, user.id);
+    if (loggedUser && userFromUserPage) {
+      followerFollowedCreatorService.deleteRelationship(
+        loggedUser.id,
+        userFromUserPage.id
+      );
       setIsFollowing((prevState) => !prevState);
     }
   };
 
-  if (!user) {
+  if (!userFromUserPage) {
     return null;
   }
 
-  const { name, thumbnailUrl } = user;
+  const { name, thumbnailUrl } = userFromUserPage;
 
   return (
     <PageContainer data-testid={userDefaults.testID}>
       <UserDetails
-        {...user}
+        {...userFromUserPage}
         isFollowing={isFollowing}
         onFollow={handleFollow}
         onUnfollow={handleUnfollow}
@@ -85,7 +76,7 @@ export const User: React.FC = (): JSX.Element | null => {
 
       <PostCreator
         name={name}
-        nickname={String(urlNickname)}
+        nickname={String(userFromUserPage?.nickname)}
         onChange={() => {}}
         thumbnailUrl={thumbnailUrl}
       />

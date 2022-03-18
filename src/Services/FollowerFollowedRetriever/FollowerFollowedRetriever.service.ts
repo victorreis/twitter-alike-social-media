@@ -26,7 +26,7 @@ const isFollowerFollowed = (
   );
 };
 
-export const FollowerFollowedRetrieverService: FollowerFollowedService = {
+export const followerFollowedRetrieverService: FollowerFollowedService = {
   getAll,
   isFollowerFollowed,
 };
