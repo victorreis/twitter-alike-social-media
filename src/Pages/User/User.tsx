@@ -16,7 +16,12 @@ export const userDefaults: Required<TestProps> = {
   testID: 'User',
 };
 
-export const User: React.FC = (): JSX.Element | null => {
+export const User: React.FC<{
+  onTogglePostFilter: (index: number) => void;
+  toggleActiveIndex: number;
+}> = (props): JSX.Element | null => {
+  const { onTogglePostFilter, toggleActiveIndex } = props;
+
   const [isFollowing, setIsFollowing] = useState<boolean | undefined>(
     undefined
   );
@@ -46,6 +51,7 @@ export const User: React.FC = (): JSX.Element | null => {
         userFromUserPage.id
       );
       setIsFollowing((prevState) => !prevState);
+      onTogglePostFilter(toggleActiveIndex);
     }
   };
 
@@ -56,6 +62,7 @@ export const User: React.FC = (): JSX.Element | null => {
         userFromUserPage.id
       );
       setIsFollowing((prevState) => !prevState);
+      onTogglePostFilter(toggleActiveIndex);
     }
   };
 

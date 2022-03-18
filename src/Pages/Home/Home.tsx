@@ -68,7 +68,10 @@ export const Home: React.FC = (): JSX.Element => {
     <PageContainer data-testid={homeDefaults.testID}>
       {open && (
         <Modal onClose={handleCloseModal}>
-          <User />
+          <User
+            onTogglePostFilter={handleTogglePostFilter}
+            toggleActiveIndex={toggleActiveIndex}
+          />
         </Modal>
       )}
 
