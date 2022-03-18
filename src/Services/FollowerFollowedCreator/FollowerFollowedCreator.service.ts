@@ -2,9 +2,27 @@ import { nanoid } from 'nanoid';
 
 import { LOCAL_STORAGE } from '../../Config/Constants';
 import { FollowerFollowedType } from '../../Models/FollowerFollowed.types';
+import { UserType } from '../../Models/User.types';
 import { followerFollowedRetrieverService } from '../FollowerFollowedRetriever/FollowerFollowedRetriever.service';
 import { userRetrieverService } from '../UserRetriever';
 import { FollowerFollowedCreatorService } from './FollowerFollowedCreator.service.type';
+
+const updateUserFollowingNumber = (
+  userToBeUpdated: UserType,
+  operationNumber: number
+) => {
+  const users = userRetrieverService.getAll().map((user) => {
+    if (user.id === userToBeUpdated.id) {
+      return {
+        ...userToBeUpdated,
+        following: userToBeUpdated.following + operationNumber,
+      };
+    }
+    return user;
+  });
+
+  localStorage.setItem(LOCAL_STORAGE.USERS, JSON.stringify(users));
+};
 
 const createRelationship = (
   followerUserId: string,
@@ -29,6 +47,8 @@ const createRelationship = (
     LOCAL_STORAGE.FOLLOWER_FOLLOWED,
     JSON.stringify(followerFolloweds)
   );
+
+  updateUserFollowingNumber(follower, 1);
 
   return newFollowerFollowed;
 };
@@ -56,6 +76,8 @@ const deleteRelationship = (
     LOCAL_STORAGE.FOLLOWER_FOLLOWED,
     JSON.stringify(newFollowerFolloweds)
   );
+
+  updateUserFollowingNumber(follower, -1);
 };
 
 export const followerFollowedCreatorService: FollowerFollowedCreatorService = {
