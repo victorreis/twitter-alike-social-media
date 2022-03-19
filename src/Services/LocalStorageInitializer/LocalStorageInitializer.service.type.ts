@@ -13,5 +13,8 @@ export interface LocalStorageInitializer {
 }
 
 export interface LocalStorageInitializerService {
+  /**
+   * Initialize the localStorage with some mocked data.
+   */
   initialize: () => void;
 }

@@ -1,6 +1,7 @@
 import { nanoid } from 'nanoid';
 
-import { LOCAL_STORAGE } from '../../Config/Constants';
+import { LOCAL_STORAGE } from '../../Config/Constants.config';
+import { USER_NOT_FOUND } from '../../Config/ErrorMessages.config';
 import { FollowerFollowedType } from '../../Models/FollowerFollowed.types';
 import { UserType } from '../../Models/User.types';
 import { followerFollowedRetrieverService } from '../FollowerFollowedRetriever/FollowerFollowedRetriever.service';
@@ -33,7 +34,7 @@ const createRelationship = (
   const followed = userRetrieverService.getById(followedUserId);
 
   if (!follower || !followed) {
-    throw Error(`This user doesn't exists`);
+    throw Error(USER_NOT_FOUND(`${followerUserId}|${followedUserId}`));
   }
 
   const newFollowerFollowed: FollowerFollowedType = {
@@ -62,7 +63,7 @@ const deleteRelationship = (
   const followed = userRetrieverService.getById(followedUserId);
 
   if (!follower || !followed) {
-    throw Error(`This user doesn't exists`);
+    throw Error(USER_NOT_FOUND(`${followerUserId}|${followedUserId}`));
   }
 
   const newFollowerFolloweds = followerFolloweds.filter(

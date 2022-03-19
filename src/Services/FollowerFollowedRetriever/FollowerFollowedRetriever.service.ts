@@ -1,4 +1,4 @@
-import { LOCAL_STORAGE } from '../../Config/Constants';
+import { LOCAL_STORAGE } from '../../Config/Constants.config';
 import { FollowerFollowedType } from '../../Models/FollowerFollowed.types';
 import { UserType } from '../../Models/User.types';
 import { FollowerFollowedService } from './FollowerFollowedRetriever.service.type';

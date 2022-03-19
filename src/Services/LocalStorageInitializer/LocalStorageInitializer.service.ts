@@ -1,4 +1,4 @@
-import { LOCAL_STORAGE } from '../../Config/Constants';
+import { LOCAL_STORAGE } from '../../Config/Constants.config';
 import { mockedFollowerFolloweds } from './FollowerFollowed.mock';
 import { LocalStorageInitializerService } from './LocalStorageInitializer.service.type';
 import { mockedPostsAllTypes } from './Posts.mock';

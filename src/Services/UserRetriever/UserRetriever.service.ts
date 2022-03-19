@@ -1,4 +1,4 @@
-import { LOCAL_STORAGE } from '../../Config/Constants';
+import { LOCAL_STORAGE } from '../../Config/Constants.config';
 import { UserType } from '../../Models/User.types';
 import { UserRetrieverService } from './UserRetriever.service.type';
 

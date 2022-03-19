@@ -1,4 +1,4 @@
-import { LOCAL_STORAGE } from '../../Config/Constants';
+import { LOCAL_STORAGE } from '../../Config/Constants.config';
 import { followerFollowedRetrieverService } from '../FollowerFollowedRetriever';
 import { PostTypes } from '../LocalStorageInitializer/LocalStorageInitializer.service.type';
 import { PostRetrieverService } from './PostRetriever.service.type';

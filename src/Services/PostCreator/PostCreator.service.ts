@@ -1,6 +1,14 @@
+import dayjs from 'dayjs';
 import { nanoid } from 'nanoid';
 
-import { LOCAL_STORAGE } from '../../Config/Constants';
+import {
+  LOCAL_STORAGE,
+  SHORT_DATE_FORMAT,
+} from '../../Config/Constants.config';
+import {
+  REACHED_THE_MAX_NUMBER_OF_POSTS_PER_DAY,
+  USER_NOT_FOUND,
+} from '../../Config/ErrorMessages.config';
 import { PostType } from '../../Models/Post.types';
 import { QuotePostType } from '../../Models/QuotePost.types';
 import { RepostType } from '../../Models/Repost.types';
@@ -8,12 +16,26 @@ import { postRetrieverService } from '../PostRetriever';
 import { userRetrieverService } from '../UserRetriever';
 import { PostCreatorService } from './PostCreator.service.type';
 
+const reachedTheMaximumNumberOfPostsPerDay = (userId: string) => {
+  const postsByUser = postRetrieverService.getAllCreatedByUser(userId);
+  const todayPosts = postsByUser.filter(
+    (post) =>
+      dayjs(post.createdAt).format(SHORT_DATE_FORMAT) ===
+      dayjs(new Date()).format(SHORT_DATE_FORMAT)
+  );
+
+  return todayPosts.length >= 5;
+};
+
 const createPost = (text: string, createdById: string): PostType => {
   const posts = postRetrieverService.getAll();
   const userCreator = userRetrieverService.getById(createdById);
 
   if (!userCreator) {
-    throw Error(`This user doesn't exists`);
+    throw Error(USER_NOT_FOUND(createdById));
+  }
+  if (reachedTheMaximumNumberOfPostsPerDay(createdById)) {
+    throw Error(REACHED_THE_MAX_NUMBER_OF_POSTS_PER_DAY(createdById));
   }
 
   const newPost: PostType = {
@@ -41,7 +63,10 @@ const createRepost = (
   const userCreator = userRetrieverService.getById(createdById);
 
   if (!originalPost || !userCreator) {
-    throw Error(`This user doesn't exists`);
+    throw Error(USER_NOT_FOUND(createdById));
+  }
+  if (reachedTheMaximumNumberOfPostsPerDay(createdById)) {
+    throw Error(REACHED_THE_MAX_NUMBER_OF_POSTS_PER_DAY(createdById));
   }
 
   const newRepost: RepostType = {
@@ -68,7 +93,10 @@ const createQuotePost = (
   const userCreator = userRetrieverService.getById(createdById);
 
   if (!userCreator) {
-    throw Error(`This user doesn't exists`);
+    throw Error(USER_NOT_FOUND(createdById));
+  }
+  if (reachedTheMaximumNumberOfPostsPerDay(createdById)) {
+    throw Error(REACHED_THE_MAX_NUMBER_OF_POSTS_PER_DAY(createdById));
   }
 
   const newPost: QuotePostType = {
