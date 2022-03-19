@@ -1,6 +1,6 @@
 import dayjs from 'dayjs';
 
-import { EXTENDED_DATE_FORMAT } from '../../Config/Constants';
+import { EXTENDED_DATE_FORMAT } from '../../Config/Constants.config';
 import { TestProps } from '../../Config/Tests/Test.types';
 import { FeedbackColor } from '../../Theme/Types/Colors.types';
 import { Avatar } from '../Avatar';

@@ -6,12 +6,7 @@ export interface RequiredQuotePostProps {}
 
 export interface DefaultQuotePostProps {}
 
-export interface OptionalQuotePostProps {
-  /**
-   * Sets the component styles.
-   */
-  style?: React.CSSProperties;
-}
+export interface OptionalQuotePostProps {}
 
 export type QuotePostProps = RequiredQuotePostProps &
   DefaultQuotePostProps &

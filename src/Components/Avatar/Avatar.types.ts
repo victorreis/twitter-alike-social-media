@@ -33,12 +33,7 @@ export interface DefaultAvatarProps {
   clickable?: boolean;
 }
 
-export interface OptionalAvatarProps {
-  /**
-   * Sets the component styles.
-   */
-  style?: React.CSSProperties;
-}
+export interface OptionalAvatarProps {}
 
 export type AvatarProps = RequiredAvatarProps &
   DefaultAvatarProps &

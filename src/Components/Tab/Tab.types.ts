@@ -15,12 +15,7 @@ export interface DefaultTabProps {
   active?: boolean;
 }
 
-export interface OptionalTabProps {
-  /**
-   * Sets the component styles.
-   */
-  style?: React.CSSProperties;
-}
+export interface OptionalTabProps {}
 
 export type TabProps = RequiredTabProps &
   DefaultTabProps &

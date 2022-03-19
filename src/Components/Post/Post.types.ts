@@ -20,12 +20,7 @@ export interface DefaultPostProps {
   compact?: boolean;
 }
 
-export interface OptionalPostProps {
-  /**
-   * Sets the component styles.
-   */
-  style?: React.CSSProperties;
-}
+export interface OptionalPostProps {}
 
 export type PostProps = RequiredPostProps &
   DefaultPostProps &

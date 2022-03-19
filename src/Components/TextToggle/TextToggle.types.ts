@@ -20,12 +20,7 @@ export interface DefaultTextToggleProps {
   activeIndex?: number;
 }
 
-export interface OptionalTextToggleProps {
-  /**
-   * Sets the component styles.
-   */
-  style?: React.CSSProperties;
-}
+export interface OptionalTextToggleProps {}
 
 export type TextToggleProps = RequiredTextToggleProps &
   DefaultTextToggleProps &

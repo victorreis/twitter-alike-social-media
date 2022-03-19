@@ -16,7 +16,6 @@ export const UserDetailsContainer = styled.div<UserDetailsStyleProps>`
 
 export const UserDetailsHeader = styled.div<UserDetailsStyleProps>`
   display: flex;
-  flex-direction: row;
   column-gap: 1rem;
 `;
 

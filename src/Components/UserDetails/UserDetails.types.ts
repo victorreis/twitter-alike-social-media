@@ -12,11 +12,6 @@ export interface DefaultUserDetailsProps {}
 
 export interface OptionalUserDetailsProps {
   /**
-   * Sets the component styles.
-   */
-  style?: React.CSSProperties;
-
-  /**
    * Defines when the logged user is following or not the loaded user.
    */
   isFollowing?: boolean;

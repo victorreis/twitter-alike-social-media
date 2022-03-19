@@ -7,7 +7,7 @@ exports[`userDetails component tests snapshot tests should render correctly 1`] 
   id="user123"
 >
   <div
-    className="UserDetailsHeader-twitter-alike-social-media__sc-1pkktdh-1 jPbomt"
+    className="UserDetailsHeader-twitter-alike-social-media__sc-1pkktdh-1 ljblTd"
   >
     <div
       className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 jOfrBo"

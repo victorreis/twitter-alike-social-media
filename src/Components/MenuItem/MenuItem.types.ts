@@ -14,12 +14,7 @@ export interface RequiredMenuItemProps {
 
 export interface DefaultMenuItemProps {}
 
-export interface OptionalMenuItemProps {
-  /**
-   * Sets the component styles.
-   */
-  style?: React.CSSProperties;
-}
+export interface OptionalMenuItemProps {}
 
 export type MenuItemProps = RequiredMenuItemProps &
   DefaultMenuItemProps &

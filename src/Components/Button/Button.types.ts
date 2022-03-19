@@ -40,11 +40,6 @@ export interface DefaultButtonProps {
 
 export interface OptionalButtonProps {
   /**
-   * Sets the component styles.
-   */
-  style?: React.CSSProperties;
-
-  /**
    * Sets the background color when the component is in a hover state.
    */
   hoverFeedbackColor?: FeedbackColor;

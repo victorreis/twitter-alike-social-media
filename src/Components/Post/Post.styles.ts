@@ -32,20 +32,17 @@ const getPostContentButtonsContainerBorder = ({
   theme: DefaultTheme;
   hasChildren: boolean;
 }): CSSObject => {
-  if (hasChildren) {
-    return {};
-  }
-
   return {
-    borderTopWidth: '1px',
-    borderTopStyle: 'solid',
-    borderTopColor: theme.colors.background.default.normal,
+    ...(!hasChildren && {
+      borderTopWidth: '1px',
+      borderTopStyle: 'solid',
+      borderTopColor: theme.colors.background.default.normal,
+    }),
   };
 };
 
 export const PostContainer = styled.div`
   display: flex;
-  flex-direction: row;
   padding: 16px;
   column-gap: 1rem;
 
@@ -61,7 +58,6 @@ export const PostContent = styled.div`
 
 export const PostContentHeader = styled.div`
   display: flex;
-  flex-direction: row;
   column-gap: 1rem;
   align-items: center;
 `;
@@ -77,7 +73,6 @@ export const PostText = styled(Typography)`
 
 export const PostContentButtonsContainer = styled.div<{ hasChildren: boolean }>`
   display: flex;
-  flex-direction: row;
   flex: 1;
   column-gap: 1rem;
   align-items: center;

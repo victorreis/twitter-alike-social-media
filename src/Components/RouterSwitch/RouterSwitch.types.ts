@@ -4,12 +4,7 @@ export interface RequiredRouterSwitchProps {}
 
 export interface DefaultRouterSwitchProps {}
 
-export interface OptionalRouterSwitchProps {
-  /**
-   * Sets the component styles.
-   */
-  style?: React.CSSProperties;
-}
+export interface OptionalRouterSwitchProps {}
 
 export type RouterSwitchProps = RequiredRouterSwitchProps &
   DefaultRouterSwitchProps &

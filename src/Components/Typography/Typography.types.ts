@@ -16,12 +16,7 @@ export interface DefaultTypographyProps {
   variant?: TypographyVariant;
 }
 
-export interface OptionalTypographyProps {
-  /**
-   * Sets the component styles.
-   */
-  style?: React.CSSProperties;
-}
+export interface OptionalTypographyProps {}
 
 export type TypographyProps = RequiredTypographyProps &
   DefaultTypographyProps &

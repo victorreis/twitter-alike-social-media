@@ -1,7 +1,7 @@
 import dayjs from 'dayjs';
 import { nanoid } from 'nanoid';
 
-import { SHORT_DATE_FORMAT } from '../../Config/Constants';
+import { SHORT_DATE_FORMAT } from '../../Config/Constants.config';
 import { PostType } from '../../Models/Post.types';
 import { QuotePostType } from '../../Models/QuotePost.types';
 import { RepostType } from '../../Models/Repost.types';

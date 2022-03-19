@@ -5,7 +5,7 @@ import {
   useCallback,
 } from 'react';
 
-import { POST_CREATOR_MAX_LENGTH } from '../../Config/Constants';
+import { POST_CREATOR_MAX_LENGTH } from '../../Config/Constants.config';
 import { TestProps } from '../../Config/Tests/Test.types';
 import { useShowUserPage } from '../../Hooks/ShowUserPage';
 import { Avatar } from '../Avatar';

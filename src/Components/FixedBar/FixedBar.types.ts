@@ -25,12 +25,7 @@ export interface DefaultFixedBarProps {
   justifyContent?: JustifyContent;
 }
 
-export interface OptionalFixedBarProps {
-  /**
-   * Sets the component styles.
-   */
-  style?: React.CSSProperties;
-}
+export interface OptionalFixedBarProps {}
 
 export type FixedBarProps = RequiredFixedBarProps &
   DefaultFixedBarProps &

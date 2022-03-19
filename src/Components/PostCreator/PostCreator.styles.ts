@@ -19,7 +19,6 @@ export const PostCreatorHeader = styled.div`
 export const PostCreatorFooter = styled.div`
   padding-top: 16px;
   display: flex;
-  flex-direction: row;
   justify-content: flex-end;
   align-items: center;
   column-gap: 1rem;

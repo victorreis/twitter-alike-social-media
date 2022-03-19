@@ -9,14 +9,13 @@ const getTabActiveBorder = ({
   theme: DefaultTheme;
   active: boolean;
 }): CSSObject => {
-  if (active) {
-    return {
+  return {
+    ...(active && {
       borderBottomWidth: '4px',
       borderBottomStyle: 'solid',
       borderBottomColor: theme.colors.background.default.light,
-    };
-  }
-  return {};
+    }),
+  };
 };
 
 export const TabContainer = styled.div<TabStyleProps>`

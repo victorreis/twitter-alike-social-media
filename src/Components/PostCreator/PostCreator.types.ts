@@ -15,12 +15,7 @@ export interface RequiredPostCreatorProps {
 
 export interface DefaultPostCreatorProps {}
 
-export interface OptionalPostCreatorProps {
-  /**
-   * Sets the component styles.
-   */
-  style?: React.CSSProperties;
-}
+export interface OptionalPostCreatorProps {}
 
 export type PostCreatorProps = RequiredPostCreatorProps &
   DefaultPostCreatorProps &

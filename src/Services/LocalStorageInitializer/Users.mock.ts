@@ -1,7 +1,7 @@
 import dayjs from 'dayjs';
 import { nanoid } from 'nanoid';
 
-import { SHORT_DATE_FORMAT } from '../../Config/Constants';
+import { SHORT_DATE_FORMAT } from '../../Config/Constants.config';
 import { UserType } from '../../Models/User.types';
 
 export const getRandomNumber = (max = 777) => Math.round(Math.random() * max);
@@ -24,7 +24,7 @@ export const mockedUsers: UserType[] = [
   {
     id: nanoid(),
     name: 'User Two',
-    nickname: 'user.two',
+    nickname: 'usertwo',
     url: 'https://i.pravatar.cc/500',
     thumbnailUrl: 'https://i.pravatar.cc/100',
     createdAt: dayjs('02-02-2012', SHORT_DATE_FORMAT).toDate(),
@@ -35,7 +35,7 @@ export const mockedUsers: UserType[] = [
   {
     id: nanoid(),
     name: 'User Three',
-    nickname: 'user.three',
+    nickname: 'userthree',
     url: 'https://i.pravatar.cc/500',
     thumbnailUrl: 'https://i.pravatar.cc/100',
     createdAt: dayjs('03-03-2013', SHORT_DATE_FORMAT).toDate(),
@@ -46,7 +46,7 @@ export const mockedUsers: UserType[] = [
   {
     id: nanoid(),
     name: 'User Four',
-    nickname: 'user.four',
+    nickname: 'userfour',
     url: 'https://i.pravatar.cc/500',
     thumbnailUrl: 'https://i.pravatar.cc/100',
     createdAt: dayjs('04-04-2014', SHORT_DATE_FORMAT).toDate(),
@@ -57,7 +57,7 @@ export const mockedUsers: UserType[] = [
   {
     id: nanoid(),
     name: 'User Five',
-    nickname: 'user.five',
+    nickname: 'userfive',
     url: 'https://i.pravatar.cc/500',
     thumbnailUrl: 'https://i.pravatar.cc/100',
     createdAt: dayjs('05-05-2015', SHORT_DATE_FORMAT).toDate(),
@@ -68,7 +68,7 @@ export const mockedUsers: UserType[] = [
   {
     id: nanoid(),
     name: 'User Six',
-    nickname: 'user.six',
+    nickname: 'usersix',
     url: 'https://i.pravatar.cc/500',
     thumbnailUrl: 'https://i.pravatar.cc/100',
     createdAt: dayjs('06-06-2016', SHORT_DATE_FORMAT).toDate(),
@@ -79,7 +79,7 @@ export const mockedUsers: UserType[] = [
   {
     id: nanoid(),
     name: 'User Seven',
-    nickname: 'user.seven',
+    nickname: 'userseven',
     url: 'https://i.pravatar.cc/500',
     thumbnailUrl: 'https://i.pravatar.cc/100',
     createdAt: dayjs('07-07-2017', SHORT_DATE_FORMAT).toDate(),

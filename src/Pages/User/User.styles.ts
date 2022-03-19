@@ -12,7 +12,6 @@ export const UserTabBar = styled.div`
   align-items: flex-start;
 
   box-sizing: border-box;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: ${({ theme }) => theme.colors.background.default.light};
+  border-bottom: 1px solid
+    ${({ theme }) => theme.colors.background.default.light};
 `;

@@ -13,10 +13,8 @@ const getBackgroundColor = ({
   hoverFeedbackColor?: FeedbackColor;
   hover: boolean;
 }): string => {
-  if (hover) {
-    if (hoverFeedbackColor) {
-      return theme.colors.feedback[hoverFeedbackColor].dark;
-    }
+  if (hover && hoverFeedbackColor) {
+    return theme.colors.feedback[hoverFeedbackColor].dark;
   }
   return theme.colors.background.default.darkest;
 };
@@ -37,10 +35,8 @@ const getBorderColor = ({
   hoverFeedbackColor?: FeedbackColor;
   hover: boolean;
 }): string => {
-  if (hover) {
-    if (hoverFeedbackColor) {
-      return theme.colors.feedback[hoverFeedbackColor].darkest;
-    }
+  if (hover && hoverFeedbackColor) {
+    return theme.colors.feedback[hoverFeedbackColor].darkest;
   }
   return `${theme.colors.main.effect.normal}55`;
 };

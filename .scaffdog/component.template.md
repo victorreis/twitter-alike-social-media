@@ -36,12 +36,7 @@ export interface Default{{ inputs.value | pascal }}Props {
   variant?: TypographyVariant;
 }
 
-export interface Optional{{ inputs.value | pascal }}Props {
-  /**
-   * Sets the component styles.
-   */
-  style?: React.CSSProperties;
-}
+export interface Optional{{ inputs.value | pascal }}Props {}
 
 export type {{ inputs.value | pascal }}Props = Required{{ inputs.value | pascal }}Props &
   Default{{ inputs.value | pascal }}Props &

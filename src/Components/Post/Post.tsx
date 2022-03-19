@@ -3,7 +3,7 @@ import { useMemo } from 'react';
 import dayjs from 'dayjs';
 import { nanoid } from 'nanoid';
 
-import { EXTENDED_DATE_FORMAT } from '../../Config/Constants';
+import { EXTENDED_DATE_FORMAT } from '../../Config/Constants.config';
 import { TestProps } from '../../Config/Tests/Test.types';
 import { useShowUserPage } from '../../Hooks/ShowUserPage';
 import { TypographyVariant } from '../../Theme/Types/Typographies.types';

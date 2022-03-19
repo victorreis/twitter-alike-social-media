@@ -1,6 +1,6 @@
 import dayjs from 'dayjs';
 
-import { SHORT_DATE_FORMAT } from '../../Config/Constants';
+import { SHORT_DATE_FORMAT } from '../../Config/Constants.config';
 import {
   renderJestDomCreator,
   renderRTRCreator,

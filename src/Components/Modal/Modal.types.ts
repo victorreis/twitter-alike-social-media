@@ -14,11 +14,6 @@ export interface OptionalModalProps {
    * Callback function that is called when the modal backdrop is closed.
    */
   onClose?: () => void;
-
-  /**
-   * Sets the component styles.
-   */
-  style?: React.CSSProperties;
 }
 
 export type ModalProps = RequiredModalProps &

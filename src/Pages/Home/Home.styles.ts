@@ -4,7 +4,6 @@ import { Typography } from '../../Components/Typography';
 
 export const HomeContainer = styled.div`
   display: flex;
-  flex-direction: row;
   column-gap: 1rem;
 `;
 
@@ -21,10 +20,8 @@ export const HomeVerticalMenu = styled.div`
   padding: 1rem;
   box-sizing: border-box;
   height: 100vh;
-
-  border-right-width: 1px;
-  border-right-style: solid;
-  border-right-color: ${({ theme }) => theme.colors.background.default.normal};
+  border-right: 1px solid
+    ${({ theme }) => theme.colors.background.default.normal};
 `;
 
 export const HomeFeedContainer = styled.div`

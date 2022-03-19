@@ -28,11 +28,6 @@ export interface DefaultTextareaProps {
 
 export interface OptionalTextareaProps {
   /**
-   * Sets the component styles.
-   */
-  style?: React.CSSProperties;
-
-  /**
    * Controls the maximum number of caracters allowed.
    * @default 777
    */

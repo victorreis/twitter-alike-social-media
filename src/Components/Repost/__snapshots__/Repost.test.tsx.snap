@@ -8,7 +8,7 @@ exports[`repost component tests snapshot tests should render correctly 1`] = `
   type="Repost"
 >
   <div
-    className="RepostTextContainer-twitter-alike-social-media__sc-dgb1yt-1 lNuFn"
+    className="RepostTextContainer-twitter-alike-social-media__sc-dgb1yt-1 hxLbHP"
   >
     <svg
       className="RepostIcon-twitter-alike-social-media__sc-dgb1yt-3 bStOLt"
@@ -38,7 +38,7 @@ exports[`repost component tests snapshot tests should render correctly 1`] = `
     </h5>
   </div>
   <div
-    className="PostContainer-twitter-alike-social-media__sc-zy8jam-0 kqSmiT"
+    className="PostContainer-twitter-alike-social-media__sc-zy8jam-0 gsEoCj"
     data-testid="Post"
     type="Post"
   >
@@ -62,7 +62,7 @@ exports[`repost component tests snapshot tests should render correctly 1`] = `
       className="PostContent-twitter-alike-social-media__sc-zy8jam-1 kvzPWr"
     >
       <div
-        className="PostContentHeader-twitter-alike-social-media__sc-zy8jam-2 dyHMAc"
+        className="PostContentHeader-twitter-alike-social-media__sc-zy8jam-2 ilvDfQ"
       >
         <h4
           className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 dwIaAW PostContentTitle-twitter-alike-social-media__sc-zy8jam-3 bFlsZm"
@@ -103,7 +103,7 @@ exports[`repost component tests snapshot tests should render correctly 1`] = `
         </span>
       </span>
       <div
-        className="PostContentButtonsContainer-twitter-alike-social-media__sc-zy8jam-5 DMmfK"
+        className="PostContentButtonsContainer-twitter-alike-social-media__sc-zy8jam-5 gsSVXy"
       >
         <button
           className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 fBnyBV"

@@ -12,7 +12,6 @@ export const RepostContainer = styled.div<RepostStyleProps>`
 
 export const RepostTextContainer = styled.div<RepostStyleProps>`
   display: flex;
-  flex-direction: row;
   column-gap: 0.5rem;
   padding: 16px;
   padding-bottom: 0;

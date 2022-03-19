@@ -99,30 +99,6 @@ describe('button component tests', () => {
         ...themes.default.typographies.button,
       });
     });
-
-    // eslint-disable-next-line jest/no-commented-out-tests
-    // it('should change colors when on hover', () => {
-    //   expect.hasAssertions();
-    //   const hoverFeedbackColor: FeedbackColor = 'error';
-    //   setup({ ...requiredProps, hoverFeedbackColor }).renderJestDom();
-    //   let container = screen.getByTestId(buttonDefaults.testID);
-
-    //   fireEvent.mouseOver(container);
-
-    //   console.log({
-    //     hoverFeedbackColor,
-    //     expect: hexToRgb(
-    //       themes.default.colors.feedback[hoverFeedbackColor].dark
-    //     ),
-    //   });
-
-    //   container = screen.getByTestId(buttonDefaults.testID);
-    //   expect(container).toHaveStyle({
-    //     backgroundColor: hexToRgb(
-    //       themes.default.colors.feedback[hoverFeedbackColor].dark
-    //     ),
-    //   });
-    // });
   });
 
   describe('snapshot tests', () => {

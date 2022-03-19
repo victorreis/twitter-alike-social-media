@@ -6,12 +6,7 @@ export interface RequiredRepostProps {}
 
 export interface DefaultRepostProps {}
 
-export interface OptionalRepostProps {
-  /**
-   * Sets the component styles.
-   */
-  style?: React.CSSProperties;
-}
+export interface OptionalRepostProps {}
 
 export type RepostProps = RequiredRepostProps &
   DefaultRepostProps &

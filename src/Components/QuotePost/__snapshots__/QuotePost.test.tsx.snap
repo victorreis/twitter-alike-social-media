@@ -2,7 +2,7 @@
 
 exports[`quotePost component tests snapshot tests should render correctly 1`] = `
 <div
-  className="PostContainer-twitter-alike-social-media__sc-zy8jam-0 kqSmiT"
+  className="PostContainer-twitter-alike-social-media__sc-zy8jam-0 gsEoCj"
   data-testid="QuotePost"
   type="Post"
 >
@@ -26,7 +26,7 @@ exports[`quotePost component tests snapshot tests should render correctly 1`] = 
     className="PostContent-twitter-alike-social-media__sc-zy8jam-1 kvzPWr"
   >
     <div
-      className="PostContentHeader-twitter-alike-social-media__sc-zy8jam-2 dyHMAc"
+      className="PostContentHeader-twitter-alike-social-media__sc-zy8jam-2 ilvDfQ"
     >
       <h4
         className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 dwIaAW PostContentTitle-twitter-alike-social-media__sc-zy8jam-3 bFlsZm"
@@ -67,7 +67,7 @@ exports[`quotePost component tests snapshot tests should render correctly 1`] = 
       </span>
     </span>
     <div
-      className="PostContainer-twitter-alike-social-media__sc-zy8jam-0 fEIXaV"
+      className="PostContainer-twitter-alike-social-media__sc-zy8jam-0 dSFmBV"
       data-testid="Post"
       type="Post"
     >
@@ -75,7 +75,7 @@ exports[`quotePost component tests snapshot tests should render correctly 1`] = 
         className="PostContent-twitter-alike-social-media__sc-zy8jam-1 kvzPWr"
       >
         <div
-          className="PostContentHeader-twitter-alike-social-media__sc-zy8jam-2 dyHMAc"
+          className="PostContentHeader-twitter-alike-social-media__sc-zy8jam-2 ilvDfQ"
         >
           <div
             className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 kdIcfD"
@@ -132,7 +132,7 @@ exports[`quotePost component tests snapshot tests should render correctly 1`] = 
           </span>
         </span>
         <div
-          className="PostContentButtonsContainer-twitter-alike-social-media__sc-zy8jam-5 DMmfK"
+          className="PostContentButtonsContainer-twitter-alike-social-media__sc-zy8jam-5 gsSVXy"
         >
           <button
             className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 hdSPNA"
@@ -172,7 +172,7 @@ exports[`quotePost component tests snapshot tests should render correctly 1`] = 
       </div>
     </div>
     <div
-      className="PostContentButtonsContainer-twitter-alike-social-media__sc-zy8jam-5 gAOtQc"
+      className="PostContentButtonsContainer-twitter-alike-social-media__sc-zy8jam-5 fQKNOE"
     >
       <button
         className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 fBnyBV"

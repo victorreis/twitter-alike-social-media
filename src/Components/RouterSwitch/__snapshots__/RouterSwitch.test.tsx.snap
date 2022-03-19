@@ -10,7 +10,7 @@ exports[`routerSwitch component tests snapshot tests should render correctly 1`]
   >
     <nav>
       <div
-        className="HomeVerticalMenu-twitter-alike-social-media__sc-yzia5e-2 iCpZvy"
+        className="HomeVerticalMenu-twitter-alike-social-media__sc-yzia5e-2 gAbMSD"
       >
         <h2
           className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 BTnQe HomeTitle-twitter-alike-social-media__sc-yzia5e-1 gKXhqI"
@@ -27,7 +27,7 @@ exports[`routerSwitch component tests snapshot tests should render correctly 1`]
         </h2>
         <a
           aria-current="page"
-          className="MenuItemContainer-twitter-alike-social-media__sc-87xn0-0 PCyrH active"
+          className="MenuItemContainer-twitter-alike-social-media__sc-87xn0-0 bywCrn active"
           data-testid="MenuItem"
           href="/"
           onClick={[Function]}
@@ -54,7 +54,7 @@ exports[`routerSwitch component tests snapshot tests should render correctly 1`]
         </a>
         <a
           aria-current="page"
-          className="MenuItemContainer-twitter-alike-social-media__sc-87xn0-0 PCyrH active"
+          className="MenuItemContainer-twitter-alike-social-media__sc-87xn0-0 bywCrn active"
           data-testid="MenuItem"
           href="/"
           onClick={[Function]}
@@ -167,7 +167,7 @@ exports[`routerSwitch component tests snapshot tests should render correctly 1`]
           />
         </div>
         <div
-          className="PostCreatorFooter-twitter-alike-social-media__sc-r64v60-2 haUZSF"
+          className="PostCreatorFooter-twitter-alike-social-media__sc-r64v60-2 jvHXpp"
         >
           <span
             className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 bsZKYT"
