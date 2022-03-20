@@ -66,6 +66,7 @@ The main objective of this project is to practice some development skills throug
 ## Data consumed
 
 - locaStorage is initialized with some mocked data. Services consumes this data.
+- **IMPORTANT:** make sure to erase the localStorage because of the limit of posts per day (5 posts per day).
 
 ## Installation
 
