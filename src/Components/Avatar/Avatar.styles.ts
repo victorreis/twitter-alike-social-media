@@ -54,7 +54,8 @@ export const AvatarImage = styled.img<AvatarStyleProps>`
 `;
 
 export const AvatarInitials = styled(Typography)<AvatarStyleProps>`
-  font-size: ${({ size }) => toPx(avatarDimensions[size] * 0.67)};
+  font-size: ${({ size }: { size: AvatarSize }) =>
+    toPx(avatarDimensions[size] * 0.67)};
   color: red;
   font-family: Impact;
 `;
