@@ -29,10 +29,10 @@
     "lint:report": "yarn lint -f json -o reports/eslint-report.json",
     "type-check": "tsc --noEmit",
     "format": "prettier --config .prettierrc --write .",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "craco start",
+    "build": "craco build",
     "test": "jest --config=jest.config.js",
-    "eject": "react-scripts eject",
+    "eject": "craco eject",
     "g": "yarn scaffdog generate && yarn format"
   },
   "devDependencies": {
@@ -107,6 +107,7 @@
     "typescript-plugin-styled-components": "^2.0.0"
   },
   "dependencies": {
+    "@craco/craco": "^6.4.3",
     "dayjs": "^1.11.0",
     "nanoid": "^3.3.1",
     "react": "^17.0.2",
