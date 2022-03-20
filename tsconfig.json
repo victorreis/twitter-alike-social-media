@@ -35,7 +35,7 @@
     "useDefineForClassFields": true,
 
     /* Modules */
-    "module": "esnext",
+    "module": "commonjs",
     // "rootDir": "./",
     "moduleResolution": "node",
     "baseUrl": "./",
@@ -64,7 +64,7 @@
     // "emitDeclarationOnly": true,
     "sourceMap": true,
     // "outFile": "./",
-    "outDir": "./dist",
+    "outDir": "./build",
     "removeComments": true,
     "noEmit": true,
     "importHelpers": true,
