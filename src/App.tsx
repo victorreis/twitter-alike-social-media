@@ -3,6 +3,7 @@ import { ToastContainer } from 'react-toastify';
 
 import { Container, GlobalStyle } from './App.styles';
 import { RouterSwitch } from './Components/RouterSwitch';
+import { CLOSE_AFTER, POSITION } from './Config/Toast.config';
 import { localStorageInitializerService } from './Services/LocalStorageInitializer/LocalStorageInitializer.service';
 import { CustomThemeProvider } from './Theme/CustomThemeProvider';
 
@@ -17,14 +18,14 @@ export const App: FC = (): JSX.Element => {
     <CustomThemeProvider>
       <GlobalStyle />
       <ToastContainer
-        autoClose={5000}
+        autoClose={CLOSE_AFTER}
         closeOnClick
         draggable
         hideProgressBar={false}
         newestOnTop={false}
         pauseOnFocusLoss
         pauseOnHover
-        position="top-right"
+        position={POSITION}
         rtl={false}
         theme="dark"
       />

@@ -1,10 +1,11 @@
-import { ToastOptions } from 'react-toastify';
+import { ToastOptions, ToastPosition } from 'react-toastify';
 
-const CLOSE_AFTER = 5000;
+export const CLOSE_AFTER = 5000;
+export const POSITION: ToastPosition = 'bottom-right';
 
 export const TOAST_PARAMS: Record<string, ToastOptions> = {
   ERROR: {
-    position: 'top-right',
+    position: POSITION,
     autoClose: CLOSE_AFTER,
     hideProgressBar: false,
     closeOnClick: true,
@@ -13,7 +14,7 @@ export const TOAST_PARAMS: Record<string, ToastOptions> = {
     progress: undefined,
   },
   SUCCESS: {
-    position: 'top-right',
+    position: POSITION,
     autoClose: CLOSE_AFTER,
     hideProgressBar: false,
     closeOnClick: true,
