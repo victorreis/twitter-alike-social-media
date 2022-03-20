@@ -12,6 +12,7 @@ exports[`userDetails component tests snapshot tests should render correctly 1`] 
     <div
       className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 jOfrBo"
       data-testid="Avatar"
+      onClick={[Function]}
       size="LG"
     >
       <img

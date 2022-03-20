@@ -7,6 +7,18 @@ export const availableAvatarSize: ReadonlyArray<
 export type AvatarSize = typeof availableAvatarSize[number];
 export type AvatarSizes = Record<AvatarSize, number>;
 
+export interface AvatarClickProps {
+  /**
+   * Controls when the Avatar is clickable or not.
+   */
+  isAvatarClickable?: boolean;
+
+  /**
+   * Callback function that is called when the Avatar is clicked.
+   */
+  onClickAvatar?: (nickname: string) => void;
+}
+
 export interface RequiredAvatarProps {
   /**
    * Avatar image.
@@ -17,6 +29,11 @@ export interface RequiredAvatarProps {
    * Name show as title or as initials.
    */
   name: string;
+
+  /**
+   * Name show as title or as initials.
+   */
+  nickname: string;
 }
 
 export interface DefaultAvatarProps {
@@ -25,12 +42,6 @@ export interface DefaultAvatarProps {
    * @default 'MD'.
    */
   size?: AvatarSize;
-
-  /**
-   * Controls when the Avatar is clickable or not.
-   * @default true.
-   */
-  clickable?: boolean;
 }
 
 export interface OptionalAvatarProps {}
@@ -38,7 +49,11 @@ export interface OptionalAvatarProps {}
 export type AvatarProps = RequiredAvatarProps &
   DefaultAvatarProps &
   OptionalAvatarProps &
+  AvatarClickProps &
   TestProps &
-  Omit<React.HTMLAttributes<HTMLImageElement>, 'children'>;
+  Omit<React.HTMLAttributes<HTMLImageElement>, 'children' | 'onClick'>;
 
+export type AvatarContainerStyleProps = Required<
+  DefaultAvatarProps & Pick<AvatarClickProps, 'isAvatarClickable'>
+>;
 export type AvatarStyleProps = Required<DefaultAvatarProps>;

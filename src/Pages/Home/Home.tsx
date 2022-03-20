@@ -35,9 +35,12 @@ export const Home: React.FC = (): JSX.Element => {
     showAllPostsFromFollowedUsers,
     updateLoadedPosts,
   } = useRenderPosts({});
-  const { openUserModal, handleCloseUserPage } = useShowUserPage({
-    nickname: loggedUser?.nickname,
-  });
+  const {
+    openUserModal,
+    handleShowUserPage,
+    handleCloseUserPage,
+    isAvatarClickable,
+  } = useShowUserPage();
 
   const [toggleActiveIndex, setToggleActiveIndex] = useState(0);
   const [open, setOpen] = useState(openUserModal);
@@ -116,8 +119,10 @@ export const Home: React.FC = (): JSX.Element => {
 
         <PostCreator
           ref={postCreatorRef}
+          isAvatarClickable={isAvatarClickable}
           name={String(loggedUser?.name)}
           nickname={String(loggedUser?.nickname)}
+          onClickAvatar={handleShowUserPage}
           onSubmit={handleSubmitPost}
           thumbnailUrl={String(loggedUser?.thumbnailUrl)}
         />

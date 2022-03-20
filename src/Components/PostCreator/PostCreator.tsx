@@ -7,7 +7,6 @@ import {
 
 import { POST_CREATOR_MAX_LENGTH } from '../../Config/Constants.config';
 import { TestProps } from '../../Config/Tests/Test.types';
-import { useShowUserPage } from '../../Hooks/ShowUserPage';
 import { Avatar } from '../Avatar';
 import { Button } from '../Button';
 import { Textarea } from '../Textarea';
@@ -34,16 +33,14 @@ const PostCreatorComponent: ForwardRefRenderFunction<
     name,
     nickname,
     onSubmit,
+    isAvatarClickable,
+    onClickAvatar,
     style,
     ...others
   } = props;
 
   const [value, setValue] = useState('');
   const [characterCounter, setCharacterCounter] = useState(0);
-
-  const { handleShowUserPage, isAvatarClickable } = useShowUserPage({
-    nickname,
-  });
 
   const handleChange = (newValue: string) => {
     setValue(newValue);
@@ -62,9 +59,10 @@ const PostCreatorComponent: ForwardRefRenderFunction<
     <PostCreatorContainer data-testid={testID} style={style} {...others}>
       <PostCreatorHeader>
         <Avatar
-          clickable={isAvatarClickable}
+          isAvatarClickable={isAvatarClickable}
           name={name}
-          onClick={handleShowUserPage}
+          nickname={nickname}
+          onClickAvatar={onClickAvatar}
           thumbnailUrl={thumbnailUrl}
         />
         <Textarea

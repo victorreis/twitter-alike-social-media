@@ -73,8 +73,9 @@ export const UserDetails: React.FC<UserDetailsProps> = (props): JSX.Element => {
     <UserDetailsContainer data-testid={testID} style={style} {...others}>
       <UserDetailsHeader>
         <Avatar
-          clickable={false}
+          isAvatarClickable={false}
           name={name}
+          nickname={nickname}
           size="LG"
           thumbnailUrl={thumbnailUrl}
         />

@@ -19,6 +19,8 @@ export const Repost: React.FC<RepostProps> = (props): JSX.Element => {
     style,
     originalPost,
     createdBy,
+    isAvatarClickable,
+    onClickAvatar,
     onClickRepost,
     onClickQuotePost,
     ...others
@@ -41,6 +43,8 @@ export const Repost: React.FC<RepostProps> = (props): JSX.Element => {
 
       <Post
         {...originalPost}
+        isAvatarClickable={isAvatarClickable}
+        onClickAvatar={onClickAvatar}
         onClickQuotePost={handleClickQuotePostOriginalPost}
         onClickRepost={handleClickRepostOriginalPost}
       />

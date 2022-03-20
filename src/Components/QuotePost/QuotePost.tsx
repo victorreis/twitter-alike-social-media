@@ -13,6 +13,8 @@ export const QuotePost: React.FC<QuotePostProps> = (props): JSX.Element => {
     id,
     createdBy,
     originalPost,
+    isAvatarClickable,
+    onClickAvatar,
     onClickRepost,
     onClickQuotePost,
     ...others
@@ -42,11 +44,15 @@ export const QuotePost: React.FC<QuotePostProps> = (props): JSX.Element => {
       onClickQuotePost={handleClickQuotePost}
       onClickRepost={handleClickRepost}
       {...others}
+      isAvatarClickable={isAvatarClickable}
+      onClickAvatar={onClickAvatar}
       type="Post"
     >
       <Post
         compact
         {...originalPost}
+        isAvatarClickable={isAvatarClickable}
+        onClickAvatar={onClickAvatar}
         onClickQuotePost={handleClickQuotePostOriginalPost}
         onClickRepost={handleClickRepostOriginalPost}
       />

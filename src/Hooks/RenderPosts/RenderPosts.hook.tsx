@@ -10,12 +10,14 @@ import { PostTypes } from '../../Services/LocalStorageInitializer';
 import { postCreatorService } from '../../Services/PostCreator';
 import { postRetrieverService } from '../../Services/PostRetriever';
 import { useLoggedUser } from '../LoggedUser';
+import { useShowUserPage } from '../ShowUserPage/ShowUserPage.hook';
 
 export const useRenderPosts = (options: { userId?: string }) => {
   const { userId } = options;
 
   const [posts, setPosts] = useState<PostTypes[]>([]);
   const { loggedUser } = useLoggedUser();
+  const { isAvatarClickable, handleShowUserPage } = useShowUserPage();
 
   const showAllPosts = useCallback(() => {
     setPosts(() => postRetrieverService.getAll());
@@ -76,13 +78,20 @@ export const useRenderPosts = (options: { userId?: string }) => {
       return (
         <Post
           key={post.id}
-          {...post}
+          isAvatarClickable={isAvatarClickable}
+          onClickAvatar={handleShowUserPage}
           onClickQuotePost={handleClickQuotePost}
           onClickRepost={handleClickRepost}
+          {...post}
         />
       );
     },
-    [handleClickQuotePost, handleClickRepost]
+    [
+      handleClickQuotePost,
+      handleClickRepost,
+      handleShowUserPage,
+      isAvatarClickable,
+    ]
   );
 
   const renderRepost = useCallback(
@@ -90,13 +99,20 @@ export const useRenderPosts = (options: { userId?: string }) => {
       return (
         <Repost
           key={post.id}
-          {...post}
+          isAvatarClickable={isAvatarClickable}
+          onClickAvatar={handleShowUserPage}
           onClickQuotePost={handleClickQuotePost}
           onClickRepost={handleClickRepost}
+          {...post}
         />
       );
     },
-    [handleClickQuotePost, handleClickRepost]
+    [
+      handleClickQuotePost,
+      handleClickRepost,
+      handleShowUserPage,
+      isAvatarClickable,
+    ]
   );
 
   const renderQuotePost = useCallback(
@@ -104,13 +120,20 @@ export const useRenderPosts = (options: { userId?: string }) => {
       return (
         <QuotePost
           key={post.id}
-          {...post}
+          isAvatarClickable={isAvatarClickable}
+          onClickAvatar={handleShowUserPage}
           onClickQuotePost={handleClickQuotePost}
           onClickRepost={handleClickRepost}
+          {...post}
         />
       );
     },
-    [handleClickQuotePost, handleClickRepost]
+    [
+      handleClickQuotePost,
+      handleClickRepost,
+      handleShowUserPage,
+      isAvatarClickable,
+    ]
   );
 
   const renderPosts: () => JSX.Element[] = useCallback(() => {

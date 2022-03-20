@@ -1,5 +1,6 @@
 import { TestProps } from '../../Config/Tests/Test.types';
 import { PostType } from '../../Models/Post.types';
+import { AvatarClickProps } from '../Avatar';
 
 export interface RequiredPostProps {
   /**
@@ -27,4 +28,5 @@ export type PostProps = RequiredPostProps &
   OptionalPostProps &
   TestProps &
   PostType &
+  AvatarClickProps &
   Omit<React.HTMLAttributes<HTMLDivElement>, 'children'>;

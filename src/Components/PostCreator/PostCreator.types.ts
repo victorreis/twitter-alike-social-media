@@ -1,16 +1,11 @@
 import { TestProps } from '../../Config/Tests/Test.types';
-import { RequiredAvatarProps } from '../Avatar';
+import { AvatarClickProps, RequiredAvatarProps } from '../Avatar';
 
 export interface RequiredPostCreatorProps {
   /**
    * Callback function that is called when the post button is clicked.
    */
   onSubmit: (text: string) => void;
-
-  /**
-   * Callback function that is called when the text is changed.
-   */
-  nickname: string;
 }
 
 export interface DefaultPostCreatorProps {}
@@ -22,6 +17,7 @@ export type PostCreatorProps = RequiredPostCreatorProps &
   OptionalPostCreatorProps &
   TestProps &
   RequiredAvatarProps &
+  AvatarClickProps &
   Omit<React.HTMLAttributes<HTMLDivElement>, 'children' | 'onSubmit'>;
 
 export type PostCreatorStyleProps = Required<DefaultPostCreatorProps>;

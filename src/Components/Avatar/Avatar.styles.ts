@@ -2,7 +2,12 @@ import styled, { CSSObject } from 'styled-components';
 
 import { toPx } from '../../Utils/Transform/toPx.util';
 import { Typography } from '../Typography';
-import { AvatarSize, AvatarSizes, AvatarStyleProps } from './Avatar.types';
+import {
+  AvatarContainerStyleProps,
+  AvatarSize,
+  AvatarSizes,
+  AvatarStyleProps,
+} from './Avatar.types';
 
 export const avatarDimensions: AvatarSizes = {
   SM: 32,
@@ -28,7 +33,7 @@ const getAvatarContainerDimensions = ({
   };
 };
 
-export const AvatarContainer = styled.div<AvatarStyleProps>`
+export const AvatarContainer = styled.div<AvatarContainerStyleProps>`
   vertical-align: middle;
   border-radius: 50%;
   background-color: white;
@@ -36,7 +41,8 @@ export const AvatarContainer = styled.div<AvatarStyleProps>`
   place-items: center;
   box-sizing: border-box;
   padding: 2px;
-  cursor: ${({ clickable }) => (clickable ? 'pointer' : undefined)};
+  cursor: ${({ isAvatarClickable }) =>
+    isAvatarClickable ? 'pointer' : undefined};
 
   ${getAvatarContainerDimensions};
 `;
@@ -47,7 +53,7 @@ export const AvatarImage = styled.img<AvatarStyleProps>`
   ${getAvatarDimensions}
 `;
 
-export const AvatarInitials = styled(Typography)<{ size: AvatarSize }>`
+export const AvatarInitials = styled(Typography)<AvatarStyleProps>`
   font-size: ${({ size }) => toPx(avatarDimensions[size] * 0.67)};
   color: red;
   font-family: Impact;

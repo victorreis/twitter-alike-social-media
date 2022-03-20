@@ -4,10 +4,9 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { UserType } from '../../Models/User.types';
 import { userRetrieverService } from '../../Services/UserRetriever';
 
-export const useShowUserPage = (options: { nickname?: string }) => {
+export const useShowUserPage = () => {
   const [userFromUserPage, setUserFromUserPage] = useState<UserType>();
 
-  const { nickname } = options;
   const navigate = useNavigate();
   const { nickname: urlNickname } = useParams();
 
@@ -24,22 +23,20 @@ export const useShowUserPage = (options: { nickname?: string }) => {
     setUserFromUserPage(() => loadedUser);
   }, [handleCloseUserPage, urlNickname]);
 
-  const canUserPageBeShown = useCallback(
-    () => Boolean(urlNickname !== nickname && nickname),
-    [nickname, urlNickname]
+  const handleShowUserPage = useCallback(
+    (newNickname: string) => {
+      if (urlNickname !== newNickname) {
+        navigate(`/user/${newNickname}`);
+      }
+    },
+    [navigate, urlNickname]
   );
-
-  const handleShowUserPage = useCallback(() => {
-    if (canUserPageBeShown() && nickname) {
-      navigate(`/user/${nickname}`);
-    }
-  }, [canUserPageBeShown, navigate, nickname]);
 
   return {
     userFromUserPage,
     handleShowUserPage,
     handleCloseUserPage,
     openUserModal: Boolean(urlNickname),
-    isAvatarClickable: canUserPageBeShown(),
+    isAvatarClickable: true,
   };
 };

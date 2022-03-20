@@ -21,7 +21,8 @@ export const User: React.FC = (): JSX.Element | null => {
   const [isFollowing, setIsFollowing] = useState<boolean | undefined>(
     undefined
   );
-  const { userFromUserPage } = useShowUserPage({});
+  const { userFromUserPage, isAvatarClickable, handleShowUserPage } =
+    useShowUserPage();
   const { loggedUser } = useLoggedUser();
   const { renderPosts, updateLoadedPosts } = useRenderPosts({
     userId: userFromUserPage?.id,
@@ -76,15 +77,17 @@ export const User: React.FC = (): JSX.Element | null => {
   };
 
   const renderPostCreator = () => {
-    const { id, name, nickname, thumbnailUrl } = userFromUserPage;
+    const { id, name, thumbnailUrl } = userFromUserPage;
     if (loggedUser?.id !== id) {
       return null;
     }
 
     return (
       <PostCreator
+        isAvatarClickable={isAvatarClickable}
         name={name}
-        nickname={nickname}
+        nickname={String(loggedUser?.nickname)}
+        onClickAvatar={handleShowUserPage}
         onSubmit={handleSubmitPost}
         thumbnailUrl={thumbnailUrl}
       />

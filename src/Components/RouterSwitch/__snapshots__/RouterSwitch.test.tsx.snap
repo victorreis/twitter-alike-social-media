@@ -143,13 +143,13 @@ exports[`routerSwitch component tests snapshot tests should render correctly 1`]
           <div
             className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 fMGQXn"
             data-testid="Avatar"
+            onClick={[Function]}
             size="MD"
           >
             <img
               alt="undefined's avatar photo."
               className="AvatarImage-twitter-alike-social-media__sc-ne4tqs-1 dnbueO"
               data-testid="Avatar_image"
-              onClick={[Function]}
               onError={[Function]}
               size="MD"
               src="undefined"

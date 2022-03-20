@@ -19,7 +19,7 @@ export interface RequiredButtonProps {
   children: string;
 
   /**
-   * Callback function that is called when the componentis clicked.
+   * Callback function that is called when the component is clicked.
    */
   onClick: () => void;
 }

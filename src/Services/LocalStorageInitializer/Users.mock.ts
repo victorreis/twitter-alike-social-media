@@ -10,7 +10,7 @@ export const LOGGED_IN_USER_ID = '1';
 export const LOGGED_IN_USER: UserType = {
   id: LOGGED_IN_USER_ID,
   name: 'Victor Reis',
-  nickname: 'victor.reis',
+  nickname: 'victorreis',
   url: 'https://i.pravatar.cc/500',
   thumbnailUrl: 'https://i.pravatar.cc/100',
   createdAt: dayjs('01-01-2011', SHORT_DATE_FORMAT).toDate(),

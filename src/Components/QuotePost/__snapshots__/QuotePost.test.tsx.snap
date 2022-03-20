@@ -7,15 +7,15 @@ exports[`quotePost component tests snapshot tests should render correctly 1`] = 
   type="Post"
 >
   <div
-    className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 fMGQXn"
+    className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 czdfxE"
     data-testid="Avatar"
+    onClick={[Function]}
     size="MD"
   >
     <img
       alt="Another User's avatar photo."
       className="AvatarImage-twitter-alike-social-media__sc-ne4tqs-1 dnbueO"
       data-testid="Avatar_image"
-      onClick={[Function]}
       onError={[Function]}
       size="MD"
       src="https://i.pravatar.cc/300"
@@ -78,15 +78,15 @@ exports[`quotePost component tests snapshot tests should render correctly 1`] = 
           className="PostContentHeader-twitter-alike-social-media__sc-zy8jam-2 ilvDfQ"
         >
           <div
-            className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 kdIcfD"
+            className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 gREXng"
             data-testid="Avatar"
+            onClick={[Function]}
             size="SM"
           >
             <img
               alt="Victor Reis's avatar photo."
               className="AvatarImage-twitter-alike-social-media__sc-ne4tqs-1 huWvgW"
               data-testid="Avatar_image"
-              onClick={[Function]}
               onError={[Function]}
               size="SM"
               src="https://i.pravatar.cc/300"
