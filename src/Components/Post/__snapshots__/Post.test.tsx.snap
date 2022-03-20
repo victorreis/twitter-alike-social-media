@@ -70,8 +70,9 @@ exports[`post component tests snapshot tests should render correctly 1`] = `
       className="PostContentButtonsContainer-twitter-alike-social-media__sc-zy8jam-5 gsSVXy"
     >
       <button
-        className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 fBnyBV"
+        className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 cpQvHN"
         data-testid="Button"
+        disabled={false}
         onClick={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
@@ -87,8 +88,9 @@ exports[`post component tests snapshot tests should render correctly 1`] = `
         9
       </span>
       <button
-        className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 fBnyBV"
+        className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 cpQvHN"
         data-testid="Button"
+        disabled={false}
         onClick={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}

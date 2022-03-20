@@ -1,8 +1,15 @@
 import { useState, useEffect, useCallback } from 'react';
+import { toast } from 'react-toastify';
 
 import { Post } from '../../Components/Post';
 import { QuotePost } from '../../Components/QuotePost';
 import { Repost } from '../../Components/Repost';
+import { REACHED_THE_MAX_NUMBER_OF_POSTS_PER_DAY } from '../../Config/ErrorMessages.config';
+import {
+  QUOTE_POST_CREATED,
+  REPOST_CREATED,
+} from '../../Config/SuccessMessages.config';
+import { TOAST_PARAMS } from '../../Config/Toast.config';
 import { PostType } from '../../Models/Post.types';
 import { QuotePostType } from '../../Models/QuotePost.types';
 import { RepostType } from '../../Models/Repost.types';
@@ -52,22 +59,38 @@ export const useRenderPosts = (options: { userId?: string }) => {
   const handleClickRepost = useCallback(
     (originalPostId: string) => {
       if (loggedUser) {
-        postCreatorService.createRepost(originalPostId, loggedUser.id);
-        updateLoadedPosts();
+        try {
+          postCreatorService.createRepost(originalPostId, loggedUser.id);
+          updateLoadedPosts();
+          toast.success(REPOST_CREATED, TOAST_PARAMS['SUCCESS']);
+        } catch (e) {
+          toast.error(
+            REACHED_THE_MAX_NUMBER_OF_POSTS_PER_DAY,
+            TOAST_PARAMS['ERROR']
+          );
+        }
       }
     },
     [loggedUser, updateLoadedPosts]
   );
 
   const handleClickQuotePost = useCallback(
-    (originalPostId: string) => {
+    (originalPostId: string, text: string) => {
       if (loggedUser) {
-        postCreatorService.createQuotePost(
-          originalPostId,
-          '...',
-          loggedUser.id
-        );
-        updateLoadedPosts();
+        try {
+          postCreatorService.createQuotePost(
+            originalPostId,
+            text,
+            loggedUser.id
+          );
+          updateLoadedPosts();
+          toast.success(QUOTE_POST_CREATED, TOAST_PARAMS['SUCCESS']);
+        } catch (e) {
+          toast.error(
+            REACHED_THE_MAX_NUMBER_OF_POSTS_PER_DAY,
+            TOAST_PARAMS['ERROR']
+          );
+        }
       }
     },
     [loggedUser, updateLoadedPosts]

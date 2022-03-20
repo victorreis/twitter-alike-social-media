@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef, useCallback } from 'react';
 import { AiFillHome } from 'react-icons/ai';
 import { FaUserCircle } from 'react-icons/fa';
-import { NavLink } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 import { PageContainer } from '../../App.styles';
 import { Button } from '../../Components/Button';
@@ -11,13 +11,16 @@ import { Modal } from '../../Components/Modal';
 import { PostCreator } from '../../Components/PostCreator';
 import { TextToggle } from '../../Components/TextToggle';
 import { Typography } from '../../Components/Typography';
+import { REACHED_THE_MAX_NUMBER_OF_POSTS_PER_DAY } from '../../Config/ErrorMessages.config';
+import { POST_CREATED } from '../../Config/SuccessMessages.config';
 import { TestProps } from '../../Config/Tests/Test.types';
+import { TOAST_PARAMS } from '../../Config/Toast.config';
 import { useLoggedUser } from '../../Hooks/LoggedUser';
 import { useRenderPosts } from '../../Hooks/RenderPosts';
 import { useShowUserPage } from '../../Hooks/ShowUserPage';
 import { postCreatorService } from '../../Services/PostCreator';
 import { User } from '../User';
-import { HomeFeedContainer, HomeTitle, HomeVerticalMenu } from './Home.styles';
+import { HomeFeedContainer, Logo, HomeVerticalMenu } from './Home.styles';
 
 export const homeDefaults: Required<TestProps> = {
   testID: 'Home',
@@ -76,9 +79,28 @@ export const Home: React.FC = (): JSX.Element => {
 
   const handleSubmitPost = (text: string) => {
     if (loggedUser) {
-      postCreatorService.createPost(text, loggedUser.id);
-      updateLoadedPosts();
+      try {
+        postCreatorService.createPost(text, loggedUser.id);
+        toast.success(POST_CREATED, TOAST_PARAMS['SUCCESS']);
+        updateLoadedPosts();
+      } catch (e) {
+        toast.error(
+          REACHED_THE_MAX_NUMBER_OF_POSTS_PER_DAY,
+          TOAST_PARAMS['ERROR']
+        );
+      }
     }
+  };
+
+  const renderLogo = () => {
+    return (
+      <Logo to="/">
+        <span>
+          <span className="larger">P</span>
+          osterr
+        </span>
+      </Logo>
+    );
   };
 
   return (
@@ -91,9 +113,7 @@ export const Home: React.FC = (): JSX.Element => {
 
       <nav>
         <HomeVerticalMenu>
-          <HomeTitle variant="h2">
-            <NavLink to="/">Posterr</NavLink>
-          </HomeTitle>
+          {renderLogo()}
 
           <MenuItem to="/">
             <AiFillHome /> Home

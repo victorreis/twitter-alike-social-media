@@ -1,10 +1,21 @@
 import { useState, useEffect } from 'react';
+import { toast } from 'react-toastify';
 
 import { PageContainer } from '../../App.styles';
 import { PostCreator } from '../../Components/PostCreator';
 import { Tab } from '../../Components/Tab';
 import { UserDetails } from '../../Components/UserDetails';
+import {
+  REACHED_THE_MAX_NUMBER_OF_POSTS_PER_DAY,
+  UNNAVAILABLE_USER,
+} from '../../Config/ErrorMessages.config';
+import {
+  FOLLOW_CREATED,
+  FOLLOW_DELETED,
+  POST_CREATED,
+} from '../../Config/SuccessMessages.config';
 import { TestProps } from '../../Config/Tests/Test.types';
+import { TOAST_PARAMS } from '../../Config/Toast.config';
 import { useLoggedUser } from '../../Hooks/LoggedUser';
 import { useRenderPosts } from '../../Hooks/RenderPosts';
 import { useShowUserPage } from '../../Hooks/ShowUserPage';
@@ -49,30 +60,54 @@ export const User: React.FC = (): JSX.Element | null => {
 
   const handleFollow = () => {
     if (loggedUser) {
-      followerFollowedCreatorService.createRelationship(
-        loggedUser.id,
-        userFromUserPage.id
-      );
-      setIsFollowing((prevState) => !prevState);
-      updateLoadedPosts();
+      try {
+        followerFollowedCreatorService.createRelationship(
+          loggedUser.id,
+          userFromUserPage.id
+        );
+        toast.success(
+          FOLLOW_CREATED(userFromUserPage.nickname),
+          TOAST_PARAMS['SUCCESS']
+        );
+        setIsFollowing((prevState) => !prevState);
+        updateLoadedPosts();
+      } catch (e) {
+        toast.error(UNNAVAILABLE_USER, TOAST_PARAMS['ERROR']);
+      }
     }
   };
 
   const handleUnfollow = () => {
     if (loggedUser) {
-      followerFollowedCreatorService.deleteRelationship(
-        loggedUser.id,
-        userFromUserPage.id
-      );
-      setIsFollowing((prevState) => !prevState);
-      updateLoadedPosts();
+      try {
+        followerFollowedCreatorService.deleteRelationship(
+          loggedUser.id,
+          userFromUserPage.id
+        );
+        toast.success(
+          FOLLOW_DELETED(userFromUserPage.nickname),
+          TOAST_PARAMS['SUCCESS']
+        );
+        setIsFollowing((prevState) => !prevState);
+        updateLoadedPosts();
+      } catch (e) {
+        toast.error(UNNAVAILABLE_USER, TOAST_PARAMS['ERROR']);
+      }
     }
   };
 
   const handleSubmitPost = (text: string) => {
     if (loggedUser) {
-      postCreatorService.createPost(text, loggedUser.id);
-      updateLoadedPosts();
+      try {
+        postCreatorService.createPost(text, loggedUser.id);
+        toast.success(POST_CREATED, TOAST_PARAMS['SUCCESS']);
+        updateLoadedPosts();
+      } catch (e) {
+        toast.error(
+          REACHED_THE_MAX_NUMBER_OF_POSTS_PER_DAY,
+          TOAST_PARAMS['ERROR']
+        );
+      }
     }
   };
 

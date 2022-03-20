@@ -12,19 +12,21 @@ exports[`routerSwitch component tests snapshot tests should render correctly 1`]
       <div
         className="HomeVerticalMenu-twitter-alike-social-media__sc-yzia5e-2 gAbMSD"
       >
-        <h2
-          className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 BTnQe HomeTitle-twitter-alike-social-media__sc-yzia5e-1 gKXhqI"
-          data-testid="Typography"
+        <a
+          aria-current="page"
+          className="Logo-twitter-alike-social-media__sc-yzia5e-1 fpNctc active"
+          href="/"
+          onClick={[Function]}
         >
-          <a
-            aria-current="page"
-            className="active"
-            href="/"
-            onClick={[Function]}
-          >
-            Posterr
-          </a>
-        </h2>
+          <span>
+            <span
+              className="larger"
+            >
+              P
+            </span>
+            osterr
+          </span>
+        </a>
         <a
           aria-current="page"
           className="MenuItemContainer-twitter-alike-social-media__sc-87xn0-0 bywCrn active"
@@ -80,8 +82,9 @@ exports[`routerSwitch component tests snapshot tests should render correctly 1`]
           Profile
         </a>
         <button
-          className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 fBnyBV"
+          className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 cpQvHN"
           data-testid="Button"
+          disabled={false}
           onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
@@ -110,8 +113,9 @@ exports[`routerSwitch component tests snapshot tests should render correctly 1`]
           data-testid="TextToggle"
         >
           <button
-            className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 hdSPNA TextToggleActiveButton-twitter-alike-social-media__sc-oz9uiz-1 kUSULk"
+            className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 heWXfI TextToggleActiveButton-twitter-alike-social-media__sc-oz9uiz-1 kUSULk"
             data-testid="Button"
+            disabled={false}
             onClick={[Function]}
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
@@ -121,8 +125,9 @@ exports[`routerSwitch component tests snapshot tests should render correctly 1`]
             ALL
           </button>
           <button
-            className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 hdSPNA TextToggleActiveButton-twitter-alike-social-media__sc-oz9uiz-1 TextToggleButton-twitter-alike-social-media__sc-oz9uiz-2 kUSULk kqflPP"
+            className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 heWXfI TextToggleActiveButton-twitter-alike-social-media__sc-oz9uiz-1 TextToggleButton-twitter-alike-social-media__sc-oz9uiz-2 kUSULk kqflPP"
             data-testid="Button"
+            disabled={false}
             onClick={[Function]}
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
@@ -179,8 +184,9 @@ exports[`routerSwitch component tests snapshot tests should render correctly 1`]
              
           </span>
           <button
-            className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 fBnyBV"
+            className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 cpQvHN"
             data-testid="Button"
+            disabled={false}
             onClick={[Function]}
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}

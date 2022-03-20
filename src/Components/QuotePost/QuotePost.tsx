@@ -24,16 +24,22 @@ export const QuotePost: React.FC<QuotePostProps> = (props): JSX.Element => {
     onClickRepost(id);
   };
 
-  const handleClickQuotePost = () => {
-    onClickQuotePost(id);
+  const handleClickQuotePost = (
+    originalPostId: string,
+    quotePostText: string
+  ) => {
+    onClickQuotePost(originalPostId, quotePostText);
   };
 
   const handleClickRepostOriginalPost = () => {
     onClickRepost(originalPost.id);
   };
 
-  const handleClickQuotePostOriginalPost = () => {
-    onClickQuotePost(originalPost.id);
+  const handleClickQuotePostOriginalPost = (
+    originalPostId: string,
+    quotePostText: string
+  ) => {
+    onClickQuotePost(originalPostId, quotePostText);
   };
 
   return (

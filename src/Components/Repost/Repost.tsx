@@ -30,8 +30,11 @@ export const Repost: React.FC<RepostProps> = (props): JSX.Element => {
     onClickRepost(originalPost.id);
   };
 
-  const handleClickQuotePostOriginalPost = () => {
-    onClickQuotePost(originalPost.id);
+  const handleClickQuotePostOriginalPost = (
+    originalPostId: string,
+    quotePostText: string
+  ) => {
+    onClickQuotePost(originalPostId, quotePostText);
   };
 
   return (

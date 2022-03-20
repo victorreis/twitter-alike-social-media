@@ -35,7 +35,8 @@ const createPost = (text: string, createdById: string): PostType => {
     throw Error(USER_NOT_FOUND(createdById));
   }
   if (reachedTheMaximumNumberOfPostsPerDay(createdById)) {
-    throw Error(REACHED_THE_MAX_NUMBER_OF_POSTS_PER_DAY(createdById));
+    console.error(REACHED_THE_MAX_NUMBER_OF_POSTS_PER_DAY);
+    throw Error(REACHED_THE_MAX_NUMBER_OF_POSTS_PER_DAY);
   }
 
   const newPost: PostType = {
@@ -66,7 +67,8 @@ const createRepost = (
     throw Error(USER_NOT_FOUND(createdById));
   }
   if (reachedTheMaximumNumberOfPostsPerDay(createdById)) {
-    throw Error(REACHED_THE_MAX_NUMBER_OF_POSTS_PER_DAY(createdById));
+    console.error(REACHED_THE_MAX_NUMBER_OF_POSTS_PER_DAY);
+    throw Error(REACHED_THE_MAX_NUMBER_OF_POSTS_PER_DAY);
   }
 
   const newRepost: RepostType = {
@@ -96,7 +98,8 @@ const createQuotePost = (
     throw Error(USER_NOT_FOUND(createdById));
   }
   if (reachedTheMaximumNumberOfPostsPerDay(createdById)) {
-    throw Error(REACHED_THE_MAX_NUMBER_OF_POSTS_PER_DAY(createdById));
+    console.error(REACHED_THE_MAX_NUMBER_OF_POSTS_PER_DAY);
+    throw Error(REACHED_THE_MAX_NUMBER_OF_POSTS_PER_DAY);
   }
 
   const newPost: QuotePostType = {

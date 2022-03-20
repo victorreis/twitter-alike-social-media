@@ -11,7 +11,7 @@ export interface RequiredPostProps {
   /**
    * Callback function that is called when the QuotePost button is clicked.
    */
-  onClickQuotePost: (originalPostId: string) => void;
+  onClickQuotePost: (originalPostId: string, quotePostText: string) => void;
 }
 
 export interface DefaultPostProps {

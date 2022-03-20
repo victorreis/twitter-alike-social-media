@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo, useRef, useState } from 'react';
 
 import dayjs from 'dayjs';
 import { nanoid } from 'nanoid';
@@ -8,6 +8,7 @@ import { TestProps } from '../../Config/Tests/Test.types';
 import { TypographyVariant } from '../../Theme/Types/Typographies.types';
 import { Avatar } from '../Avatar';
 import { Button, ButtonSize } from '../Button';
+import { PostCreator } from '../PostCreator';
 import { Typography } from '../Typography';
 import {
   PostContainer,
@@ -44,6 +45,8 @@ export const Post: React.FC<PostProps> = (props): JSX.Element => {
   } = props;
 
   const { name, nickname, thumbnailUrl } = createdBy;
+  const [showPostCreator, setShowPostCreator] = useState<boolean>();
+  const quotePostCreatorRef = useRef<HTMLTextAreaElement>(null);
 
   const formattedDate = dayjs(createdAt).format(EXTENDED_DATE_FORMAT);
 
@@ -58,8 +61,9 @@ export const Post: React.FC<PostProps> = (props): JSX.Element => {
     onClickRepost(id);
   };
 
-  const handleClickQuotePost = () => {
-    onClickQuotePost(id);
+  const handleSubmitQuotePost = (quotePostText: string) => {
+    setShowPostCreator(() => false);
+    onClickQuotePost(id, quotePostText);
   };
 
   const renderText = useMemo(
@@ -84,6 +88,29 @@ export const Post: React.FC<PostProps> = (props): JSX.Element => {
         size={compact ? 'SM' : 'MD'}
         thumbnailUrl={thumbnailUrl}
       />
+    );
+  };
+
+  const handleShowQuotePostCreator = () => {
+    setShowPostCreator(() => true);
+    if (quotePostCreatorRef.current) {
+      quotePostCreatorRef.current.focus();
+    }
+  };
+
+  const renderQuotePostCreator = () => {
+    return (
+      showPostCreator && (
+        <PostCreator
+          ref={quotePostCreatorRef}
+          isAvatarClickable={isAvatarClickable}
+          name={name}
+          nickname={nickname}
+          onClickAvatar={onClickAvatar}
+          onSubmit={handleSubmitQuotePost}
+          thumbnailUrl={thumbnailUrl}
+        />
+      )
     );
   };
 
@@ -119,11 +146,18 @@ export const Post: React.FC<PostProps> = (props): JSX.Element => {
             Repost
           </Button>
           <Typography variant={textVariant}>{reposts}</Typography>
-          <Button onClick={handleClickQuotePost} size={buttonSize}>
+          <Button
+            disabled={showPostCreator}
+            onClick={handleShowQuotePostCreator}
+            size={buttonSize}
+          >
             Quote post
           </Button>
+
           <Typography variant={textVariant}>{quotPosts}</Typography>
         </PostContentButtonsContainer>
+
+        {renderQuotePostCreator()}
       </PostContent>
     </PostContainer>
   );
