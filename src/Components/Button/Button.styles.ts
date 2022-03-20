@@ -8,16 +8,22 @@ const getBackgroundColor = ({
   theme,
   hoverFeedbackColor,
   hover,
+  disabled,
 }: {
   theme: DefaultTheme;
   hoverFeedbackColor?: FeedbackColor;
   hover: boolean;
+  disabled: boolean;
 }): string => {
+  if (disabled) {
+    return theme.colors.background.default.dark;
+  }
   if (hover && hoverFeedbackColor) {
     return theme.colors.feedback[hoverFeedbackColor].dark;
   }
   return theme.colors.background.default.darkest;
 };
+
 const getButtonDimensions = ({ size }: { size: ButtonSize }): CSSObject => {
   const buttonDimensions: ButtonSizes = {
     MD: '2.2rem',
@@ -30,13 +36,21 @@ const getBorderColor = ({
   theme,
   hoverFeedbackColor,
   hover,
+  disabled,
 }: {
   theme: DefaultTheme;
   hoverFeedbackColor?: FeedbackColor;
   hover: boolean;
+  disabled: boolean;
 }): string => {
   if (hover && hoverFeedbackColor) {
+    if (disabled) {
+      return theme.colors.feedback[hoverFeedbackColor].dark;
+    }
     return theme.colors.feedback[hoverFeedbackColor].darkest;
+  }
+  if (disabled) {
+    return `${theme.colors.main.effect.normal}33`;
   }
   return `${theme.colors.main.effect.normal}55`;
 };
@@ -54,26 +68,34 @@ export const ButtonContainer = styled.button<ButtonStyleProps>`
   ${getButtonDimensions};
 
   border-width: 1px;
-  border-color: ${({ theme, hoverFeedbackColor }) =>
-    getBorderColor({ theme, hoverFeedbackColor, hover: false })};
   border-style: solid;
+  border-color: ${({ theme, hoverFeedbackColor, disabled }) =>
+    getBorderColor({ theme, hoverFeedbackColor, hover: false, disabled })};
   border-radius: ${({ theme }) => toPx(theme.borders.radius.LG)};
 
   ${({ theme }) => theme.typographies.button};
-  color: ${({ theme }) => theme.colors.background.default.lightest};
+  color: ${({ theme, disabled }) =>
+    disabled
+      ? theme.colors.background.default.light
+      : theme.colors.background.default.lightest};
 
-  background-color: ${({ theme }) =>
-    getBackgroundColor({ theme, hover: false })};
+  background-color: ${({ theme, disabled }) =>
+    getBackgroundColor({ theme, hover: false, disabled })};
 
   &:hover {
-    background-color: ${({ theme, hoverFeedbackColor }) =>
-      getBackgroundColor({ theme, hoverFeedbackColor, hover: true })};
+    background-color: ${({ theme, hoverFeedbackColor, disabled }) =>
+      getBackgroundColor({ theme, hoverFeedbackColor, hover: true, disabled })};
 
-    border-color: ${({ theme, hoverFeedbackColor }) =>
-      getBorderColor({ theme, hoverFeedbackColor, hover: true })};
+    border-color: ${({ theme, hoverFeedbackColor, disabled }) =>
+      getBorderColor({ theme, hoverFeedbackColor, hover: true, disabled })};
 
-    box-shadow: inset 0 0 1em
-      ${({ theme, hoverFeedbackColor }) =>
-        getBorderColor({ theme, hoverFeedbackColor, hover: true })};
+    ${({ theme, hoverFeedbackColor, disabled }) =>
+      !disabled &&
+      `box-shadow: inset 0 0 1em ${getBorderColor({
+        theme,
+        hoverFeedbackColor,
+        hover: true,
+        disabled,
+      })}`};
   }
 `;

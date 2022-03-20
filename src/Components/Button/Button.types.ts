@@ -36,6 +36,12 @@ export interface DefaultButtonProps {
    * @default 'LG'.
    */
   size?: ButtonSize;
+
+  /**
+   * Disable the button, so it can't be clicked.
+   * @default 'false'.
+   */
+  disabled?: boolean;
 }
 
 export interface OptionalButtonProps {
