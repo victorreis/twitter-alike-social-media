@@ -119,6 +119,13 @@
     "styled-normalize": "^8.0.7",
     "web-vitals": "^2.1.4"
   },
+  "peerDependencies": {
+    "@babel/plugin-syntax-flow": "^7.16.7",
+    "@testing-library/dom": "^8.11.3",
+    "autoprefixer": "^10.4.4",
+    "postcss": "^8.4.12",
+    "react-is": "^17.0.2"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
