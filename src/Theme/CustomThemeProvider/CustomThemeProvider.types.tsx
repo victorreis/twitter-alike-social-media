@@ -5,7 +5,14 @@ export type ThemeContextType = {
   switchTheme: (themeMode: ThemeMode) => void;
 };
 
-export type CustomThemeProviderProps = {
+export interface RequiredCustomThemeProviderProps {
+  children?: React.ReactNode;
+}
+
+export interface DefaultCustomThemeProviderProps {
   testID?: string;
   themeName?: ThemeMode;
-};
+}
+
+export type CustomThemeProviderProps = RequiredCustomThemeProviderProps &
+  DefaultCustomThemeProviderProps;

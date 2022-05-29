@@ -9,7 +9,8 @@
     "**/docs",
     "**/lib",
     "**/dist",
-    "**/reports"
+    "**/reports",
+    "**/__mocks__"
   ],
   "compilerOptions": {
     /* Projects */

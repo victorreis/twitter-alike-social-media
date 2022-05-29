@@ -19,13 +19,29 @@ module.exports = {
   collectCoverage: true,
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
-  // collectCoverageFrom: undefined,
+  collectCoverageFrom: ['src/**/*.ts', 'src/**/*.tsx'],
 
   // The directory where Jest should output its coverage files
   coverageDirectory: 'coverage',
 
   // An array of regexp pattern strings used to skip coverage collection
-  coveragePathIgnorePatterns: ['/node_modules/'],
+  coveragePathIgnorePatterns: [
+    'node_modules/',
+    '.config.ts',
+    '.module.ts',
+    '.model.ts',
+    '.entity.ts',
+    '.types.ts',
+    '.dto.ts',
+    'index.ts',
+    'App.ts',
+    'main.ts',
+    '.d.ts',
+    'reportWebVitals.ts',
+    'Routes.ts',
+    '.theme.ts',
+    '.styles.ts',
+  ],
 
   // Indicates which provider should be used to instrument code for coverage
   // coverageProvider: 'babel',
@@ -37,7 +53,7 @@ module.exports = {
   coverageThreshold: {
     global: {
       branches: 40,
-      functions: 50,
+      functions: 40,
       lines: 50,
       statements: 50,
     },
@@ -117,10 +133,10 @@ module.exports = {
   // runner: 'jest-runner',
 
   // The paths to modules that run some code to configure or set up the testing environment before each test
-  // setupFiles: ['dotenv/config'],
+  setupFiles: ['dotenv/config'],
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
-  // setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
+  setupFilesAfterEnv: ['<rootDir>/src/Config/Tests/GlobalSetup.config.tsx'],
 
   // The number of seconds after which a test is considered as slow and reported as such in the results.
   // slowTestThreshold: 5,
@@ -132,13 +148,15 @@ module.exports = {
   testEnvironment: 'jsdom',
 
   // Options that will be passed to the testEnvironment
-  // testEnvironmentOptions: {},
+  // testEnvironmentOptions: {
+  //   url: 'http://localhost',
+  // },
 
   // Adds a location field to test results
   // testLocationInResults: false,
 
   // The glob patterns Jest uses to detect test files
-  // testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[tj]s?(x)'],
+  testMatch: ['**/*/*.test.tsx', '**/*/*.test.ts'],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
   // testPathIgnorePatterns: [

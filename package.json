@@ -32,6 +32,7 @@
     "start": "craco start",
     "build": "craco build",
     "test": "jest --config=jest.config.js",
+    "test:dev": "jest --config=jest.config.js --watchAll",
     "eject": "craco eject",
     "g": "yarn scaffdog generate && yarn format"
   },
