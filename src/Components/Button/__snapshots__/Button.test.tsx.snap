@@ -2,7 +2,7 @@
 
 exports[`button component tests snapshot tests should render correctly 1`] = `
 <button
-  className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 cpQvHN"
+  className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 iHxNIv"
   data-testid="Button"
   disabled={false}
   onClick={[Function]}

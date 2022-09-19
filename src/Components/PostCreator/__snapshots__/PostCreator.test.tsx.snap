@@ -2,21 +2,21 @@
 
 exports[`postCreator component tests snapshot tests should render correctly 1`] = `
 <div
-  className="PostCreatorContainer-twitter-alike-social-media__sc-r64v60-0 hgebJz"
+  className="PostCreatorContainer-twitter-alike-social-media__sc-r64v60-0 jgVgol"
   data-testid="PostCreator"
 >
   <div
-    className="PostCreatorHeader-twitter-alike-social-media__sc-r64v60-1 dERajZ"
+    className="PostCreatorHeader-twitter-alike-social-media__sc-r64v60-1 jPmJar"
   >
     <div
-      className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 czdfxE"
+      className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 dwSceS"
       data-testid="Avatar"
       onClick={[Function]}
       size="MD"
     >
       <img
         alt="Victor Reis's avatar photo."
-        className="AvatarImage-twitter-alike-social-media__sc-ne4tqs-1 dnbueO"
+        className="AvatarImage-twitter-alike-social-media__sc-ne4tqs-1 cdAMXQ"
         data-testid="Avatar_image"
         onError={[Function]}
         size="MD"
@@ -25,7 +25,7 @@ exports[`postCreator component tests snapshot tests should render correctly 1`] 
       />
     </div>
     <textarea
-      className="StyledTextarea-twitter-alike-social-media__sc-12f32i7-0 ioqcrC"
+      className="StyledTextarea-twitter-alike-social-media__sc-12f32i7-0 bivTbY"
       data-testid="Textarea"
       maxLength={777}
       onChange={[Function]}
@@ -35,10 +35,10 @@ exports[`postCreator component tests snapshot tests should render correctly 1`] 
     />
   </div>
   <div
-    className="PostCreatorFooter-twitter-alike-social-media__sc-r64v60-2 jvHXpp"
+    className="PostCreatorFooter-twitter-alike-social-media__sc-r64v60-2 guOzgL"
   >
     <span
-      className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 bsZKYT"
+      className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 llowaZ"
       data-testid="Typography"
     >
       0
@@ -47,7 +47,7 @@ exports[`postCreator component tests snapshot tests should render correctly 1`] 
        
     </span>
     <button
-      className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 cpQvHN"
+      className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 iHxNIv"
       data-testid="Button"
       disabled={false}
       onClick={[Function]}

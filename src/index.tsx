@@ -1,16 +1,13 @@
 import { StrictMode } from 'react';
-import ReactDOM from 'react-dom';
-
-import { Normalize } from 'styled-normalize';
+import { createRoot } from 'react-dom/client';
 
 import { App } from './App';
 
-ReactDOM.render(
+const root = createRoot(document.getElementById('root') as HTMLElement);
+root.render(
   <StrictMode>
-    <Normalize />
     <App />
-  </StrictMode>,
-  document.getElementById('root')
+  </StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

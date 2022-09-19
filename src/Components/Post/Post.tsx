@@ -126,7 +126,7 @@ export const Post: React.FC<PostProps> = (props): JSX.Element => {
 
       <PostContent>
         <PostContentHeader>
-          {compact && renderAvatar()}
+          {compact ? renderAvatar() : null}
 
           <PostContentTitle variant={userNameVariant}>{name}</PostContentTitle>
           <PostContentTitle variant={userInfoVariant}>

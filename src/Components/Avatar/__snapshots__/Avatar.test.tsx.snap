@@ -2,14 +2,14 @@
 
 exports[`avatar component tests snapshot tests should render correctly 1`] = `
 <div
-  className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 czdfxE"
+  className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 dwSceS"
   data-testid="Avatar"
   onClick={[Function]}
   size="MD"
 >
   <img
     alt="Victor Reis's avatar photo."
-    className="AvatarImage-twitter-alike-social-media__sc-ne4tqs-1 dnbueO"
+    className="AvatarImage-twitter-alike-social-media__sc-ne4tqs-1 cdAMXQ"
     data-testid="Avatar_image"
     onError={[Function]}
     size="MD"

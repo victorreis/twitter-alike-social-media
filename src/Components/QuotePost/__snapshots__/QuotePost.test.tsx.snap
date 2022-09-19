@@ -2,19 +2,19 @@
 
 exports[`quotePost component tests snapshot tests should render correctly 1`] = `
 <div
-  className="PostContainer-twitter-alike-social-media__sc-zy8jam-0 gsEoCj"
+  className="PostContainer-twitter-alike-social-media__sc-zy8jam-0 jsSZZt"
   data-testid="QuotePost"
   type="Post"
 >
   <div
-    className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 czdfxE"
+    className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 dwSceS"
     data-testid="Avatar"
     onClick={[Function]}
     size="MD"
   >
     <img
       alt="Another User's avatar photo."
-      className="AvatarImage-twitter-alike-social-media__sc-ne4tqs-1 dnbueO"
+      className="AvatarImage-twitter-alike-social-media__sc-ne4tqs-1 cdAMXQ"
       data-testid="Avatar_image"
       onError={[Function]}
       size="MD"
@@ -23,26 +23,26 @@ exports[`quotePost component tests snapshot tests should render correctly 1`] = 
     />
   </div>
   <div
-    className="PostContent-twitter-alike-social-media__sc-zy8jam-1 kvzPWr"
+    className="PostContent-twitter-alike-social-media__sc-zy8jam-1 dmVaWN"
   >
     <div
-      className="PostContentHeader-twitter-alike-social-media__sc-zy8jam-2 ilvDfQ"
+      className="PostContentHeader-twitter-alike-social-media__sc-zy8jam-2 hDDSzK"
     >
       <h4
-        className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 dwIaAW PostContentTitle-twitter-alike-social-media__sc-zy8jam-3 bFlsZm"
+        className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 dBHhJY PostContentTitle-twitter-alike-social-media__sc-zy8jam-3 cGPPKU"
         data-testid="Typography"
       >
         Another User
       </h4>
       <h4
-        className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 cCEHbN PostContentTitle-twitter-alike-social-media__sc-zy8jam-3 bFlsZm"
+        className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 koYtcv PostContentTitle-twitter-alike-social-media__sc-zy8jam-3 cGPPKU"
         data-testid="Typography"
       >
         @
         another.user
       </h4>
       <h4
-        className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 cCEHbN"
+        className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 koYtcv"
         data-testid="Typography"
       >
         - 
@@ -50,7 +50,7 @@ exports[`quotePost component tests snapshot tests should render correctly 1`] = 
       </h4>
     </div>
     <span
-      className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 bsZKYT PostText-twitter-alike-social-media__sc-zy8jam-4 kKAkLD"
+      className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 llowaZ PostText-twitter-alike-social-media__sc-zy8jam-4 fcOTsp"
       data-testid="Post_text"
     >
       <span>
@@ -67,25 +67,25 @@ exports[`quotePost component tests snapshot tests should render correctly 1`] = 
       </span>
     </span>
     <div
-      className="PostContainer-twitter-alike-social-media__sc-zy8jam-0 dSFmBV"
+      className="PostContainer-twitter-alike-social-media__sc-zy8jam-0 iXYSGT"
       data-testid="Post"
       type="Post"
     >
       <div
-        className="PostContent-twitter-alike-social-media__sc-zy8jam-1 kvzPWr"
+        className="PostContent-twitter-alike-social-media__sc-zy8jam-1 dmVaWN"
       >
         <div
-          className="PostContentHeader-twitter-alike-social-media__sc-zy8jam-2 ilvDfQ"
+          className="PostContentHeader-twitter-alike-social-media__sc-zy8jam-2 hDDSzK"
         >
           <div
-            className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 gREXng"
+            className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 koAMpq"
             data-testid="Avatar"
             onClick={[Function]}
             size="SM"
           >
             <img
               alt="Victor Reis's avatar photo."
-              className="AvatarImage-twitter-alike-social-media__sc-ne4tqs-1 huWvgW"
+              className="AvatarImage-twitter-alike-social-media__sc-ne4tqs-1 kaECXk"
               data-testid="Avatar_image"
               onError={[Function]}
               size="SM"
@@ -94,20 +94,20 @@ exports[`quotePost component tests snapshot tests should render correctly 1`] = 
             />
           </div>
           <h5
-            className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 cCEHbN PostContentTitle-twitter-alike-social-media__sc-zy8jam-3 bFlsZm"
+            className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 koYtcv PostContentTitle-twitter-alike-social-media__sc-zy8jam-3 cGPPKU"
             data-testid="Typography"
           >
             Victor Reis
           </h5>
           <h5
-            className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 XqMSr PostContentTitle-twitter-alike-social-media__sc-zy8jam-3 bFlsZm"
+            className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 MqOTd PostContentTitle-twitter-alike-social-media__sc-zy8jam-3 cGPPKU"
             data-testid="Typography"
           >
             @
             victor.reis
           </h5>
           <h5
-            className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 XqMSr"
+            className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 MqOTd"
             data-testid="Typography"
           >
             - 
@@ -115,7 +115,7 @@ exports[`quotePost component tests snapshot tests should render correctly 1`] = 
           </h5>
         </div>
         <span
-          className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 kTmxqV PostText-twitter-alike-social-media__sc-zy8jam-4 kKAkLD"
+          className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 dIaJqP PostText-twitter-alike-social-media__sc-zy8jam-4 fcOTsp"
           data-testid="Post_text"
         >
           <span>
@@ -132,10 +132,10 @@ exports[`quotePost component tests snapshot tests should render correctly 1`] = 
           </span>
         </span>
         <div
-          className="PostContentButtonsContainer-twitter-alike-social-media__sc-zy8jam-5 gsSVXy"
+          className="PostContentButtonsContainer-twitter-alike-social-media__sc-zy8jam-5 WCgWA"
         >
           <button
-            className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 heWXfI"
+            className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 dLbeGW"
             data-testid="Button"
             disabled={false}
             onClick={[Function]}
@@ -147,13 +147,13 @@ exports[`quotePost component tests snapshot tests should render correctly 1`] = 
             Repost
           </button>
           <span
-            className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 kTmxqV"
+            className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 dIaJqP"
             data-testid="Typography"
           >
             9
           </span>
           <button
-            className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 heWXfI"
+            className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 dLbeGW"
             data-testid="Button"
             disabled={false}
             onClick={[Function]}
@@ -165,7 +165,7 @@ exports[`quotePost component tests snapshot tests should render correctly 1`] = 
             Quote post
           </button>
           <span
-            className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 kTmxqV"
+            className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 dIaJqP"
             data-testid="Typography"
           >
             99
@@ -174,10 +174,10 @@ exports[`quotePost component tests snapshot tests should render correctly 1`] = 
       </div>
     </div>
     <div
-      className="PostContentButtonsContainer-twitter-alike-social-media__sc-zy8jam-5 fQKNOE"
+      className="PostContentButtonsContainer-twitter-alike-social-media__sc-zy8jam-5 cAmSwW"
     >
       <button
-        className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 cpQvHN"
+        className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 iHxNIv"
         data-testid="Button"
         disabled={false}
         onClick={[Function]}
@@ -189,13 +189,13 @@ exports[`quotePost component tests snapshot tests should render correctly 1`] = 
         Repost
       </button>
       <span
-        className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 bsZKYT"
+        className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 llowaZ"
         data-testid="Typography"
       >
         9
       </span>
       <button
-        className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 cpQvHN"
+        className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 iHxNIv"
         data-testid="Button"
         disabled={false}
         onClick={[Function]}
@@ -207,7 +207,7 @@ exports[`quotePost component tests snapshot tests should render correctly 1`] = 
         Quote post
       </button>
       <span
-        className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 bsZKYT"
+        className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 llowaZ"
         data-testid="Typography"
       >
         99

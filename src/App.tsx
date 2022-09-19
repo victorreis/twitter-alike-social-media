@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { FC, useLayoutEffect } from 'react';
 import { ToastContainer } from 'react-toastify';
 
@@ -16,6 +17,8 @@ export const App: FC = (): JSX.Element => {
 
   return (
     <CustomThemeProvider>
+      {/* waiting for a new lib version compatible with React 18 */}
+      {/* @ts-ignore */}
       <GlobalStyle />
       <ToastContainer
         autoClose={CLOSE_AFTER}

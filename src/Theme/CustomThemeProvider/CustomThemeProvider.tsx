@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { useMemo, useState, createContext } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
@@ -45,6 +46,8 @@ export const CustomThemeProvider: React.FC<CustomThemeProviderProps> = (
 
   return (
     <ThemeContext.Provider data-testid={testID} value={providerValue}>
+      {/* waiting for a new lib version compatible with React 18 */}
+      {/* @ts-ignore */}
       <ThemeProvider theme={theme}>
         <BrowserRouter>{children}</BrowserRouter>
       </ThemeProvider>

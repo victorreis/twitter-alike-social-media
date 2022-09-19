@@ -4,6 +4,11 @@ import { AvatarClickProps } from '../Avatar';
 
 export interface RequiredPostProps {
   /**
+   * Children.
+   */
+  children?: React.ReactNode;
+
+  /**
    * Callback function that is called when the Repost button is clicked.
    */
   onClickRepost: (originalPostId: string) => void;

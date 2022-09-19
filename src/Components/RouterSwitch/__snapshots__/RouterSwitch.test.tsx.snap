@@ -5,16 +5,16 @@ exports[`routerSwitch component tests snapshot tests should render correctly 1`]
   data-testid="RouterSwitch"
 >
   <div
-    className="ContainerScroll-twitter-alike-social-media__sc-q0f03s-0 PageContainer-twitter-alike-social-media__sc-q0f03s-2 iEbgwk hWgpzS"
+    className="ContainerScroll-twitter-alike-social-media__sc-q0f03s-0 PageContainer-twitter-alike-social-media__sc-q0f03s-2 bzejee flxQWw"
     data-testid="Home"
   >
     <nav>
       <div
-        className="HomeVerticalMenu-twitter-alike-social-media__sc-yzia5e-2 gAbMSD"
+        className="HomeVerticalMenu-twitter-alike-social-media__sc-yzia5e-2 ijnLPh"
       >
         <a
           aria-current="page"
-          className="Logo-twitter-alike-social-media__sc-yzia5e-1 fpNctc active"
+          className="Logo-twitter-alike-social-media__sc-yzia5e-1 byvFC active"
           href="/"
           onClick={[Function]}
         >
@@ -29,7 +29,7 @@ exports[`routerSwitch component tests snapshot tests should render correctly 1`]
         </a>
         <a
           aria-current="page"
-          className="MenuItemContainer-twitter-alike-social-media__sc-87xn0-0 bywCrn active"
+          className="MenuItemContainer-twitter-alike-social-media__sc-87xn0-0 hUZhVl active"
           data-testid="MenuItem"
           href="/"
           onClick={[Function]}
@@ -56,7 +56,7 @@ exports[`routerSwitch component tests snapshot tests should render correctly 1`]
         </a>
         <a
           aria-current="page"
-          className="MenuItemContainer-twitter-alike-social-media__sc-87xn0-0 bywCrn active"
+          className="MenuItemContainer-twitter-alike-social-media__sc-87xn0-0 hUZhVl active"
           data-testid="MenuItem"
           href="/"
           onClick={[Function]}
@@ -82,7 +82,7 @@ exports[`routerSwitch component tests snapshot tests should render correctly 1`]
           Profile
         </a>
         <button
-          className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 cpQvHN"
+          className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 iHxNIv"
           data-testid="Button"
           disabled={false}
           onClick={[Function]}
@@ -96,24 +96,24 @@ exports[`routerSwitch component tests snapshot tests should render correctly 1`]
       </div>
     </nav>
     <div
-      className="HomeFeedContainer-twitter-alike-social-media__sc-yzia5e-3 hPFclt"
+      className="HomeFeedContainer-twitter-alike-social-media__sc-yzia5e-3 hruGor"
     >
       <div
-        className="FixedBarContainer-twitter-alike-social-media__sc-1hwkltx-0 iJVjri"
+        className="FixedBarContainer-twitter-alike-social-media__sc-1hwkltx-0 eprasI"
         data-testid="FixedBar"
       >
         <span
-          className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 bsZKYT"
+          className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 llowaZ"
           data-testid="Typography"
         >
           Home
         </span>
         <div
-          className="TextToggleContainer-twitter-alike-social-media__sc-oz9uiz-0 mIkpa"
+          className="TextToggleContainer-twitter-alike-social-media__sc-oz9uiz-0 isqEII"
           data-testid="TextToggle"
         >
           <button
-            className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 heWXfI TextToggleActiveButton-twitter-alike-social-media__sc-oz9uiz-1 kUSULk"
+            className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 dLbeGW TextToggleActiveButton-twitter-alike-social-media__sc-oz9uiz-1 jwXQve"
             data-testid="Button"
             disabled={false}
             onClick={[Function]}
@@ -125,7 +125,7 @@ exports[`routerSwitch component tests snapshot tests should render correctly 1`]
             ALL
           </button>
           <button
-            className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 heWXfI TextToggleActiveButton-twitter-alike-social-media__sc-oz9uiz-1 TextToggleButton-twitter-alike-social-media__sc-oz9uiz-2 kUSULk kqflPP"
+            className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 dLbeGW TextToggleActiveButton-twitter-alike-social-media__sc-oz9uiz-1 TextToggleButton-twitter-alike-social-media__sc-oz9uiz-2 jwXQve eUAzmR"
             data-testid="Button"
             disabled={false}
             onClick={[Function]}
@@ -139,21 +139,21 @@ exports[`routerSwitch component tests snapshot tests should render correctly 1`]
         </div>
       </div>
       <div
-        className="PostCreatorContainer-twitter-alike-social-media__sc-r64v60-0 hgebJz"
+        className="PostCreatorContainer-twitter-alike-social-media__sc-r64v60-0 jgVgol"
         data-testid="PostCreator"
       >
         <div
-          className="PostCreatorHeader-twitter-alike-social-media__sc-r64v60-1 dERajZ"
+          className="PostCreatorHeader-twitter-alike-social-media__sc-r64v60-1 jPmJar"
         >
           <div
-            className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 fMGQXn"
+            className="AvatarContainer-twitter-alike-social-media__sc-ne4tqs-0 bMMLCN"
             data-testid="Avatar"
             onClick={[Function]}
             size="MD"
           >
             <img
               alt="undefined's avatar photo."
-              className="AvatarImage-twitter-alike-social-media__sc-ne4tqs-1 dnbueO"
+              className="AvatarImage-twitter-alike-social-media__sc-ne4tqs-1 cdAMXQ"
               data-testid="Avatar_image"
               onError={[Function]}
               size="MD"
@@ -162,7 +162,7 @@ exports[`routerSwitch component tests snapshot tests should render correctly 1`]
             />
           </div>
           <textarea
-            className="StyledTextarea-twitter-alike-social-media__sc-12f32i7-0 ioqcrC"
+            className="StyledTextarea-twitter-alike-social-media__sc-12f32i7-0 bivTbY"
             data-testid="Textarea"
             maxLength={777}
             onChange={[Function]}
@@ -172,10 +172,10 @@ exports[`routerSwitch component tests snapshot tests should render correctly 1`]
           />
         </div>
         <div
-          className="PostCreatorFooter-twitter-alike-social-media__sc-r64v60-2 jvHXpp"
+          className="PostCreatorFooter-twitter-alike-social-media__sc-r64v60-2 guOzgL"
         >
           <span
-            className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 bsZKYT"
+            className="TypographyContainer-twitter-alike-social-media__sc-1rk4wyq-0 llowaZ"
             data-testid="Typography"
           >
             0
@@ -184,7 +184,7 @@ exports[`routerSwitch component tests snapshot tests should render correctly 1`]
              
           </span>
           <button
-            className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 cpQvHN"
+            className="ButtonContainer-twitter-alike-social-media__sc-1bqjegs-0 iHxNIv"
             data-testid="Button"
             disabled={false}
             onClick={[Function]}

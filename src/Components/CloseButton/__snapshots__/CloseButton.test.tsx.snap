@@ -2,7 +2,7 @@
 
 exports[`closeButton component tests snapshot tests should render correctly 1`] = `
 <button
-  className="CloseButtonContainer-twitter-alike-social-media__sc-1gjf1sx-1 jiZEDz"
+  className="CloseButtonContainer-twitter-alike-social-media__sc-1gjf1sx-1 fzoSSR"
   data-testid="CloseButton"
   onClick={[MockFunction]}
 >
@@ -31,7 +31,7 @@ exports[`closeButton component tests snapshot tests should render correctly 1`] 
     />
   </svg>
   <div
-    className="TransparentContainer-twitter-alike-social-media__sc-1gjf1sx-0 bFFqqg"
+    className="TransparentContainer-twitter-alike-social-media__sc-1gjf1sx-0 eysuIy"
   />
 </button>
 `;

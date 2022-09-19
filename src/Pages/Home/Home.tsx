@@ -105,11 +105,11 @@ export const Home: React.FC = (): JSX.Element => {
 
   return (
     <PageContainer data-testid={homeDefaults.testID}>
-      {open && (
+      {open ? (
         <Modal onClose={handleCloseModal}>
           <User />
         </Modal>
-      )}
+      ) : null}
 
       <nav>
         <HomeVerticalMenu>

@@ -2,7 +2,7 @@
 
 exports[`menuItem component tests snapshot tests should render correctly 1`] = `
 <a
-  className="MenuItemContainer-twitter-alike-social-media__sc-87xn0-0 bywCrn"
+  className="MenuItemContainer-twitter-alike-social-media__sc-87xn0-0 hUZhVl"
   data-testid="MenuItem"
   href="/user/teste"
   onClick={[Function]}
